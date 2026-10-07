@@ -1,0 +1,78 @@
+name: Fork release (Linux)
+
+# Builds the Linux AppImage for a private fork and publishes it as a GitHub
+# release, which the fork's desktop app reads as its update feed. Pushed by
+# scripts/release/fork-linux.ts; upstream's own workflows stay disabled here.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish AppImage
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Free disk space
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+
+      # Private-repo runners have 7 GB of RAM; the renderer bundle peaks near that.
+      - name: Add swap
+        run: |
+          sudo fallocate -l 8G /mnt/build.swap
+          sudo chmod 600 /mnt/build.swap
+          sudo mkswap /mnt/build.swap
+          sudo swapon /mnt/build.swap
+
+      - name: Checkout code
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version-file: .bun-version
+
+      - name: Install dependencies
+        run: bun install --frozen --ignore-scripts
+
+      - name: Install Linux native build deps
+        run: sudo apt-get update && sudo apt-get install -y libx11-dev libxkbfile-dev
+
+      - name: Install desktop native dependencies
+        working-directory: apps/desktop
+        run: bun run install:deps
+
+      # After the frozen install: bun.lock records workspace versions.
+      - name: Set version from tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          for pkg in apps/desktop packages/host-service packages/cli; do
+            bun -e "const f='$pkg/package.json';const p=await Bun.file(f).json();p.version='$VERSION';await Bun.write(f,JSON.stringify(p,null,'\t')+'\n')"
+          done
+
+      - name: Compile app
+        working-directory: apps/desktop
+        env:
+          SUPERSET_UPDATE_GITHUB_REPO: ${{ github.repository }}
+          SUPERSET_WORKSPACE_NAME: superset
+          TARGET_ARCH: x64
+        run: bun run prebuild
+
+      - name: Package AppImage
+        working-directory: apps/desktop
+        run: bun run package -- --linux AppImage --publish never --config electron-builder.ts
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Superset $VERSION" \
+            --notes "Linux build of $VERSION from ${GITHUB_SHA::9}." \
+            "apps/desktop/release/superset-$VERSION-x86_64.AppImage" \
+            apps/desktop/release/latest-linux.yml
