@@ -135,7 +135,7 @@ export const roadmapRouter = router({
 			);
 		}),
 
-	apply: protectedProcedure
+	applyActions: protectedProcedure
 		.input(
 			scopeSchema.extend({
 				expectedRevision: z.number().int().min(0),

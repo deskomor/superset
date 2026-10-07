@@ -12,7 +12,7 @@ export function useRoadmapApply(
 ): (actions: RoadmapAction[]) => Promise<boolean> {
 	const { t } = useLingui();
 	const utils = workspaceTrpc.useUtils();
-	const { mutateAsync } = workspaceTrpc.roadmap.apply.useMutation();
+	const { mutateAsync } = workspaceTrpc.roadmap.applyActions.useMutation();
 
 	return useCallback(
 		async (actions) => {
