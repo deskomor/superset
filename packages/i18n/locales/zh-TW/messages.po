@@ -6555,6 +6555,9 @@ msgstr "實驗功能"
 msgid "Expired"
 msgstr "已過期"
 
+msgid "Explain"
+msgstr "解釋"
+
 msgid "Explain how this repository works…"
 msgstr "講講這個儲存庫是怎麼運作的…"
 

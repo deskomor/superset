@@ -26,12 +26,14 @@ import {
 	useTerminalFolderPolicy,
 	useUrlLinkAction,
 } from "renderer/lib/clickPolicy";
+import { getTerminalSelectionForCopy } from "renderer/lib/terminal/terminal-copy";
 import {
 	type ConnectionState,
 	terminalRuntimeRegistry,
 } from "renderer/lib/terminal/terminal-runtime-registry";
 import { useOpenInExternalEditor } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/useOpenInExternalEditor";
 import { useRevealInFinder } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/useRevealInFinder";
+import { useExplainSelectionSource } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/providers/ExplainSelectionProvider";
 import type {
 	PaneViewerData,
 	TerminalPaneData,
@@ -487,6 +489,23 @@ export function TerminalPane({
 	});
 
 	useCopyOnSelect({ terminalId, terminalInstanceId, connectionState });
+
+	useExplainSelectionSource(containerRef, {
+		readSelection: () => {
+			const xterm = terminalRuntimeRegistry.getTerminal(
+				terminalId,
+				terminalInstanceId,
+			);
+			return xterm?.hasSelection() ? getTerminalSelectionForCopy(xterm) : "";
+		},
+		readContext: async () => {
+			const { text } = await workspaceTrpcUtils.terminal.transcript.fetch({
+				workspaceId,
+				terminalId,
+			});
+			return text ? { kind: "terminal", transcript: text } : null;
+		},
+	});
 
 	useHotkey(
 		"CLEAR_TERMINAL",

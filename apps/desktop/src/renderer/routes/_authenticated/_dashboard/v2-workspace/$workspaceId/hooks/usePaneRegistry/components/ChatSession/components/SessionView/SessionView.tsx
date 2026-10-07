@@ -18,6 +18,7 @@ import { ChatHistorySidebarScroller } from "@superset/ui/chat-history-sidebar";
 import { Spinner } from "@superset/ui/spinner";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useExplainSelectionSource } from "../../../../../../providers/ExplainSelectionProvider";
 import type { OpenFile } from "../../../../../../types";
 import { ChatPaneActionsProvider } from "../../providers/ChatPaneActionsProvider";
 import type { ChatForkTarget } from "../../types";
@@ -198,6 +199,19 @@ export function SessionView({
 			},
 		[agentSwitch, agentLabel],
 	);
+	const rootRef = useRef<HTMLDivElement>(null);
+	useExplainSelectionSource(rootRef, {
+		readContext: async () => ({
+			kind: "chat",
+			transcript: buildChatHandoffTranscript(
+				timelineRef.current,
+				snapshotRef.current,
+				agentLabel ?? "Agent",
+			),
+			sourceLabel: agentLabel,
+			presetId: agentSwitch?.currentPresetId,
+		}),
+	});
 	const {
 		cancelTurn,
 		loadOlder,
@@ -266,7 +280,10 @@ export function SessionView({
 	// sizes to its content and leaves the right of the pane empty.
 	return (
 		<ChatPaneActionsProvider openFile={openFile} workspaceId={workspaceId}>
-			<div className="flex h-full min-h-0 w-full min-w-0 flex-col">
+			<div
+				ref={rootRef}
+				className="flex h-full min-h-0 w-full min-w-0 flex-col"
+			>
 				{/* Only worth a row when it carries a control: the pane header above
 				    already names the agent, and harness/status/connection repeated
 				    under it read louder than the transcript. */}

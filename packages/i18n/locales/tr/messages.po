@@ -6555,6 +6555,9 @@ msgstr "Deneysel"
 msgid "Expired"
 msgstr "Süresi doldu"
 
+msgid "Explain"
+msgstr "Açıkla"
+
 msgid "Explain how this repository works…"
 msgstr "Bu deponun nasıl çalıştığını açıkla…"
 

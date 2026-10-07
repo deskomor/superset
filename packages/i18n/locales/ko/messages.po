@@ -6555,6 +6555,9 @@ msgstr "실험실"
 msgid "Expired"
 msgstr "만료됨"
 
+msgid "Explain"
+msgstr "설명"
+
 msgid "Explain how this repository works…"
 msgstr "이 리포지토리가 어떻게 동작하는지 설명…"
 

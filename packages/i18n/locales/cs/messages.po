@@ -6555,6 +6555,9 @@ msgstr "Experimentální"
 msgid "Expired"
 msgstr "Vypršelo"
 
+msgid "Explain"
+msgstr "Vysvětlit"
+
 msgid "Explain how this repository works…"
 msgstr "Vysvětli, jak tento repozitář funguje…"
 

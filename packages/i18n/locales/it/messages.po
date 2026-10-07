@@ -6555,6 +6555,9 @@ msgstr "Sperimentale"
 msgid "Expired"
 msgstr "Scaduto"
 
+msgid "Explain"
+msgstr "Spiega"
+
 msgid "Explain how this repository works…"
 msgstr "Spiega come funziona questo repository…"
 

@@ -6555,6 +6555,9 @@ msgstr "Thử nghiệm"
 msgid "Expired"
 msgstr "Đã hết hạn"
 
+msgid "Explain"
+msgstr "Giải thích"
+
 msgid "Explain how this repository works…"
 msgstr "Giải thích repository này hoạt động thế nào…"
 

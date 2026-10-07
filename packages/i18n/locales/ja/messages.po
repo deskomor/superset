@@ -6555,6 +6555,9 @@ msgstr "実験的機能"
 msgid "Expired"
 msgstr "期限切れ"
 
+msgid "Explain"
+msgstr "説明"
+
 msgid "Explain how this repository works…"
 msgstr "このリポジトリの仕組みを説明…"
 
