@@ -46,6 +46,7 @@ its hook entries into these files while preserving user-defined entries:
 | `~/.factory/settings.json` | Factory Droid hook registration (`UserPromptSubmit`, `Notification`, `PostToolUse`, `Stop`) |
 | `~/.omp/agent/extensions/superset-hooks.ts` (or `$OMP_CODING_AGENT_DIR/extensions/superset-hooks.ts`) | Oh My Pi lifecycle extension (`session_start`, `agent_start`, `before_agent_start`, `tool_execution_end`, `agent_end`, `session_end`, `session_shutdown`) |
 | `~/.pi/agent/extensions/superset-hooks.ts` | Pi lifecycle extension (`session_start`, `before_agent_start`, `agent_end`, `session_end`) |
+| `~/.prime/agent/extensions/superset-hooks.ts` (or `$PRIME_AGENT_CODING_AGENT_DIR/extensions/superset-hooks.ts`) | Prime Agent lifecycle extension (`session_start`, `agent_start`, `tool_execution_end`, `agent_end`, `session_shutdown`); sends the session id for resume and fork |
 
 For Codex specifically, Superset now relies on native `~/.codex/hooks.json`
 registration for durable prompt/tool lifecycle events. The wrapper in

@@ -638,6 +638,11 @@ export const AGENT_EFFORT_SUPPORT: readonly AgentEffortSupport[] = [
 		efforts: [...PI_THINKING_LEVELS],
 	},
 	{
+		presetId: "prime-agent",
+		effortFlag: "--thinking",
+		efforts: [...PI_THINKING_LEVELS, { id: "max", label: "Max" }],
+	},
+	{
 		presetId: "copilot",
 		effortFlag: "--effort",
 		efforts: [

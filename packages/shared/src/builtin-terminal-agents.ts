@@ -147,6 +147,17 @@ export const BUILTIN_TERMINAL_AGENTS = [
 		nonInteractiveCommand: "pi --no-tools -p",
 	}),
 	createBuiltinTerminalAgent({
+		id: "prime-agent",
+		label: "Prime Agent",
+		description:
+			"Prime Intellect's self-improving coding agent with a persistent Python REPL.",
+		command: "prime-agent",
+		resumeCommand: "prime-agent --resume",
+		forkCommand: "prime-agent --fork {sessionId}",
+		nonInteractiveCommand: "prime-agent --no-tools -p",
+		includeInDefaultTerminalPresets: true,
+	}),
+	createBuiltinTerminalAgent({
 		id: "copilot",
 		label: "Copilot",
 		description:

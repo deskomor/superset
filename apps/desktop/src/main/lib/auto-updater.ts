@@ -14,6 +14,7 @@ import {
 	isUpstreamServerError,
 } from "main/lib/update-error-classification";
 import { redactUpdateError } from "main/lib/update-error-redaction";
+import { resolveGitHubToken, resolveUpdateFeed } from "main/lib/update-feed";
 import { gte, prerelease } from "semver";
 import {
 	AUTO_UPDATE_STATUS,
@@ -59,13 +60,31 @@ function isPrereleaseBuild(): boolean {
 const IS_PRERELEASE = isPrereleaseBuild();
 const IS_AUTO_UPDATE_PLATFORM = PLATFORM.IS_MAC || PLATFORM.IS_LINUX;
 
-// Use explicit feed URLs to ensure we always fetch platform-specific manifests
-// (for example latest-mac.yml and latest-linux.yml) from the correct release.
-// - Stable: fetches from /releases/latest/download/ (latest non-prerelease)
-// - Canary: fetches from /releases/download/desktop-canary/ (rolling canary tag)
-const UPDATE_FEED_URL = IS_PRERELEASE
-	? "https://github.com/superset-sh/superset/releases/download/desktop-canary"
-	: "https://github.com/superset-sh/superset/releases/latest/download";
+// Baked in at build time; a fork that publishes its own releases sets it.
+const UPDATE_GITHUB_REPO = process.env.SUPERSET_UPDATE_GITHUB_REPO || undefined;
+let feedDescription = UPDATE_GITHUB_REPO ?? "superset-sh/superset";
+
+/**
+ * Points electron-updater at the release feed before each check: a private
+ * feed's token comes from `gh`, which can sign in or out while the app runs.
+ * Returns false when there is no usable feed.
+ */
+async function applyUpdateFeed(): Promise<boolean> {
+	const feed = await resolveUpdateFeed({
+		githubRepo: UPDATE_GITHUB_REPO,
+		isPrerelease: IS_PRERELEASE,
+		resolveToken: () => resolveGitHubToken(),
+	});
+	if (!feed) return false;
+	autoUpdater.setFeedURL(feed);
+	feedDescription =
+		feed.provider === "generic"
+			? feed.url
+			: `github:${feed.owner}/${feed.repo}`;
+	return true;
+}
+
+const NO_UPDATE_TOKEN_MESSAGE = `No GitHub token for ${UPDATE_GITHUB_REPO}: set GH_TOKEN or run \`gh auth login\``;
 
 export type { AutoUpdateStatusEvent } from "shared/auto-update";
 
@@ -235,23 +254,29 @@ export function checkForUpdates(): void {
 		);
 		return;
 	}
-	isDismissed = false;
-	emitStatus(AUTO_UPDATE_STATUS.CHECKING);
-	autoUpdater
-		.checkForUpdates()
-		.then(releaseDownloadPromise)
-		.catch((error) => {
-			if (isTransientError(error)) {
-				log.info(
-					"[auto-updater] Update server unreachable, will retry later:",
-					error?.message,
-				);
-				emitStatus(AUTO_UPDATE_STATUS.IDLE);
-				return;
-			}
-			log.error("[auto-updater] Failed to check for updates:", error);
-			emitStatus(AUTO_UPDATE_STATUS.ERROR, undefined, error.message);
-		});
+	void applyUpdateFeed().then((ready) => {
+		if (!ready) {
+			log.info(`[auto-updater] Check skipped: ${NO_UPDATE_TOKEN_MESSAGE}`);
+			return;
+		}
+		isDismissed = false;
+		emitStatus(AUTO_UPDATE_STATUS.CHECKING);
+		autoUpdater
+			.checkForUpdates()
+			.then(releaseDownloadPromise)
+			.catch((error) => {
+				if (isTransientError(error)) {
+					log.info(
+						"[auto-updater] Update server unreachable, will retry later:",
+						error?.message,
+					);
+					emitStatus(AUTO_UPDATE_STATUS.IDLE);
+					return;
+				}
+				log.error("[auto-updater] Failed to check for updates:", error);
+				emitStatus(AUTO_UPDATE_STATUS.ERROR, undefined, error.message);
+			});
+	});
 }
 
 export function checkForUpdatesInteractive(): void {
@@ -316,8 +341,11 @@ export function checkForUpdatesInteractive(): void {
 	isDismissed = false;
 	emitStatus(AUTO_UPDATE_STATUS.CHECKING);
 
-	autoUpdater
-		.checkForUpdates()
+	applyUpdateFeed()
+		.then((ready) => {
+			if (!ready) throw new Error(NO_UPDATE_TOKEN_MESSAGE);
+			return autoUpdater.checkForUpdates();
+		})
 		.then((result) => {
 			releaseDownloadPromise(result);
 			if (
@@ -456,15 +484,9 @@ export function setupAutoUpdater(): void {
 	// Allow downgrade for prerelease builds so users can switch back to stable
 	autoUpdater.allowDowngrade = IS_PRERELEASE;
 
-	// Use generic provider with explicit feed URL so electron-updater can request
-	// the correct manifest for the current platform from GitHub release assets.
-	autoUpdater.setFeedURL({
-		provider: "generic",
-		url: UPDATE_FEED_URL,
-	});
-
+	// The feed is applied before every check (applyUpdateFeed), not here.
 	log.info(
-		`[auto-updater] Initialized: version=${app.getVersion()}, channel=${IS_PRERELEASE ? "canary" : "stable"}, feedURL=${UPDATE_FEED_URL}`,
+		`[auto-updater] Initialized: version=${app.getVersion()}, channel=${IS_PRERELEASE ? "canary" : "stable"}, feed=${feedDescription}`,
 	);
 
 	autoUpdater.on("error", (error) => {
@@ -499,7 +521,7 @@ export function setupAutoUpdater(): void {
 
 	autoUpdater.on("checking-for-update", () => {
 		log.info(
-			`[auto-updater] Checking for updates... (currentVersion=${app.getVersion()}, feedURL=${UPDATE_FEED_URL})`,
+			`[auto-updater] Checking for updates... (currentVersion=${app.getVersion()}, feed=${feedDescription})`,
 		);
 		emitStatus(AUTO_UPDATE_STATUS.CHECKING);
 	});

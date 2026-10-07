@@ -58,6 +58,7 @@ export const PRESET_ICONS: Record<string, PresetIconSet> = {
 	pi: { light: piIcon, dark: piWhiteIcon },
 	polygraph: { light: polygraphIcon, dark: polygraphWhiteIcon },
 	superset: { light: supersetIcon, dark: supersetIcon },
+	"prime-agent": { light: piIcon, dark: piWhiteIcon },
 	ufo: { light: ufoIcon, dark: ufoWhiteIcon },
 	"cursor-agent": { light: cursorAgentIcon, dark: cursorAgentIcon },
 	"cursor-composer": { light: cursorAgentIcon, dark: cursorAgentIcon },

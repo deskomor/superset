@@ -6,20 +6,37 @@ import {
 	CODEX_MARKER_END,
 	CODEX_MARKER_START,
 	hashMcpServerValue,
+	primeAgentServerName,
 	type SyncManagedMcpServersOptions,
 	syncManagedMcpServers,
+	toPrimeAgentServerValue,
 } from "./managed-mcp-servers";
-import { resolveSupersetHomeDir } from "./paths";
+import { getPrimeAgentDir, resolveSupersetHomeDir } from "./paths";
 
 export interface McpReconcileReport {
-	agent: "claude" | "codex";
+	agent: "claude" | "codex" | "prime-agent";
 	/** Entries we own that the config does not carry, or carries with another value. */
 	stale: string[];
 	wrote: boolean;
 }
 
 /** Which agents materialize plugin MCP entries. Skills reach every agent; this does not. */
-const AGENTS = ["claude", "codex"] as const;
+const AGENTS = ["claude", "codex", "prime-agent"] as const;
+
+function readTracked(supersetHomeDir: string, filePath: string) {
+	try {
+		const ledger = JSON.parse(
+			fs.readFileSync(
+				path.join(supersetHomeDir, "plugins", "mcp-ledger.json"),
+				"utf-8",
+			),
+		);
+		return (ledger?.files?.[filePath] ?? {}) as Record<string, string>;
+	} catch {
+		// No ledger: we have written nothing, so every desired entry is stale.
+		return {};
+	}
+}
 
 function claudeStale(
 	desired: Record<string, PluginMcpServerConfig>,
@@ -38,18 +55,7 @@ function claudeStale(
 	} catch {
 		// No file, or unreadable: everything we want is missing.
 	}
-	let tracked: Record<string, string> = {};
-	try {
-		const ledger = JSON.parse(
-			fs.readFileSync(
-				path.join(supersetHomeDir, "plugins", "mcp-ledger.json"),
-				"utf-8",
-			),
-		);
-		tracked = ledger?.files?.[claudePath] ?? {};
-	} catch {
-		// No ledger: we have written nothing, so every desired entry is stale.
-	}
+	const tracked = readTracked(supersetHomeDir, claudePath);
 	const wrong = Object.entries(desired)
 		.filter(([name, config]) => {
 			if (!(name in current)) return true;
@@ -97,6 +103,41 @@ function codexStale(
 	return [...missing, ...managed.filter((name) => !(name in desired))];
 }
 
+/** Like Claude's, but under Prime Agent's names and dialect, and only once it is installed. */
+function primeAgentStale(
+	desired: Record<string, PluginMcpServerConfig>,
+	homeDir: string,
+	supersetHomeDir: string,
+): string[] {
+	const agentDir = getPrimeAgentDir(homeDir);
+	if (!fs.existsSync(agentDir)) return [];
+	const filePath = path.join(agentDir, "settings.json");
+	let current: Record<string, unknown> = {};
+	try {
+		const servers = JSON.parse(fs.readFileSync(filePath, "utf-8"))?.mcpServers;
+		if (servers && typeof servers === "object") current = servers;
+	} catch {
+		// No file, or unreadable: everything we want is missing.
+	}
+	const tracked = readTracked(supersetHomeDir, filePath);
+	const expected: Record<string, unknown> = {};
+	for (const [name, config] of Object.entries(desired)) {
+		const value = toPrimeAgentServerValue(config, supersetHomeDir);
+		if (value) expected[primeAgentServerName(name)] = value;
+	}
+	const wrong = Object.entries(expected)
+		.filter(([name, value]) => {
+			if (!(name in current)) return true;
+			if (tracked[name] === undefined) return false;
+			return hashMcpServerValue(current[name]) !== hashMcpServerValue(value);
+		})
+		.map(([name]) => name);
+	const removed = Object.keys(tracked).filter(
+		(name) => !(name in expected) && name in current,
+	);
+	return [...wrong, ...removed];
+}
+
 /**
  * Checks the supported agents' MCP configs against the desired set and writes
  * only when something is actually missing or changed.
@@ -120,6 +161,7 @@ export function reconcileMcpServers(
 	const stale: Record<(typeof AGENTS)[number], string[]> = {
 		claude: claudeStale(desired, homeDir, supersetHomeDir),
 		codex: codexStale(desired, homeDir),
+		"prime-agent": primeAgentStale(desired, homeDir, supersetHomeDir),
 	};
 	const needsWrite = AGENTS.some((agent) => stale[agent].length > 0);
 

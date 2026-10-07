@@ -145,6 +145,7 @@ const RATES_BY_AGENT: Record<UsageAgent, Record<string, ModelRate>> = {
 	copilot: MULTI_AGENT_RATES,
 	pi: MULTI_AGENT_RATES,
 	omp: MULTI_AGENT_RATES,
+	"prime-agent": MULTI_AGENT_RATES,
 	fx: MULTI_AGENT_RATES,
 	muse: MUSE_RATES,
 	// Devin's own SWE models are billed in ACUs with no published token

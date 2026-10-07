@@ -1,6 +1,6 @@
 import { useTerminalAgentBinding } from "renderer/hooks/host-service/useTerminalAgentBindings";
 import { useAcpChatEnabled } from "renderer/hooks/useAcpChatEnabled";
-import { acpHarnessForPreset } from "renderer/lib/acpHarness";
+import { acpHarnessLoadsSessions } from "renderer/lib/acpHarness";
 import type { TerminalPaneData } from "../../../../../../types";
 import type { AgentIdentity, AgentSurface } from "../useAgentSurfaceSwitch";
 
@@ -27,10 +27,12 @@ export function useAgentSurface(
 ): ResolvedAgentSurface {
 	const acpChat = useAcpChatEnabled();
 	const binding = useTerminalAgentBinding(workspaceId, data.terminalId);
-	const harness = acpHarnessForPreset(binding?.agentId);
 
 	const agent =
-		harness && binding?.agentId && binding.agentSessionId && !binding.endedAt
+		acpHarnessLoadsSessions(binding?.agentId) &&
+		binding?.agentId &&
+		binding.agentSessionId &&
+		!binding.endedAt
 			? { id: binding.agentId, sessionId: binding.agentSessionId }
 			: undefined;
 

@@ -36,12 +36,13 @@ Fork uses the agent's own fork command, so the copy has the full conversation. B
 | Codex | `codex fork <id>` |
 | OpenCode | `opencode --session <id> --fork` |
 | Pi | `pi --fork <id>` |
+| Prime Agent | `prime-agent --fork <id>` |
 | Grok | `grok --resume <id> --fork-session` |
 | Droid | `droid --fork <id>` |
 
 Superset also passes the agent's launch flags, such as `--dangerously-skip-permissions` for Claude Code, so a fork runs with the same permissions as a new session. **Settings → Agents** shows each agent's command and fork args.
 
-For other agents, set **Fork Args** under **Settings → Agents**. **Fork session** is disabled until Superset knows the agent's session id, and for agents without fork args. For Claude Code, Codex, OpenCode, and Pi, Superset refuses the fork if the agent has deleted the source session. For other agents, Superset cannot check, so the new pane opens and the agent reports the missing session there.
+For other agents, set **Fork Args** under **Settings → Agents**. **Fork session** is disabled until Superset knows the agent's session id, and for agents without fork args. For Claude Code, Codex, OpenCode, Pi, and Prime Agent, Superset refuses the fork if the agent has deleted the source session. For other agents, Superset cannot check, so the new pane opens and the agent reports the missing session there.
 
 A fork copies the conversation, not the files. Both sessions work in the same workspace.
 

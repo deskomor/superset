@@ -14,6 +14,7 @@ export type UsageAgent =
 	| "copilot"
 	| "pi"
 	| "omp"
+	| "prime-agent"
 	| "fx"
 	| "muse"
 	| "devin";

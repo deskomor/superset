@@ -85,6 +85,22 @@ describe("reconcileMcpServers", () => {
 		reconcileMcpServers({}, opts());
 		expect(claudeServers()).toEqual(["mine"]);
 	});
+
+	test("writes Prime Agent's entries when only its config is stale", () => {
+		reconcileMcpServers({ linear: LINEAR }, opts());
+		const settings = path.join(home, ".prime", "agent", "settings.json");
+		fs.mkdirSync(path.dirname(settings), { recursive: true });
+
+		const reports = reconcileMcpServers({ linear: LINEAR }, opts());
+
+		expect(reports.find((r) => r.agent === "prime-agent")?.wrote).toBe(true);
+		expect(
+			Object.keys(JSON.parse(fs.readFileSync(settings, "utf-8")).mcpServers),
+		).toEqual(["superset-linear"]);
+		expect(
+			reconcileMcpServers({ linear: LINEAR }, opts()).every((r) => !r.wrote),
+		).toBe(true);
+	});
 });
 
 describe("syncManagedMcpServers", () => {

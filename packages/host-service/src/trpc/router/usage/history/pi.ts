@@ -1,15 +1,17 @@
 /**
- * Pi / Oh My Pi usage (omp is a pi fork with the same session format).
- * Sessions are JSONL trees under `~/.pi/agent/sessions/--<encoded-cwd>--/`
- * (resp. `~/.omp/...`): a `{type:"session"}` header carrying the cwd, then
- * `{type:"message"}` entries whose assistant messages hold the model and a
- * usage block (input/output/cacheRead/cacheWrite plus a computed cost).
- * Entries are appended exactly once each — branching is by parent id — so no
- * cross-file dedupe is needed.
+ * Pi / Oh My Pi / Prime Agent usage (omp and prime-agent are pi forks with
+ * the same session format). Sessions are JSONL trees under
+ * `~/.pi/agent/sessions/--<encoded-cwd>--/` (resp. `~/.omp/...`; Prime Agent
+ * keeps them flat in its agent dir's `sessions/`): a `{type:"session"}` header
+ * carrying the cwd, then `{type:"message"}` entries whose assistant messages
+ * hold the model and a usage block (input/output/cacheRead/cacheWrite plus a
+ * computed cost). Entries are appended exactly once each — branching is by
+ * parent id — so no cross-file dedupe is needed.
  */
 
 import { homedir } from "node:os";
 import { join } from "node:path";
+import { getPrimeAgentDir } from "@superset/agent-setup/paths";
 import type { UsageAgent } from "../types";
 import type { LogFile } from "./logs";
 import { collectLogFiles } from "./logs";
@@ -22,8 +24,12 @@ import {
 	toSessionLabel,
 } from "./parse";
 
-export function piSessionsRoot(agent: "pi" | "omp"): string {
-	return join(homedir(), `.${agent}`, "agent", "sessions");
+type PiFamilyAgent = "pi" | "omp" | "prime-agent";
+
+export function piSessionsRoot(agent: PiFamilyAgent): string {
+	return agent === "prime-agent"
+		? join(getPrimeAgentDir(), "sessions")
+		: join(homedir(), `.${agent}`, "agent", "sessions");
 }
 
 interface PiLine {
@@ -119,7 +125,7 @@ async function parsePiLogFile(
 
 /** Returns the number of session files scanned. */
 export async function collectPiEntries(
-	agent: "pi" | "omp",
+	agent: PiFamilyAgent,
 	days: number,
 	cutoffMs: number,
 	out: UsageLogEntry[],

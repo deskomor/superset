@@ -117,6 +117,17 @@ Every action is reachable via flags; prompts only fire on a TTY. Pass a version
 explicitly and add `--republish` to skip the tag-exists prompt. Flows also export
 `runDesktop(args)` / `runCli(args)` for programmatic use.
 
+## Private fork (Linux)
+
+`bun scripts/release/fork-linux.ts <owner/repo>` releases this checkout to your
+own GitHub repository instead of `superset-sh/superset`. It patch-bumps the
+unified version above the repo's latest release, commits and tags `v<version>`,
+builds the AppImage with `SUPERSET_UPDATE_GITHUB_REPO=<owner/repo>` baked in,
+pushes `main` and the tag, and publishes the AppImage with `latest-linux.yml`.
+An app built this way checks that repository's latest release through the
+GitHub API, so a private repository works: the token comes from `GH_TOKEN` or
+`GITHUB_TOKEN`, else from `gh auth token`. With neither, it skips the check.
+
 ## Prerequisites
 
 - Run from the monorepo root.

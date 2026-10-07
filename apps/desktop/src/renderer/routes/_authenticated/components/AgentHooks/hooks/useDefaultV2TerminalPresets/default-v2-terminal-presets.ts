@@ -8,6 +8,7 @@ export const DEFAULT_V2_TERMINAL_PRESET_IDS = [
 	"codex",
 	"opencode",
 	"omp",
+	"prime-agent",
 	"copilot",
 	"vibe",
 	"kimi",

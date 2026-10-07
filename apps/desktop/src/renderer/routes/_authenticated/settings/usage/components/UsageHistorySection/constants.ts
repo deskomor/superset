@@ -18,13 +18,14 @@ export const AGENT_CHART_CONFIG = {
 	copilot: { label: "Copilot", color: "#22a5b8" },
 	pi: { label: "Pi", color: "#b04a82" },
 	omp: { label: "Oh My Pi", color: "#829c2e" },
+	"prime-agent": { label: "Prime Agent", color: "#6b7f99" },
 	fx: { label: "fx", color: "#5b6bd6" },
 	muse: { label: "Muse Code", color: "#cc6b8e" },
 	devin: { label: "Devin", color: "#7f5fa8" },
 } satisfies ChartConfig;
 
 /** Preset-icon registry keys per agent (cursor's icon is keyed by its
- * agent id `cursor-agent`; omp shares pi's mark). */
+ * agent id `cursor-agent`; omp and prime-agent share pi's mark). */
 export const AGENT_ICON_KEY: Record<keyof typeof AGENT_CHART_CONFIG, string> = {
 	claude: "claude",
 	codex: "codex",
@@ -35,6 +36,7 @@ export const AGENT_ICON_KEY: Record<keyof typeof AGENT_CHART_CONFIG, string> = {
 	copilot: "copilot",
 	pi: "pi",
 	omp: "omp",
+	"prime-agent": "prime-agent",
 	fx: "fx",
 	muse: "muse",
 	devin: "devin",
@@ -50,6 +52,7 @@ export const AGENT_ORDER = [
 	"copilot",
 	"pi",
 	"omp",
+	"prime-agent",
 	"fx",
 	"muse",
 	"devin",

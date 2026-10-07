@@ -300,6 +300,131 @@ describe("syncManagedMcpServers — per-agent external scoping", () => {
 	});
 });
 
+describe("syncManagedMcpServers — Prime Agent", () => {
+	const agentDir = path.join(HOME_DIR, ".prime", "agent");
+	const settings = path.join(agentDir, "settings.json");
+	const PROXIED: PluginMcpServerConfig = {
+		type: "http",
+		url: "https://api.superset.sh/mcp/plugins/superset/linear",
+		headersHelper: "/bin/superset auth mcp-headers",
+	};
+	const readPrime = () =>
+		JSON.parse(readFileSync(settings, "utf-8")) as {
+			mcpServers: Record<string, unknown>;
+			defaultModel?: string;
+		};
+
+	let savedAgentDir: string | undefined;
+	beforeEach(() => {
+		savedAgentDir = process.env.PRIME_AGENT_CODING_AGENT_DIR;
+		delete process.env.PRIME_AGENT_CODING_AGENT_DIR;
+		mkdirSync(agentDir, { recursive: true });
+		writeFileSync(
+			settings,
+			JSON.stringify({
+				defaultModel: "opus",
+				mcpServers: { mine: { type: "stdio", command: "mine" } },
+			}),
+		);
+	});
+
+	afterEach(() => {
+		if (savedAgentDir === undefined) {
+			delete process.env.PRIME_AGENT_CODING_AGENT_DIR;
+		} else {
+			process.env.PRIME_AGENT_CODING_AGENT_DIR = savedAgentDir;
+		}
+	});
+
+	it("does not add a second copy of a server the user runs under another name, even when Claude has that name too", () => {
+		writeFileSync(
+			settings,
+			JSON.stringify({
+				mcpServers: {
+					pw: { type: "stdio", command: "npx", args: ["@playwright/mcp"] },
+				},
+			}),
+		);
+		writeFileSync(
+			claudeJson,
+			JSON.stringify({
+				mcpServers: { pw: { type: "stdio", command: "other" } },
+			}),
+		);
+		run({ playwright: PLAYWRIGHT });
+		expect(Object.keys(readPrime().mcpServers)).toEqual(["pw"]);
+	});
+
+	it("skips a plugin whose built-in Prime Agent integration is signed in", () => {
+		writeFileSync(
+			path.join(agentDir, "auth.json"),
+			JSON.stringify({ "mcp:linear": { type: "oauth" } }),
+		);
+		run({ linear: PROXIED });
+		expect(readPrime().mcpServers["superset-linear"]).toBeUndefined();
+	});
+
+	it("runs a credentialed endpoint through the stdio proxy under a non-reserved name", () => {
+		run({ linear: PROXIED, playwright: PLAYWRIGHT });
+
+		const root = readPrime();
+		expect(root.defaultModel).toBe("opus");
+		expect(root.mcpServers).toEqual({
+			mine: { type: "stdio", command: "mine" },
+			"superset-linear": {
+				type: "stdio",
+				command: path.join(SUPERSET_HOME, "bin", "superset"),
+				args: ["auth", "mcp-proxy", PROXIED.url],
+			},
+			playwright: {
+				type: "stdio",
+				command: "npx",
+				args: ["-y", "@playwright/mcp@latest"],
+			},
+		});
+	});
+
+	it("drops a stdio server whose env holds a literal value", () => {
+		run({
+			secret: { command: "srv", env: { TOKEN: "abc" } },
+			ref: { command: "srv", env: { TOKEN: "$MY_TOKEN" } },
+		});
+
+		const servers = readPrime().mcpServers;
+		expect(servers.secret).toBeUndefined();
+		expect(servers.ref).toEqual({
+			type: "stdio",
+			command: "srv",
+			env: { TOKEN: { env: "MY_TOKEN" } },
+		});
+	});
+
+	it("skips the round while Prime Agent holds its lock, then converges", () => {
+		mkdirSync(`${settings}.lock`);
+		run({ linear: PROXIED });
+		expect(readPrime().mcpServers["superset-linear"]).toBeUndefined();
+
+		rmSync(`${settings}.lock`, { recursive: true });
+		run({ linear: PROXIED });
+		expect(readPrime().mcpServers["superset-linear"]).toBeDefined();
+		expect(existsSync(`${settings}.lock`)).toBe(false);
+	});
+
+	it("reaps its entries and keeps the user's when nothing is installed", () => {
+		run({ linear: PROXIED });
+		run({});
+		expect(readPrime().mcpServers).toEqual({
+			mine: { type: "stdio", command: "mine" },
+		});
+	});
+
+	it("creates nothing on a machine without Prime Agent", () => {
+		rmSync(path.join(HOME_DIR, ".prime"), { recursive: true });
+		run({ linear: PROXIED });
+		expect(existsSync(path.join(HOME_DIR, ".prime"))).toBe(false);
+	});
+});
+
 describe("readExternallyConfiguredMcpServers", () => {
 	function readExternal() {
 		return readExternallyConfiguredMcpServers({

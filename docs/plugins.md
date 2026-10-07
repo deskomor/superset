@@ -110,6 +110,14 @@ The desktop's next boot would undo a `plugins sync`, and vice versa.
 Skills land in `~/.agents/skills` (what Codex, Vibe, and Kimi read natively) and are mirrored into
 `~/.claude/skills` as a plugin directory, because Claude does not read the shared convention.
 
+A plugin's MCP servers are written into each agent's own config by `syncManagedMcpServers`:
+`~/.claude.json`, `~/.codex/config.toml`, and Prime Agent's `settings.json` (only when its agent
+dir exists). Claude and Codex authenticate through a headers helper (`superset auth mcp-headers`).
+Prime Agent has none, so its entry is a stdio server, `superset auth mcp-proxy <url>`, which
+relays to the proxy URL and resolves the CLI's current token on every request. Prime Agent reserves
+`linear` and `notion` for its built-in integrations, so those entries are named `superset-linear`
+and `superset-notion` there.
+
 ## Command surface
 
 ```

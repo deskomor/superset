@@ -3,6 +3,7 @@ import { claudeSessionStore } from "./claude";
 import { codexSessionStore } from "./codex";
 import { opencodeSessionStore } from "./opencode";
 import { piSessionStore } from "./pi";
+import { primeAgentSessionStore } from "./prime-agent";
 import { toSessionQuery } from "./query";
 import type { HarnessSessionRef, HarnessSessionStore } from "./types";
 
@@ -20,6 +21,7 @@ export const HARNESS_SESSION_STORES: Partial<
 	codex: codexSessionStore,
 	opencode: opencodeSessionStore,
 	pi: piSessionStore,
+	"prime-agent": primeAgentSessionStore,
 };
 
 /**

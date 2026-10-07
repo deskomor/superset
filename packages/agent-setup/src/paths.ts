@@ -38,3 +38,11 @@ export function getOpenCodeConfigDir(): string {
 export function getOpenCodePluginDir(): string {
 	return path.join(getOpenCodeConfigDir(), "plugin");
 }
+
+/** Honors `PRIME_AGENT_CODING_AGENT_DIR`, which Prime Agent reads in place of `~/.prime/agent`. */
+export function getPrimeAgentDir(homeDir: string = os.homedir()): string {
+	const configured = process.env.PRIME_AGENT_CODING_AGENT_DIR?.trim();
+	return configured
+		? configured.replace(/^~(?=$|[\\/])/, homeDir)
+		: path.join(homeDir, ".prime", "agent");
+}

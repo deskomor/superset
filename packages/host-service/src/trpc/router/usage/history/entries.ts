@@ -133,6 +133,10 @@ export async function collectUsageEntries(
 			run: (out: UsageLogEntry[]) =>
 				collectPiEntries("omp", days, cutoffMs, out, sessionLabels),
 		},
+		{
+			run: (out: UsageLogEntry[]) =>
+				collectPiEntries("prime-agent", days, cutoffMs, out, sessionLabels),
+		},
 		{ run: (out: UsageLogEntry[]) => collectFxEntries(cutoffMs, out) },
 		{
 			run: (out: UsageLogEntry[]) =>

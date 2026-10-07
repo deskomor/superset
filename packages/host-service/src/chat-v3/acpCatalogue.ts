@@ -63,6 +63,14 @@ export const ACP_HARNESSES: Record<string, AcpHarness> = {
 		executableEnv: "PI_ACP_PI_COMMAND",
 		note: "Ungated: no pi install was available to verify a floor against, and gating on a guess would reject working versions. It reached the same state before this catalogue, since the harness resolved pi off PATH either way.",
 	},
+	"prime-agent-acp": {
+		registryId: "prime-agent-acp",
+		binary: "prime-agent",
+		args: ["--mode", "acp"],
+		minVersion: "0.9.5",
+		upgrade: "prime-agent update",
+		note: "0.9.5 verified: native ACP, no adapter. initialize reports prime-agent 0.9.5, session/new returns a session with no modes or configOptions, and loadSession is false, so a restarted chat starts a fresh agent session.",
+	},
 };
 
 /**

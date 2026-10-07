@@ -101,6 +101,10 @@ export default defineConfig({
 			),
 			"process.env.RELAY_URL": defineEnv(process.env.RELAY_URL),
 			"process.env.REALTIME_URL": defineEnv(process.env.REALTIME_URL),
+			"process.env.SUPERSET_UPDATE_GITHUB_REPO": defineEnv(
+				process.env.SUPERSET_UPDATE_GITHUB_REPO,
+				"",
+			),
 			// Must match renderer for analytics in main process
 			"process.env.NEXT_PUBLIC_POSTHOG_KEY": defineEnv(
 				process.env.NEXT_PUBLIC_POSTHOG_KEY,

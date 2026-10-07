@@ -13,22 +13,23 @@ import {
 	type ManagedTomlBlockSpec,
 	removeManagedTomlBlock,
 } from "./managed-toml-block";
-import { resolveSupersetHomeDir } from "./paths";
+import { getPrimeAgentDir, resolveSupersetHomeDir } from "./paths";
 
 /**
  * Materializes the MCP servers of installed Superset plugins into agent
- * configs, and reaps them on uninstall. MVP targets: Claude Code
+ * configs, and reaps them on uninstall. Targets: Claude Code
  * (`~/.claude.json`, the state file where `mcpServers` lives — see
- * provider-profiles.ts) and Codex (`~/.codex/config.toml`).
+ * provider-profiles.ts), Codex (`~/.codex/config.toml`) and Prime Agent
+ * (`settings.json` in its agent dir).
  *
  * Ownership models differ per dialect because an MCP entry has no natural
  * fingerprint (unlike hooks, recognized by their notify-script path):
  *
- * - Claude's `mcpServers` is a name→object map inside a user-owned file, so a
- *   sidecar ledger (`~/.superset/plugins/mcp-ledger.json`) records which keys
- *   we wrote and a hash of each value. Reap removes only keys whose current
- *   value still matches what we wrote; a user-edited entry transfers to the
- *   user. A pre-existing key we never wrote is never touched.
+ * - Claude's and Prime Agent's `mcpServers` are name→object maps inside a
+ *   user-owned file, so a sidecar ledger (`~/.superset/plugins/mcp-ledger.json`)
+ *   records which keys we wrote and a hash of each value. Reap removes only
+ *   keys whose current value still matches what we wrote; a user-edited entry
+ *   transfers to the user. A pre-existing key we never wrote is never touched.
  * - Codex's TOML gets a marker-delimited block (managed-toml-block engine),
  *   which carries its own ownership. Servers the user already defines outside
  *   the block are skipped — a duplicate `[mcp_servers.<name>]` table would be
@@ -124,6 +125,55 @@ function toClaudeServerValue(
 }
 
 /**
+ * Converges a name→value `container` on `desired` under ledger ownership, in
+ * place. Returns whether it changed and the hashes the ledger should track.
+ */
+function mergeLedgerOwnedEntries(
+	container: Record<string, unknown>,
+	desired: Record<string, unknown>,
+	tracked: Record<string, string>,
+): { mutated: boolean; nextTracked: Record<string, string> } {
+	let mutated = false;
+	const nextTracked: Record<string, string> = {};
+
+	// Reap entries we wrote that are no longer desired — unless the user
+	// edited them since, in which case ownership transfers to the user.
+	for (const [name, writtenHash] of Object.entries(tracked)) {
+		if (name in desired) continue;
+		const current = container[name];
+		if (current !== undefined && hashMcpServerValue(current) === writtenHash) {
+			delete container[name];
+			mutated = true;
+		}
+	}
+
+	for (const [name, value] of Object.entries(desired)) {
+		const valueHash = hashMcpServerValue(value);
+		const current = container[name];
+
+		if (current !== undefined && !(name in tracked)) {
+			// The user defined this server themselves before we got here;
+			// their entry wins and stays theirs.
+			continue;
+		}
+		if (
+			current !== undefined &&
+			name in tracked &&
+			hashMcpServerValue(current) !== tracked[name]
+		) {
+			// We wrote it once, the user edited it since: theirs now.
+			continue;
+		}
+		if (current === undefined || hashMcpServerValue(current) !== valueHash) {
+			container[name] = value;
+			mutated = true;
+		}
+		nextTracked[name] = valueHash;
+	}
+	return { mutated, nextTracked };
+}
+
+/**
  * Merges desired entries into `~/.claude.json`'s `mcpServers` map under
  * ledger ownership. Serializes only on semantic change so a converged sync
  * never reformats Claude's own state file.
@@ -175,44 +225,16 @@ function syncClaudeMcpServers(
 		return;
 	}
 
-	let mutated = false;
-	const nextTracked: Record<string, string> = {};
-
-	// Reap entries we wrote that are no longer desired — unless the user
-	// edited them since, in which case ownership transfers to the user.
-	for (const [name, writtenHash] of Object.entries(tracked)) {
-		if (name in desired) continue;
-		const current = container[name];
-		if (current !== undefined && hashMcpServerValue(current) === writtenHash) {
-			delete container[name];
-			mutated = true;
-		}
-	}
-
-	for (const [name, config] of Object.entries(desired)) {
-		const value = toClaudeServerValue(config);
-		const valueHash = hashMcpServerValue(value);
-		const current = container[name];
-
-		if (current !== undefined && !(name in tracked)) {
-			// The user defined this server themselves before we got here;
-			// their entry wins and stays theirs.
-			continue;
-		}
-		if (
-			current !== undefined &&
-			name in tracked &&
-			hashMcpServerValue(current) !== tracked[name]
-		) {
-			// We wrote it once, the user edited it since: theirs now.
-			continue;
-		}
-		if (current === undefined || hashMcpServerValue(current) !== valueHash) {
-			container[name] = value;
-			mutated = true;
-		}
-		nextTracked[name] = valueHash;
-	}
+	const { mutated, nextTracked } = mergeLedgerOwnedEntries(
+		container,
+		Object.fromEntries(
+			Object.entries(desired).map(([name, config]) => [
+				name,
+				toClaudeServerValue(config),
+			]),
+		),
+		tracked,
+	);
 
 	// Concurrency guard: Claude Code rewrites this file while it runs, and a
 	// write landing between our read and our write would be clobbered wholesale
@@ -252,6 +274,147 @@ function syncClaudeMcpServers(
 
 	writeFileIfChanged(filePath, JSON.stringify(root, null, 2), 0o600);
 	console.log("[agent-setup] Updated Claude mcpServers");
+}
+
+/**
+ * Server names Prime Agent keeps for its built-in integrations. An entry under
+ * one of them disables that integration instead of reaching our endpoint.
+ */
+const PRIME_AGENT_RESERVED_SERVER_NAMES: Record<string, true> = {
+	linear: true,
+	notion: true,
+};
+
+export function primeAgentServerName(name: string): string {
+	return PRIME_AGENT_RESERVED_SERVER_NAMES[name] ? `superset-${name}` : name;
+}
+
+/**
+ * Prime Agent's dialect, or null when it cannot express the server. It has no
+ * headers helper, so a credentialed endpoint runs through `superset auth
+ * mcp-proxy` over stdio, which resolves the CLI's current token per request.
+ * Its stdio `env` takes only `{ env: NAME }` references, never literal values.
+ */
+export function toPrimeAgentServerValue(
+	config: PluginMcpServerConfig,
+	supersetHomeDir: string,
+): Record<string, unknown> | null {
+	if ("url" in config) {
+		if (config.headersHelper) {
+			return {
+				type: "stdio",
+				command: path.join(supersetHomeDir, "bin", "superset"),
+				args: ["auth", "mcp-proxy", config.url],
+			};
+		}
+		return {
+			type: "http",
+			url: config.url,
+			...(config.headers ? { headers: config.headers } : {}),
+		};
+	}
+	const env: Record<string, { env: string }> = {};
+	for (const [key, value] of Object.entries(config.env ?? {})) {
+		const reference = value.match(/^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?$/)?.[1];
+		if (!reference) return null;
+		env[key] = { env: reference };
+	}
+	return {
+		type: "stdio",
+		command: config.command,
+		...(config.args ? { args: [...config.args] } : {}),
+		...(Object.keys(env).length > 0 ? { env } : {}),
+	};
+}
+
+/**
+ * Merges desired entries into Prime Agent's global `settings.json` under
+ * ledger ownership. Prime Agent rewrites that file while it runs, guarded by
+ * proper-lockfile's `<file>.lock` directory; we take the same lock and skip
+ * the round when Prime Agent holds it. Nothing is created for a machine
+ * without a Prime Agent dir.
+ */
+function syncPrimeAgentMcpServers(
+	desired: Record<string, PluginMcpServerConfig>,
+	supersetHomeDir: string,
+	ledger: McpLedger,
+	agentDir: string,
+): void {
+	const filePath = path.join(agentDir, "settings.json");
+	const tracked = ledger.files[filePath] ?? {};
+	if (!fs.existsSync(agentDir)) {
+		delete ledger.files[filePath];
+		return;
+	}
+	if (!fs.existsSync(filePath) && Object.keys(desired).length === 0) {
+		delete ledger.files[filePath];
+		return;
+	}
+
+	const lockPath = `${filePath}.lock`;
+	try {
+		fs.mkdirSync(lockPath);
+	} catch (error) {
+		if ((error as NodeJS.ErrnoException).code === "EEXIST") {
+			console.warn(
+				`[agent-setup] ${filePath} is locked by Prime Agent; skipping this round`,
+			);
+			return;
+		}
+		throw error;
+	}
+	try {
+		let root: Record<string, unknown> = {};
+		if (fs.existsSync(filePath)) {
+			try {
+				const parsed = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+				if (!isPlainObject(parsed)) {
+					console.warn(
+						`[agent-setup] Expected ${filePath} to contain a JSON object; skipping Prime Agent MCP sync`,
+					);
+					return;
+				}
+				root = parsed;
+			} catch (error) {
+				console.warn(
+					`[agent-setup] Could not parse existing ${filePath}; skipping Prime Agent MCP sync:`,
+					error,
+				);
+				return;
+			}
+		}
+		if ("mcpServers" in root && !isPlainObject(root.mcpServers)) {
+			console.warn(
+				`[agent-setup] ${filePath} has a non-object mcpServers; skipping Prime Agent MCP sync`,
+			);
+			return;
+		}
+		const container = (root.mcpServers ?? {}) as Record<string, unknown>;
+
+		const values: Record<string, unknown> = {};
+		for (const [name, config] of Object.entries(desired)) {
+			const value = toPrimeAgentServerValue(config, supersetHomeDir);
+			if (value) values[primeAgentServerName(name)] = value;
+		}
+		const { mutated, nextTracked } = mergeLedgerOwnedEntries(
+			container,
+			values,
+			tracked,
+		);
+
+		if (Object.keys(nextTracked).length === 0) {
+			delete ledger.files[filePath];
+		} else {
+			ledger.files[filePath] = nextTracked;
+		}
+		if (!mutated) return;
+
+		root.mcpServers = container;
+		writeFileIfChanged(filePath, JSON.stringify(root, null, 2), 0o600);
+		console.log("[agent-setup] Updated Prime Agent mcpServers");
+	} finally {
+		fs.rmdirSync(lockPath);
+	}
 }
 
 export const CODEX_MARKER_START = "# >>> superset managed mcp servers >>>";
@@ -330,10 +493,11 @@ function codexMcpSpec(
 
 /**
  * Server names the user configured in agent configs *outside* Superset:
- * `mcpServers` keys in ~/.claude.json the ledger doesn't track, plus
- * `[mcp_servers.<name>]` tables in Codex's config.toml outside our managed
- * block. Read-only — lets the catalog mark such plugins "already set up"
- * instead of offering Install. Unreadable files contribute nothing.
+ * `mcpServers` keys in ~/.claude.json and Prime Agent's settings.json the
+ * ledger doesn't track, plus `[mcp_servers.<name>]` tables in Codex's
+ * config.toml outside our managed block. Read-only — lets the catalog mark
+ * such plugins "already set up" instead of offering Install. Unreadable files
+ * contribute nothing.
  */
 export function readExternallyConfiguredMcpServers(
 	options: SyncManagedMcpServersOptions = {},
@@ -343,9 +507,18 @@ export function readExternallyConfiguredMcpServers(
 	const ledger = readLedger(supersetHomeDir);
 	const byName = new Map<string, ExternalMcpServer>();
 
-	const record = (name: string, config: unknown, source: string) => {
-		if (byName.has(name) || !isPlainObject(config)) return;
-		byName.set(name, {
+	// `key` defaults to the name: across Claude, Cursor and Codex the first
+	// source wins. Prime Agent's entries get their own keys, because its
+	// writer filters on Prime Agent's records alone and a same-named Claude
+	// server would otherwise hide one.
+	const record = (
+		name: string,
+		config: unknown,
+		source: string,
+		key: string = name,
+	) => {
+		if (byName.has(key) || !isPlainObject(config)) return;
+		byName.set(key, {
 			name,
 			...(typeof config.url === "string" ? { url: config.url } : {}),
 			...(typeof config.command === "string"
@@ -462,6 +635,39 @@ export function readExternallyConfiguredMcpServers(
 		}
 	}
 
+	const primeAgentDir = getPrimeAgentDir(homeDir);
+	const primeAgentPath = path.join(primeAgentDir, "settings.json");
+	const primeAgentTracked = ledger.files[primeAgentPath] ?? {};
+	if (fs.existsSync(primeAgentPath)) {
+		try {
+			const root = JSON.parse(fs.readFileSync(primeAgentPath, "utf-8"));
+			if (isPlainObject(root) && isPlainObject(root.mcpServers)) {
+				for (const [name, config] of Object.entries(root.mcpServers)) {
+					if (!(name in primeAgentTracked)) {
+						record(name, config, "Prime Agent", `prime-agent:${name}`);
+					}
+				}
+			}
+		} catch {
+			// Unparseable file: report nothing rather than guessing.
+		}
+	}
+	// A login to a built-in integration lives in auth.json as `mcp:<name>`;
+	// the agent already has that server, so ours would be a second copy.
+	const primeAgentAuthPath = path.join(primeAgentDir, "auth.json");
+	if (fs.existsSync(primeAgentAuthPath)) {
+		try {
+			const auth = JSON.parse(fs.readFileSync(primeAgentAuthPath, "utf-8"));
+			for (const name of Object.keys(PRIME_AGENT_RESERVED_SERVER_NAMES)) {
+				if (isPlainObject(auth) && `mcp:${name}` in auth) {
+					record(name, {}, "Prime Agent", `prime-agent:${name}`);
+				}
+			}
+		} catch {
+			// Unreadable: no evidence of a built-in login.
+		}
+	}
+
 	return [...byName.values()].sort((a, b) => a.name.localeCompare(b.name));
 }
 
@@ -506,6 +712,12 @@ export function syncManagedMcpServers(
 		desiredForScope((source) => source === "Claude Code"),
 		homeDir,
 		ledger,
+	);
+	syncPrimeAgentMcpServers(
+		desiredForScope((source) => source === "Prime Agent"),
+		supersetHomeDir,
+		ledger,
+		getPrimeAgentDir(homeDir),
 	);
 	writeLedger(supersetHomeDir, ledger);
 

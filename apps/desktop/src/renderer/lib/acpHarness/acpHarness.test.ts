@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { acpHarnessForPreset } from "./acpHarness";
+import { acpHarnessForPreset, acpHarnessLoadsSessions } from "./acpHarness";
 
 describe("acpHarnessForPreset", () => {
 	it("maps a preset to its harness", () => {
@@ -18,5 +18,14 @@ describe("acpHarnessForPreset", () => {
 		expect(acpHarnessForPreset("amp")).toBeUndefined();
 		expect(acpHarnessForPreset(null)).toBeUndefined();
 		expect(acpHarnessForPreset(undefined)).toBeUndefined();
+	});
+});
+
+describe("acpHarnessLoadsSessions", () => {
+	it("keeps a terminal session of an agent without session/load in its terminal", () => {
+		expect(acpHarnessForPreset("prime-agent")).toBe("prime-agent-acp");
+		expect(acpHarnessLoadsSessions("prime-agent")).toBe(false);
+		expect(acpHarnessLoadsSessions("claude")).toBe(true);
+		expect(acpHarnessLoadsSessions("amp")).toBe(false);
 	});
 });

@@ -36,6 +36,7 @@ import {
 	createOpenCodePlugin,
 	createOpenCodeWrapper,
 	createPiExtension,
+	createPrimeAgentExtension,
 	createUfoWrapper,
 	createVibeHooksToml,
 	createVibeWrapper,
@@ -52,6 +53,7 @@ import {
 	removeMuseManagedHooks,
 	removeOmpExtension,
 	removePiExtension,
+	removePrimeAgentExtension,
 	removeVibeManagedHooks,
 } from "./agent-wrappers";
 import { createArtifactGuardScript } from "./artifact-guard-hook";
@@ -111,6 +113,10 @@ const AGENT_SETUP_DEFINITIONS: Record<
 	pi: {
 		setup: [createPiExtension],
 		teardown: [removePiExtension],
+	},
+	"prime-agent": {
+		setup: [createPrimeAgentExtension],
+		teardown: [removePrimeAgentExtension],
 	},
 	"cursor-agent": {
 		setup: [
