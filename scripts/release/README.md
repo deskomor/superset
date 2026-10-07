@@ -117,15 +117,15 @@ Every action is reachable via flags; prompts only fire on a TTY. Pass a version
 explicitly and add `--republish` to skip the tag-exists prompt. Flows also export
 `runDesktop(args)` / `runCli(args)` for programmatic use.
 
-## Private fork (Linux)
+## Private repository (Linux)
 
-`bun scripts/release/fork-linux.ts <owner/repo>` releases this checkout to your
+`bun scripts/release/linux.ts <owner/repo>` releases this checkout to your
 own GitHub repository instead of `superset-sh/superset`. It tags HEAD
 `v<version>`, one patch above both the checkout and the repo's latest release,
 and pushes `main` and the tag. In that repository the tag runs
-`.github/workflows/fork-release-linux.yml`, which sets the unified version from
+`.github/workflows/release-linux.yml`, which sets the unified version from
 the tag, builds the AppImage with `SUPERSET_UPDATE_GITHUB_REPO=<owner/repo>`
-baked in, and publishes it with `latest-linux.yml`. Disable upstream's other
+baked in, and publishes it with `latest-linux.yml`. Disable the other
 workflows in that repository; only this one should run there.
 
 An app built this way checks that repository's latest release through the

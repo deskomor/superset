@@ -60,7 +60,7 @@ function isPrereleaseBuild(): boolean {
 const IS_PRERELEASE = isPrereleaseBuild();
 const IS_AUTO_UPDATE_PLATFORM = PLATFORM.IS_MAC || PLATFORM.IS_LINUX;
 
-// Baked in at build time; a fork that publishes its own releases sets it.
+// Baked in at build time by builds that publish their own releases.
 const UPDATE_GITHUB_REPO = process.env.SUPERSET_UPDATE_GITHUB_REPO || undefined;
 let feedDescription = UPDATE_GITHUB_REPO ?? "superset-sh/superset";
 

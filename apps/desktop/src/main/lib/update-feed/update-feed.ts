@@ -17,7 +17,7 @@ export type UpdateFeed =
 	  };
 
 /**
- * Where updates come from. Upstream builds read Superset's public release
+ * Where updates come from: by default, Superset's public release
  * assets. A build with `SUPERSET_UPDATE_GITHUB_REPO` ("owner/repo") reads that
  * repository's latest release through the GitHub API instead, which a private
  * repository needs; with no token there is no feed, and the check is skipped.

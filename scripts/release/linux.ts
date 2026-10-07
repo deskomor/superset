@@ -3,11 +3,11 @@
  * Release this checkout to a private GitHub repository whose releases the
  * app's updater reads (see update-feed.ts).
  *
- *   bun scripts/release/fork-linux.ts <owner/repo>
+ *   bun scripts/release/linux.ts <owner/repo>
  *
  * Tags HEAD `v<version>`, one patch above both the checkout and the repo's
  * latest release, and pushes the branch and tag. The tag runs
- * .github/workflows/fork-release-linux.yml there, which builds the AppImage
+ * .github/workflows/release-linux.yml there, which builds the AppImage
  * with SUPERSET_UPDATE_GITHUB_REPO baked in and publishes it with its
  * latest-linux.yml manifest.
  */
@@ -17,7 +17,7 @@ import { DESKTOP_PACKAGE, incrementPatch, readVersion, repoRoot } from "./lib";
 
 const repo = process.argv[2];
 if (!repo || !/^[\w.-]+\/[\w.-]+$/.test(repo)) {
-	console.error("usage: bun scripts/release/fork-linux.ts <owner/repo>");
+	console.error("usage: bun scripts/release/linux.ts <owner/repo>");
 	process.exit(1);
 }
 
@@ -50,5 +50,5 @@ console.log(
 await $`git -C ${root} tag ${tag}`;
 await $`git -C ${root} push ${`https://github.com/${repo}.git`} HEAD:main ${tag}`;
 console.log(
-	`Building in Actions: https://github.com/${repo}/actions/workflows/fork-release-linux.yml`,
+	`Building in Actions: https://github.com/${repo}/actions/workflows/release-linux.yml`,
 );

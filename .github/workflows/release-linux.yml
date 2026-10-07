@@ -1,8 +1,7 @@
-name: Fork release (Linux)
+name: Release (Linux)
 
-# Builds the Linux AppImage for a private fork and publishes it as a GitHub
-# release, which the fork's desktop app reads as its update feed. Pushed by
-# scripts/release/fork-linux.ts; upstream's own workflows stay disabled here.
+# Builds the Linux AppImage and publishes it as a GitHub release, which the
+# desktop app reads as its update feed. Pushed by scripts/release/linux.ts.
 on:
   push:
     tags: ["v*"]
