@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} 전"
 
+msgid "{done} of {total} tasks checked"
+msgstr "{total}개 중 {done}개 작업 완료"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {#초 동안 생각함} other {#초 동안 생각함}}"
 
@@ -1472,6 +1475,10 @@ msgstr "조직의 고유 식별자 (이름에서 자동 생성)"
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "중단됨"
+
 msgid "About"
 msgstr "회사 소개"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "활성"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "진행 중"
+
 msgid "active {lastActive}"
 msgstr "{lastActive} 활동"
 
@@ -1607,8 +1618,14 @@ msgstr "댓글 추가…"
 msgid "Add a description…"
 msgstr "설명 추가…"
 
+msgid "Add a journal entry"
+msgstr "일지 항목 추가"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "프로젝트 설정에서 라이프사이클 실행 스크립트를 추가하거나, 터미널 스크립트를 워크스페이스 실행으로 지정하세요."
+
+msgid "Add a note"
+msgstr "메모 추가"
 
 msgid "Add a project to see GitHub issues."
 msgstr "GitHub 이슈를 보려면 프로젝트를 추가하세요."
@@ -1618,6 +1635,15 @@ msgstr "풀 리퀘스트를 보려면 프로젝트를 추가하세요."
 
 msgid "Add a short summary…"
 msgstr "짧은 요약 추가…"
+
+msgid "Add a subtask"
+msgstr "하위 작업 추가"
+
+msgid "Add a summary"
+msgstr "요약 추가"
+
+msgid "Add a task"
+msgstr "작업 추가"
 
 msgid "Add account"
 msgstr "계정 추가"
@@ -1689,11 +1715,17 @@ msgstr "댓글을 수신할 에이전트 추가"
 msgid "Add member"
 msgstr "멤버 추가"
 
+msgid "Add milestone"
+msgstr "마일스톤 추가"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "사이드바 메뉴에서 하나 추가해 시작하세요."
 
 msgid "Add photos or files"
 msgstr "사진 또는 파일 추가"
+
+msgid "Add plan"
+msgstr "계획 추가"
 
 msgid "Add project"
 msgstr "프로젝트 추가"
@@ -1716,6 +1748,9 @@ msgstr "스크립트 추가"
 msgid "Add setup commands, one per line..."
 msgstr "설정 명령을 한 줄에 하나씩 추가하세요..."
 
+msgid "Add subtask"
+msgstr "하위 작업 추가"
+
 msgid "Add tag…"
 msgstr "태그 추가…"
 
@@ -1736,6 +1771,9 @@ msgstr "빠진 테스트 추가하기"
 
 msgid "Add this label"
 msgstr "이 라벨 추가"
+
+msgid "Add to chat"
+msgstr "채팅에 추가"
 
 msgid "Add to Dictionary"
 msgstr "사전에 추가"
@@ -2446,6 +2484,9 @@ msgstr "승인 요청"
 msgid "Ask for this to be removed"
 msgstr "삭제 요청"
 
+msgid "Ask in side chat"
+msgstr "사이드 채팅에서 질문"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "에이전트에게 요청하고, @로 파일을 언급하고, /명령을 실행하세요"
 
@@ -2788,6 +2829,9 @@ msgstr "백그라운드 작업 및 페이지"
 
 msgid "Backlog"
 msgstr "백로그"
+
+msgid "Backlog actions"
+msgstr "백로그 작업"
 
 msgid "Badge"
 msgstr "배지"
@@ -3896,6 +3940,9 @@ msgstr "모든 파일 접기"
 msgid "Collapse file"
 msgstr "파일 접기"
 
+msgid "Collapse plan"
+msgstr "계획 접기"
+
 msgid "Collapse project"
 msgstr "프로젝트 접기"
 
@@ -4396,6 +4443,9 @@ msgstr "대화"
 msgid "Conversation · Message"
 msgstr "대화 · 메시지"
 
+msgid "Conversations"
+msgstr "대화"
+
 msgid "Conversion"
 msgstr "전환"
 
@@ -4404,6 +4454,15 @@ msgstr "이전 단계 대비 전환율"
 
 msgid "Conversion so far"
 msgstr "누적 전환율"
+
+msgid "Convert to note"
+msgstr "메모로 변환"
+
+msgid "Convert to plan"
+msgstr "계획으로 변환"
+
+msgid "Convert to task"
+msgstr "작업으로 변환"
 
 msgid "Converted"
 msgstr "전환됨"
@@ -4429,6 +4488,9 @@ msgstr "링크 복사됨"
 
 msgid "Copied terminal ID"
 msgstr "터미널 ID 복사됨"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "로드맵을 Markdown으로 복사했습니다"
 
 msgid "Copied to clipboard."
 msgstr "클립보드에 복사했습니다."
@@ -4841,6 +4903,9 @@ msgstr "경로를 복사할 수 없습니다"
 msgid "Couldn't copy the image"
 msgstr "이미지를 복사하지 못했습니다"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "로드맵을 복사하지 못했습니다"
+
 msgid "Couldn't create workspace"
 msgstr "워크스페이스를 만들지 못했습니다"
 
@@ -4917,6 +4982,9 @@ msgstr "이 클라우드 워크스페이스에 연결하지 못했습니다. 아
 msgid "Couldn't reach workspace"
 msgstr "워크스페이스에 연결하지 못했습니다"
 
+msgid "Couldn't read the session to fork it"
+msgstr "분기할 세션을 읽을 수 없습니다"
+
 msgid "Couldn't read this terminal's context."
 msgstr "이 터미널의 컨텍스트를 읽을 수 없습니다."
 
@@ -4990,6 +5058,9 @@ msgstr "클라우드 워크스페이스를 시작하지 못했습니다"
 msgid "Couldn't start design mode on this page"
 msgstr "이 페이지에서 디자인 모드를 시작할 수 없습니다"
 
+msgid "Couldn't start the agent"
+msgstr "에이전트를 시작하지 못했습니다"
+
 msgid "Couldn't start workspace"
 msgstr "워크스페이스를 시작하지 못했습니다"
 
@@ -5013,6 +5084,9 @@ msgstr "풀 리퀘스트를 업데이트하지 못했습니다"
 
 msgid "Couldn't update the queue"
 msgstr "대기열을 업데이트할 수 없습니다"
+
+msgid "Couldn't update the Roadmap"
+msgstr "로드맵을 업데이트하지 못했습니다"
 
 msgid "Couldn't update thread"
 msgstr "스레드를 업데이트하지 못했습니다"
@@ -5053,8 +5127,14 @@ msgstr "데스크톱 작업 화면에서 새 작업을 만듭니다."
 msgid "Create a new workspace"
 msgstr "새 워크스페이스를 만듭니다"
 
+msgid "Create a plan"
+msgstr "계획 만들기"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "작업과 클라우드 워크스페이스를 묶는 프로젝트를 만드세요."
+
+msgid "Create a task"
+msgstr "작업 만들기"
 
 msgid "Create a task for fixing the login bug"
 msgstr "로그인 버그를 고치는 작업을 만들어 줘"
@@ -5539,6 +5619,9 @@ msgstr "이미지 삭제"
 msgid "Delete local branch on workspace removal"
 msgstr "워크스페이스 삭제 시 로컬 브랜치 삭제"
 
+msgid "Delete milestone"
+msgstr "마일스톤 삭제"
+
 msgid "Delete organization"
 msgstr "조직 삭제"
 
@@ -5547,6 +5630,9 @@ msgstr "페이지 삭제"
 
 msgid "Delete permanently"
 msgstr "영구 삭제"
+
+msgid "Delete plan"
+msgstr "계획 삭제"
 
 msgid "Delete project"
 msgstr "프로젝트 삭제"
@@ -5710,6 +5796,9 @@ msgstr "필요한 것을 설명하세요. Superset이 그 작업을 위한 격�
 
 msgid "Describe what you'd like to see built…"
 msgstr "만들어졌으면 하는 것을 설명해 주세요…"
+
+msgid "Describe where this project is going."
+msgstr "이 프로젝트가 나아갈 방향을 적어 주세요."
 
 msgid "Description"
 msgstr "설명"
@@ -5996,6 +6085,10 @@ msgstr "저장 안 함"
 msgid "Done"
 msgstr "완료"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "완료"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "완료 — 프리셋 바에서 쓰던 테두리 칩 스타일이 이제 모든 툴팁의 기본값이 되었고, 복사해 붙여 넣은 재정의는 제거했습니다 (총 −90줄)."
 
@@ -6239,6 +6332,12 @@ msgstr "실행 스크립트 편집"
 
 msgid "Edit script"
 msgstr "스크립트 편집"
+
+msgid "Edit summary"
+msgstr "요약 편집"
+
+msgid "Edit vision"
+msgstr "비전 편집"
 
 msgid "Edit your comment…"
 msgstr "댓글 수정…"
@@ -6537,6 +6636,9 @@ msgstr "모든 파일 펼치기"
 msgid "Expand file"
 msgstr "파일 펼치기"
 
+msgid "Expand plan"
+msgstr "계획 펼치기"
+
 msgid "Expand project"
 msgstr "프로젝트 펼치기"
 
@@ -6554,9 +6656,6 @@ msgstr "실험실"
 
 msgid "Expired"
 msgstr "만료됨"
-
-msgid "Explain"
-msgstr "설명"
 
 msgid "Explain how this repository works…"
 msgstr "이 리포지토리가 어떻게 동작하는지 설명…"
@@ -6597,6 +6696,12 @@ msgstr "외부 편집기"
 
 msgid "extra ${used} of ${limit}"
 msgstr "${limit} 중 추가 ${used}"
+
+msgid "Extra instructions"
+msgstr "추가 지침"
+
+msgid "Extra instructions (optional)"
+msgstr "추가 지침(선택 사항)"
 
 msgid "Extra small"
 msgstr "아주 작음"
@@ -7480,6 +7585,9 @@ msgstr "{domain} 잊기"
 
 msgid "Fork args"
 msgstr "포크 인자"
+
+msgid "Fork from here"
+msgstr "여기서 분기"
 
 msgid "Fork session"
 msgstr "세션 포크"
@@ -8673,6 +8781,9 @@ msgstr "가입일"
 msgid "Joining…"
 msgstr "참가하는 중…"
 
+msgid "Journal ({count})"
+msgstr "일지({count})"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "클릭 한 번으로 즐겨 쓰는 에디터로 이동하세요. VS Code, Cursor, Xcode, JetBrains IDE, 또는 아무 터미널에서든 worktree를 원하는 곳에서 엽니다."
 
@@ -9208,6 +9319,9 @@ msgstr "리뷰를 불러오는 중..."
 msgid "Loading terminal scripts..."
 msgstr "터미널 스크립트를 불러오는 중..."
 
+msgid "Loading the Roadmap…"
+msgstr "로드맵을 불러오는 중…"
+
 msgid "Loading usage history…"
 msgstr "사용량 기록을 불러오는 중…"
 
@@ -9598,6 +9712,24 @@ msgstr "2026년 중반"
 msgid "Mid 2027"
 msgstr "2027년 중반"
 
+msgid "Milestone"
+msgstr "마일스톤"
+
+msgid "Milestone actions"
+msgstr "마일스톤 작업"
+
+msgid "Milestone status"
+msgstr "마일스톤 상태"
+
+msgid "Milestone summary"
+msgstr "마일스톤 요약"
+
+msgid "Milestone title"
+msgstr "마일스톤 제목"
+
+msgid "Milestones"
+msgstr "마일스톤"
+
 msgid "Mine"
 msgstr "내 자동화"
 
@@ -9761,6 +9893,9 @@ msgstr "{0}에 대한 추가 작업"
 msgid "More create options"
 msgstr "추가 생성 옵션"
 
+msgid "More details"
+msgstr "자세히 설명"
+
 msgid "More options"
 msgstr "추가 옵션"
 
@@ -9783,6 +9918,9 @@ msgstr "소프트웨어 역사의 대부분"
 msgid "Move {count} to Group"
 msgstr "{count}개를 그룹으로 이동"
 
+msgid "Move down"
+msgstr "아래로 이동"
+
 msgid "Move to Center"
 msgstr "가운데로 이동"
 
@@ -9794,6 +9932,9 @@ msgstr "오른쪽으로 이동"
 
 msgid "Move to Tab"
 msgstr "탭으로 이동"
+
+msgid "Move up"
+msgstr "위로 이동"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "워크스페이스로 새 그룹 만들기"
 msgid "New issue"
 msgstr "새 이슈"
 
+msgid "New milestone title"
+msgstr "새 마일스톤 제목"
+
 msgid "New page"
 msgstr "새 페이지"
 
 msgid "New password (min 8 characters)"
 msgstr "새 비밀번호 (최소 8자)"
+
+msgid "New plan title"
+msgstr "새 계획 제목"
 
 msgid "New project"
 msgstr "새 프로젝트"
@@ -10417,11 +10564,17 @@ msgstr "머지된 풀 리퀘스트가 없습니다."
 msgid "No messages yet"
 msgstr "아직 메시지가 없습니다"
 
+msgid "No milestone"
+msgstr "마일스톤 없음"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "여기에서 사용할 수 있는 모바일 시뮬레이터가 없습니다. Limrun을 지원하는 클라우드 샌드박스 또는 로컬 iOS/Android 툴체인이 필요합니다."
 
 msgid "No name on file"
 msgstr "등록된 이름 없음"
+
+msgid "No notes yet."
+msgstr "아직 메모가 없습니다."
 
 msgid "No open issues found."
 msgstr "열린 이슈를 찾을 수 없습니다."
@@ -10805,6 +10958,12 @@ msgstr "정렬 안 됨"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "업데이트 없음"
+
+msgid "Note"
+msgstr "메모"
+
+msgid "Note (optional)"
+msgstr "메모(선택 사항)"
 
 msgid "Notes"
 msgstr "노트"
@@ -11464,6 +11623,9 @@ msgstr "워크스페이스에서 작업을 열"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "'다음에서 열기' 메뉴에서 선택한 앱(VS Code, Cursor 등)에서 워크스페이스를 엽니다"
 
+msgid "Open this conversation"
+msgstr "이 대화 열기"
+
 msgid "Open this run's workspace"
 msgstr "이 실행의 워크스페이스 열기"
 
@@ -11620,6 +11782,9 @@ msgstr "다른 호스트"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "다른 사람이 이 프로젝트를 사용 중입니다. 확인하려면 <0>{projectName}</0>을(를) 입력하세요."
+
+msgid "Other plans"
+msgstr "기타 계획"
 
 msgid "Other Team Members"
 msgstr "다른 팀 멤버"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "일시 중지됨"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "일시 중지됨"
+
 msgid "Pay now"
 msgstr "지금 결제"
 
@@ -12018,18 +12187,35 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "플랜"
 
+msgid "Plan actions"
+msgstr "계획 작업"
+
 msgid "Plan restored"
 msgstr "플랜이 복원되었습니다"
+
+msgid "Plan status"
+msgstr "계획 상태"
+
+msgid "Plan title"
+msgstr "계획 제목"
 
 msgctxt "project state"
 msgid "Planned"
 msgstr "계획됨"
+
+msgctxt "roadmap status"
+msgid "Planned"
+msgstr "예정"
 
 msgid "Planning the tooltip refactor"
 msgstr "툴팁 리팩터링 계획 중"
 
 msgid "Plans"
 msgstr "플랜"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "계획"
 
 msgid "Plant Floor"
 msgstr "작업 현장"
@@ -12372,6 +12558,12 @@ msgstr "프로젝트를 찾을 수 없습니다."
 
 msgid "Project not set up on this host"
 msgstr "이 호스트에 프로젝트가 설정되지 않았습니다"
+
+msgid "Project notes"
+msgstr "프로젝트 노트"
+
+msgid "Project notes (Markdown)"
+msgstr "프로젝트 노트(Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "프로젝트 준비 완료 — 사이드바에서 열어 보세요."
@@ -13032,8 +13224,14 @@ msgstr "그룹 이름 변경"
 msgid "Rename host"
 msgstr "호스트 이름 변경"
 
+msgid "Rename milestone"
+msgstr "마일스톤 이름 변경"
+
 msgid "Rename page"
 msgstr "페이지 이름 변경"
+
+msgid "Rename plan"
+msgstr "계획 이름 변경"
 
 msgid "Rename session"
 msgstr "세션 이름 변경"
@@ -13564,6 +13762,9 @@ msgstr "알림음"
 
 msgid "Roadmap"
 msgstr "로드맵"
+
+msgid "Roadmap actions"
+msgstr "로드맵 작업"
 
 msgid "Rocket"
 msgstr "로켓"
@@ -14252,6 +14453,9 @@ msgstr "선택한 에이전트는 터미널 에이전트가 아닙니다"
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "선택한 이슈가 여러 리포지토리에 걸쳐 있습니다. 실행하려면 단일 리포지토리의 이슈만 선택하세요."
+
+msgid "Selected text actions"
+msgstr "선택한 텍스트 작업"
 
 msgid "Selected workspace actions"
 msgstr "선택한 워크스페이스 작업"
@@ -15150,6 +15354,9 @@ msgstr "하루에 늘어난 스타"
 msgid "Stars gained per week"
 msgstr "한 주에 늘어난 스타"
 
+msgid "Start"
+msgstr "시작"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "시작일"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId가 워크스페이스의 호스트와 일치하지 않습�
 msgid "Task"
 msgstr "작업"
 
+msgid "Task actions"
+msgstr "작업 메뉴"
+
 msgid "Task ID copied"
 msgstr "작업 ID를 복사했습니다"
 
@@ -16053,6 +16263,9 @@ msgstr "이 주소에 연결할 수 없습니다"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "에이전트가 대화를 복사하고 분기는 여기서 열립니다"
 
+msgid "The agent did not start in time"
+msgstr "에이전트가 제시간에 시작되지 않았습니다"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "에이전트가 티켓부터 차이까지 작업을 맡습니다. 사람은 키 입력이 아니라 결과를 리뷰합니다. 관심은 코드를 쓰는 데서 일을 명세하고 판단하는 데로 옮겨 갑니다. 엔지니어 한 명이 격리된 워크스페이스에서 여러 에이전트를 동시에 돌립니다."
 
@@ -16070,6 +16283,9 @@ msgstr "연결된 기기에 지금 접근할 수 없습니다"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "자동화 소유자가 더 이상 이 조직에서 클라우드 워크스페이스를 사용할 수 없습니다. 소유자에게 액세스 권한을 확인해 달라고 요청하거나, 기기에서 자동화를 실행하세요."
+
+msgid "The backlog does not count toward plan progress."
+msgstr "백로그는 계획 진행률에 포함되지 않습니다."
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "최고의 에이전트는 바뀝니다.<0/>워크플로는 그럴 필요 없습니다."
@@ -16277,6 +16493,12 @@ msgstr "요청이 실패했습니다."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "그 대응은 이렇습니다. 에이전트가 에이전트를 리뷰하고, 사람은 전부 읽는 대신 표본만 확인합니다. 신뢰는 차이 하나하나가 아니라 통계적으로 쌓입니다."
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "로드맵이 다른 곳에서 변경되었습니다. 최신 버전을 표시합니다."
+
+msgid "The Roadmap is not available here"
+msgstr "여기서는 로드맵을 사용할 수 없습니다"
+
 msgid "The rubric"
 msgstr "평가 기준표"
 
@@ -16449,6 +16671,9 @@ msgstr "워크스페이스와 해당 터미널을 닫습니다. 프로젝트의 
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "이 클라우드 워크스페이스를 깨우는 중입니다. 한동안 사용하지 않았다면 최대 30초가 걸릴 수 있습니다."
+
+msgid "This conversation is not open here"
+msgstr "이 대화는 여기에서 열려 있지 않습니다"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "재부팅/충돌 복구에 사용하는 저장된 스크롤백을 삭제합니다."
@@ -16712,6 +16937,9 @@ msgstr "스테이징된 모든 변경을 스테이징 해제하고 되돌립니�
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "스테이징된 변경 사항을 모두 스테이징 해제하고 되돌립니다. 스테이징된 새 파일은 삭제됩니다. 되돌릴 수 없습니다."
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "이 워크스페이스는 프로젝트에 속하지 않아 로드맵이 없습니다."
+
 msgid "This workspace has no project to branch from"
 msgstr "이 워크스페이스에는 분기할 프로젝트가 없습니다"
 
@@ -16726,6 +16954,9 @@ msgstr "이 워크스페이스의 호스트가 오프라인입니다"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "이 워크스페이스의 호스트는 이 앱이 지원하는 것보다 오래된 호스트 서비스를 실행 중입니다. 업데이트하면 다시 연결됩니다. 워크스페이스와 파일은 그대로 유지됩니다."
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "이 워크스페이스의 호스트는 로드맵을 지원하지 않는 이전 버전입니다. 여기서 이 프로젝트를 계획하려면 업데이트하세요."
 
 msgid "Thorough reasoning effort"
 msgstr "철저한 추론"
@@ -17666,6 +17897,9 @@ msgstr "사용량 보기"
 msgid "Violence or harassment"
 msgstr "폭력 또는 괴롭힘"
 
+msgid "Vision"
+msgstr "비전"
+
 msgid "Visitors"
 msgstr "방문자"
 
@@ -17927,6 +18161,12 @@ msgstr "콘텐츠 현황: 세션이 어느 페이지에서 시작되는지, 얼�
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "작성 기준이 된 대상이 페이지에 더 이상 없어 핀이 없습니다."
 
+msgid "What this milestone means"
+msgstr "이 마일스톤의 의미"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "이 계획이 제공하는 것(Markdown)"
+
 msgid "What We're Building"
 msgstr "우리가 만들고 있는 것"
 
@@ -17959,6 +18199,9 @@ msgstr "내 순위는 몇 위일까요?"
 
 msgid "Where does my code run?"
 msgstr "제 코드는 어디에서 실행되나요?"
+
+msgid "Where is this project going?"
+msgstr "이 프로젝트는 어디로 향하고 있나요?"
 
 msgid "Where serious teams are"
 msgstr "진지한 팀들이 있는 곳"
@@ -18040,6 +18283,18 @@ msgstr "업무용 이메일"
 
 msgid "Work from tickets"
 msgstr "티켓에서 바로 작업"
+
+msgid "Work on milestone"
+msgstr "마일스톤 작업 시작"
+
+msgid "Work on plan"
+msgstr "계획 작업 시작"
+
+msgid "Work on task"
+msgstr "작업 시작"
+
+msgid "Work on this"
+msgstr "이 항목 작업 시작"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "즐겨 쓰는 도구 전반에서 에이전트와 함께 작업하세요"

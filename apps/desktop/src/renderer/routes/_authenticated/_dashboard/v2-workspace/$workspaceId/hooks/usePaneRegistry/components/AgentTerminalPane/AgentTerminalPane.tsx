@@ -88,6 +88,11 @@ export function AgentTerminalPane({
 							]
 						: null
 				}
+				pendingDraft={data.pendingDraft ?? null}
+				onDraftPlaced={() => {
+					const { pendingDraft: _placed, ...rest } = data;
+					ctx.actions.updateData(rest);
+				}}
 				modelId={data.chatModelId}
 				modelLabel={data.chatModelLabel}
 				modeId={data.chatModeId}
@@ -112,6 +117,7 @@ export function AgentTerminalPane({
 						chatModeId: _mode,
 						pendingPrompt: _prompt,
 						pendingAttachments: _attachments,
+						pendingDraft: _draft,
 						...rest
 					} = data;
 					ctx.actions.updateData({

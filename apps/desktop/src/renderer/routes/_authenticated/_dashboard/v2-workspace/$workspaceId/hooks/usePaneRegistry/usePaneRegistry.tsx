@@ -20,6 +20,7 @@ import {
 	GitPullRequest,
 	GitPullRequestArrow,
 	Globe,
+	Map as MapIcon,
 	MessageSquare,
 	Monitor,
 	Smartphone,
@@ -102,6 +103,7 @@ import { PagePaneTitle } from "./components/PagePaneTitle";
 import { PullRequestPane } from "./components/PullRequestPane";
 import { PullRequestPaneHeaderExtras } from "./components/PullRequestPane/components/PullRequestPaneHeaderExtras";
 import { ReviewPane } from "./components/ReviewPane";
+import { RoadmapPane } from "./components/RoadmapPane";
 import { SubagentPane } from "./components/SubagentPane";
 import { TerminalPaneHeaderExtras } from "./components/TerminalPane/components/TerminalPaneHeaderExtras";
 import { TerminalPaneIcon } from "./components/TerminalPane/components/TerminalPaneIcon";
@@ -774,6 +776,17 @@ export function usePaneRegistry({
 				getTitle: () => t({ message: "Review" }),
 				renderPane: (ctx: RendererContext<PaneViewerData>) => (
 					<ReviewPane context={ctx} workspaceId={workspaceId} />
+				),
+			},
+			roadmap: {
+				getIcon: () => <MapIcon className="size-3.5" />,
+				getTitle: () => t({ message: "Roadmap" }),
+				renderPane: () => (
+					<RoadmapPane
+						workspaceId={workspaceId}
+						onCreateNewAgentSession={createNewAgentSession}
+						onFocusAgentTerminal={focusAgentTerminal}
+					/>
 				),
 			},
 			mobile: {

@@ -12,15 +12,19 @@ import {
 	v2AgentConfigsQueryOptions,
 } from "renderer/hooks/useV2AgentConfigs";
 import { acpHarnessForPreset } from "renderer/lib/acpHarness";
+import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { terminalQueryColors } from "renderer/lib/terminal/terminal-query-colors";
 import type { StoreApi } from "zustand/vanilla";
 import type { PaneViewerData, TerminalPaneData } from "../../types";
 import { focusOrAddTerminalPane } from "../../utils/focusTerminalPane";
+import { waitForTerminalAgent } from "../../utils/waitForTerminalAgent";
 
 export interface CreateNewAgentSessionInput {
 	configId: string;
 	placement: "split-pane" | "new-tab";
 	prompt: string;
+	/** Put in the new agent's input without sending. Use with an empty `prompt`. */
+	draft?: string;
 	forkSessionId?: string;
 	attachments?: Array<{ attachmentId: string; name: string; mimeType: string }>;
 	modelId?: string;
@@ -78,6 +82,7 @@ export function useAgentSessionLauncher({
 					agentSurface: "acp",
 					agent: { id: presetId },
 					...(input.prompt ? { pendingPrompt: input.prompt } : {}),
+					...(input.draft ? { pendingDraft: input.draft } : {}),
 					...(input.attachments?.length
 						? { pendingAttachments: input.attachments }
 						: {}),
@@ -144,6 +149,23 @@ export function useAgentSessionLauncher({
 				} else {
 					state.addTab({ panes: [pane] });
 				}
+				if (input.draft && hostUrl) {
+					const client = getHostServiceClientByUrl(hostUrl);
+					const binding = await waitForTerminalAgent({
+						client,
+						workspaceId,
+						terminalId,
+					});
+					if (!binding) {
+						throw new Error(t({ message: "The agent did not start in time" }));
+					}
+					await client.terminal.send.mutate({
+						workspaceId,
+						terminalId,
+						text: input.draft,
+						submit: false,
+					});
+				}
 				return { terminalId };
 			} catch (error) {
 				const description = errorMessage(
@@ -161,7 +183,7 @@ export function useAgentSessionLauncher({
 				return null;
 			}
 		},
-		[runAgent, store, workspaceId, t, appearance.theme, openAgentChat],
+		[runAgent, store, workspaceId, t, appearance.theme, openAgentChat, hostUrl],
 	);
 
 	const focusAgentTerminal = useCallback(

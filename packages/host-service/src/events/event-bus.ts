@@ -362,6 +362,12 @@ export class EventBus {
 		this.broadcast({ type: "project:changed", ...message });
 	}
 
+	broadcastRoadmapChanged(
+		message: Omit<Extract<ServerMessage, { type: "roadmap:changed" }>, "type">,
+	): void {
+		this.broadcast({ type: "roadmap:changed", ...message });
+	}
+
 	/**
 	 * Fan out tag-folder presentation changes for one scope (a project id, or
 	 * the Sessions lane). Its own channel rather than a field on the project

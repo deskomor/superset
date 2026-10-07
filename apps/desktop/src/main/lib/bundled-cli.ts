@@ -1,10 +1,15 @@
 import {
+	chmodSync,
 	closeSync,
+	copyFileSync,
 	existsSync,
 	lstatSync,
 	mkdirSync,
 	openSync,
+	readFileSync,
 	readSync,
+	renameSync,
+	statSync,
 	unlinkSync,
 	writeFileSync,
 } from "node:fs";
@@ -21,6 +26,37 @@ interface InstallBundledCliShimOptions {
 	binDir?: string;
 	bundledCliPath?: string | null;
 	platform?: NodeJS.Platform;
+	/**
+	 * Where to keep a copy of the CLI that outlives this launch. An AppImage
+	 * serves its files from a mount that disappears when the app quits, so a
+	 * shim pointing into it breaks every `superset` call in surviving terminals.
+	 */
+	stableDir?: string | null;
+}
+
+/** Copies the CLI to `stableDir` when the bundled one changed, and returns the copy. */
+export function copyBundledCliToStableDir(
+	bundledCliPath: string,
+	stableDir: string,
+	platform: NodeJS.Platform = process.platform,
+): string {
+	const target = path.join(stableDir, getBundledCliBinaryName(platform));
+	const stampPath = `${target}.source`;
+	const source = statSync(bundledCliPath);
+	const stamp = `${source.size}:${source.mtimeMs}`;
+	const current =
+		existsSync(target) && existsSync(stampPath)
+			? readFileSync(stampPath, "utf-8")
+			: null;
+	if (current === stamp) return target;
+
+	mkdirSync(stableDir, { recursive: true });
+	const temp = `${target}.${process.pid}.tmp`;
+	copyFileSync(bundledCliPath, temp);
+	chmodSync(temp, 0o755);
+	renameSync(temp, target);
+	writeFileSync(stampPath, stamp);
+	return target;
 }
 
 export function getBundledCliBinaryName(
@@ -147,11 +183,21 @@ export function installBundledCliShim(
 		return "skipped";
 	}
 
+	const stableDir =
+		options.stableDir === undefined
+			? process.env.APPIMAGE
+				? path.join(path.dirname(binDir), "lib")
+				: null
+			: options.stableDir;
+	const shimTarget = stableDir
+		? copyBundledCliToStableDir(bundledCliPath, stableDir, platform)
+		: bundledCliPath;
+
 	mkdirSync(binDir, { recursive: true });
 	if (existsSync(shimPath)) {
 		unlinkSync(shimPath);
 	}
-	writeFileSync(shimPath, buildBundledCliShim(bundledCliPath, platform), {
+	writeFileSync(shimPath, buildBundledCliShim(shimTarget, platform), {
 		mode: platform === "win32" ? 0o644 : 0o755,
 	});
 

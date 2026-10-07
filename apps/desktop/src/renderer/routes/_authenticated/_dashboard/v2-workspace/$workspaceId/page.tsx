@@ -65,7 +65,7 @@ import { useWindowWidth } from "./hooks/useWindowWidth";
 import { useWorkspaceFileNavigation } from "./hooks/useWorkspaceFileNavigation";
 import { useWorkspaceHotkeys } from "./hooks/useWorkspaceHotkeys";
 import { useWorkspacePaneOpeners } from "./hooks/useWorkspacePaneOpeners";
-import { ExplainSelectionProvider } from "./providers/ExplainSelectionProvider";
+import { SelectionActionsProvider } from "./providers/SelectionActionsProvider";
 import { WorkspaceGitStatusProvider } from "./providers/WorkspaceGitStatusProvider";
 import { FileDocumentStoreProvider } from "./state/fileDocumentStore";
 import type { ConsumeSearch, PaneViewerData } from "./types";
@@ -349,6 +349,11 @@ function V2WorkspaceContent() {
 			panes: [{ kind: "desktop", data: { kind: "desktop" } }],
 		});
 	}, [store]);
+	const addRoadmapTab = useCallback(() => {
+		store.getState().addTab({
+			panes: [{ kind: "roadmap", data: { kind: "roadmap" } }],
+		});
+	}, [store]);
 	const isChatV3Enabled = useFeatureFlagEnabled(FEATURE_FLAGS.CHAT_V3) ?? false;
 	useRunPendingChatHandoff({
 		workspaceId,
@@ -381,6 +386,7 @@ function V2WorkspaceContent() {
 				case "files":
 				case "changes-list":
 				case "review":
+				case "roadmap":
 					rightStore.getState().addTab({ panes: [{ kind, data: { kind } }] });
 					return;
 				case "browser":
@@ -532,7 +538,7 @@ function V2WorkspaceContent() {
 
 	return (
 		<FileDocumentStoreProvider stores={fileDocumentStores}>
-			<ExplainSelectionProvider createNewAgentSession={createNewAgentSession}>
+			<SelectionActionsProvider createNewAgentSession={createNewAgentSession}>
 				<WorkspaceGitStatusProvider workspaceId={workspaceId}>
 					<div className="flex min-h-0 min-w-0 flex-1">
 						<div
@@ -570,6 +576,7 @@ function V2WorkspaceContent() {
 											onAddChatV3={isChatV3Enabled ? addChatV3Tab : undefined}
 											onAddBrowser={addBrowserTab}
 											onAddChanges={openChangesPane}
+											onAddRoadmap={addRoadmapTab}
 											onAddDesktop={isSandbox ? addDesktopTab : undefined}
 											showPresetsBar={showPresetsBar}
 											onToggleShowPresetsBar={setShowPresetsBar}
@@ -653,7 +660,7 @@ function V2WorkspaceContent() {
 							sidebarSlotEl,
 						)}
 				</WorkspaceGitStatusProvider>
-			</ExplainSelectionProvider>
+			</SelectionActionsProvider>
 			<CommandPalette
 				workspaceId={workspaceId}
 				open={quickOpenOpen}

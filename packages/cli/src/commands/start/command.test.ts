@@ -1,25 +1,25 @@
 import { describe, expect, mock, test } from "bun:test";
-import type { CliContext } from "../../lib/command";
-import startCommand from "./command";
+import { runStart, type StartAuth } from "./command";
+
+function auth(query: () => Promise<unknown>): () => Promise<StartAuth> {
+	return async () =>
+		({
+			api: { user: { myOrganizations: { query } } },
+			bearer: "bearer-token",
+			authConfigPath: undefined,
+		}) as unknown as StartAuth;
+}
 
 describe("start auto-update options", () => {
 	for (const daemon of [undefined, false]) {
 		test(`rejects auto-update with daemon=${daemon} before querying organizations`, async () => {
 			const query = mock(async () => []);
 			await expect(
-				startCommand.run({
-					ctx: {
-						api: { user: { myOrganizations: { query } } },
-					} as unknown as CliContext,
-					args: {},
-					options: {
-						autoUpdate: true,
-						daemon,
-						port: undefined,
-						org: undefined,
-					},
-					signal: new AbortController().signal,
-				}),
+				runStart(
+					{ autoUpdate: true, daemon },
+					new AbortController().signal,
+					auth(query),
+				),
 			).rejects.toThrow("--auto-update requires --daemon");
 			expect(query).not.toHaveBeenCalled();
 		});
@@ -36,14 +36,7 @@ describe("start auto-update options", () => {
 				throw lookupError;
 			});
 			await expect(
-				startCommand.run({
-					ctx: {
-						api: { user: { myOrganizations: { query } } },
-					} as unknown as CliContext,
-					args: {},
-					options: { ...options, port: undefined, org: undefined },
-					signal: new AbortController().signal,
-				}),
+				runStart(options, new AbortController().signal, auth(query)),
 			).rejects.toBe(lookupError);
 			expect(query).toHaveBeenCalledTimes(1);
 		});

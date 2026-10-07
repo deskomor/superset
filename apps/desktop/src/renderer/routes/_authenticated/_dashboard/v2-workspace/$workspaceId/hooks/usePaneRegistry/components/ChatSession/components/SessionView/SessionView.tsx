@@ -14,11 +14,12 @@ import {
 	useTimeline,
 } from "@superset/chat/react";
 import { MessageScroller } from "@superset/chat-ui/MessageScroller";
+import type { PromptInputHandle } from "@superset/chat-ui/PromptInput";
 import { ChatHistorySidebarScroller } from "@superset/ui/chat-history-sidebar";
 import { Spinner } from "@superset/ui/spinner";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useExplainSelectionSource } from "../../../../../../providers/ExplainSelectionProvider";
+import { useSelectionActionSource } from "../../../../../../providers/SelectionActionsProvider";
 import type { OpenFile } from "../../../../../../types";
 import { ChatPaneActionsProvider } from "../../providers/ChatPaneActionsProvider";
 import type { ChatForkTarget } from "../../types";
@@ -37,6 +38,7 @@ const NO_CONFIG_OPTIONS: SessionConfigOption[] = [];
 const MODEL_OPTIONS_GRACE_MS = 1000;
 
 export function SessionView({
+	agentId,
 	agentLabel,
 	agentSwitch,
 	canForkToWorktree,
@@ -44,6 +46,8 @@ export function SessionView({
 	headerLeft,
 	isActive,
 	onModeChange,
+	onDraftPlaced,
+	pendingDraft,
 	pendingFirstPrompt,
 	preferredModelLabel,
 	onFirstPromptSent,
@@ -59,6 +63,9 @@ export function SessionView({
 	headerLeft?: ReactNode;
 	isActive?: boolean;
 	pendingFirstPrompt: UserContent[] | null;
+	/** Placed in the composer once the session is ready, without sending. */
+	pendingDraft?: string | null;
+	onDraftPlaced?: () => void;
 	/** Selected by name once the agent lists its models, before the first prompt goes out. */
 	preferredModelLabel?: string;
 	onFirstPromptSent: () => void;
@@ -72,6 +79,8 @@ export function SessionView({
 	 */
 	onFork?: ((target: ChatForkTarget, transcript: string) => void) | undefined;
 	canForkToWorktree?: boolean;
+	/** Agent config or preset id, so a side session can use the same agent. */
+	agentId?: string;
 	/** Names the speaker in a handed-over transcript. */
 	agentLabel?: string;
 	/** The transcript goes with the switch: the next agent cannot load this session. */
@@ -144,6 +153,16 @@ export function SessionView({
 		onFirstPromptSent();
 	}, [pendingFirstPrompt, session, onFirstPromptSent, modelSettled]);
 
+	const composerInputRef = useRef<PromptInputHandle>(null);
+	const draftPlacedRef = useRef(false);
+	useEffect(() => {
+		if (!pendingDraft || draftPlacedRef.current) return;
+		if (session.status !== "ready") return;
+		draftPlacedRef.current = true;
+		composerInputRef.current?.appendText(pendingDraft);
+		onDraftPlaced?.();
+	}, [pendingDraft, session.status, onDraftPlaced]);
+
 	const sessionState = session.snapshot.session;
 	useEffect(() => {
 		onSessionState?.(sessionState ?? null);
@@ -200,7 +219,9 @@ export function SessionView({
 		[agentSwitch, agentLabel],
 	);
 	const rootRef = useRef<HTMLDivElement>(null);
-	useExplainSelectionSource(rootRef, {
+	useSelectionActionSource(rootRef, {
+		agentId,
+		insertText: (text) => composerInputRef.current?.appendText(text),
 		readContext: async () => ({
 			kind: "chat",
 			transcript: buildChatHandoffTranscript(
@@ -209,8 +230,34 @@ export function SessionView({
 				agentLabel ?? "Agent",
 			),
 			sourceLabel: agentLabel,
-			presetId: agentSwitch?.currentPresetId,
+			agentId,
 		}),
+		readContextUpTo: async ({ range }) => {
+			const end = range?.endContainer;
+			const row = (
+				end instanceof Element ? end : end?.parentElement
+			)?.closest<HTMLElement>("[data-message-id]");
+			const itemId = row?.dataset.messageId;
+			if (!range || !row || !itemId) return null;
+			const upToEnd = document.createRange();
+			upToEnd.selectNodeContents(row);
+			upToEnd.setEnd(range.endContainer, range.endOffset);
+			const fragment = upToEnd.cloneContents();
+			for (const node of fragment.querySelectorAll("details, button")) {
+				node.remove();
+			}
+			return {
+				kind: "chat",
+				transcript: buildChatHandoffTranscript(
+					timelineRef.current,
+					snapshotRef.current,
+					agentLabel ?? "Agent",
+					{ itemId, text: fragment.textContent ?? "" },
+				),
+				sourceLabel: agentLabel,
+				agentId,
+			};
+		},
 	});
 	const {
 		cancelTurn,
@@ -333,23 +380,26 @@ export function SessionView({
 						</div>
 					</MessageScroller.Provider>
 				)}
-				<Composer
-					agentSwitcher={agentSwitcher}
-					availableCommands={sessionState?.availableCommands ?? NO_COMMANDS}
-					configOptions={sessionState?.configOptions ?? NO_CONFIG_OPTIONS}
-					onSetConfigOption={onSetConfigOption}
-					modes={sessionState?.availableModes}
-					currentModeId={sessionState?.modeId}
-					onSetMode={onSetMode}
-					disabled={session.status !== "ready"}
-					draftKey={`chat-v3-draft:${sessionId}`}
-					history={history}
-					isActive={isActive}
-					onCancelTurn={onCancelTurn}
-					onSend={onSend}
-					promptQueue={promptQueue}
-					workspaceId={workspaceId}
-				/>
+				<div className="contents" data-selection-actions-ignore>
+					<Composer
+						agentSwitcher={agentSwitcher}
+						availableCommands={sessionState?.availableCommands ?? NO_COMMANDS}
+						configOptions={sessionState?.configOptions ?? NO_CONFIG_OPTIONS}
+						onSetConfigOption={onSetConfigOption}
+						modes={sessionState?.availableModes}
+						currentModeId={sessionState?.modeId}
+						onSetMode={onSetMode}
+						disabled={session.status !== "ready"}
+						draftKey={`chat-v3-draft:${sessionId}`}
+						history={history}
+						inputRef={composerInputRef}
+						isActive={isActive}
+						onCancelTurn={onCancelTurn}
+						onSend={onSend}
+						promptQueue={promptQueue}
+						workspaceId={workspaceId}
+					/>
+				</div>
 			</div>
 		</ChatPaneActionsProvider>
 	);

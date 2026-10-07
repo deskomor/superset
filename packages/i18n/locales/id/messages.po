@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} lalu"
 
+msgid "{done} of {total} tasks checked"
+msgstr "{done} dari {total} tugas dicentang"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Berpikir # detik} other {Berpikir # detik}}"
 
@@ -1472,6 +1475,10 @@ msgstr "Pengenal unik untuk organisasi Anda (dibuat otomatis dari nama)"
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "Ditinggalkan"
+
 msgid "About"
 msgstr "Tentang"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Aktif"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "Aktif"
+
 msgid "active {lastActive}"
 msgstr "aktif {lastActive}"
 
@@ -1607,8 +1618,14 @@ msgstr "Tambahkan komentar…"
 msgid "Add a description…"
 msgstr "Tambahkan deskripsi…"
 
+msgid "Add a journal entry"
+msgstr "Tambahkan entri jurnal"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Tambahkan skrip run lifecycle di Pengaturan Proyek atau tandai sebuah skrip terminal sebagai run workspace."
+
+msgid "Add a note"
+msgstr "Tambahkan catatan"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Tambahkan proyek untuk melihat issue GitHub."
@@ -1618,6 +1635,15 @@ msgstr "Tambahkan proyek untuk melihat pull request."
 
 msgid "Add a short summary…"
 msgstr "Tambahkan ringkasan singkat…"
+
+msgid "Add a subtask"
+msgstr "Tambahkan subtugas"
+
+msgid "Add a summary"
+msgstr "Tambahkan ringkasan"
+
+msgid "Add a task"
+msgstr "Tambahkan tugas"
 
 msgid "Add account"
 msgstr "Tambah akun"
@@ -1689,11 +1715,17 @@ msgstr "Tambahkan agen pendengar"
 msgid "Add member"
 msgstr "Tambah anggota"
 
+msgid "Add milestone"
+msgstr "Tambahkan milestone"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Tambahkan satu dari menu di sidebar untuk memulai."
 
 msgid "Add photos or files"
 msgstr "Tambah foto atau file"
+
+msgid "Add plan"
+msgstr "Tambahkan rencana"
 
 msgid "Add project"
 msgstr "Tambah proyek"
@@ -1716,6 +1748,9 @@ msgstr "Tambah Skrip"
 msgid "Add setup commands, one per line..."
 msgstr "Tambahkan perintah setup, satu per baris..."
 
+msgid "Add subtask"
+msgstr "Tambahkan subtugas"
+
 msgid "Add tag…"
 msgstr "Tambah tag…"
 
@@ -1736,6 +1771,9 @@ msgstr "Tambahkan tes yang belum ada"
 
 msgid "Add this label"
 msgstr "Tambahkan label ini"
+
+msgid "Add to chat"
+msgstr "Tambahkan ke obrolan"
 
 msgid "Add to Dictionary"
 msgstr "Tambahkan ke Kamus"
@@ -2446,6 +2484,9 @@ msgstr "Minta persetujuan"
 msgid "Ask for this to be removed"
 msgstr "Minta ini dihapus"
 
+msgid "Ask in side chat"
+msgstr "Tanyakan di obrolan samping"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "Tanya agen, @sebut berkas, jalankan /perintah"
 
@@ -2788,6 +2829,9 @@ msgstr "Pekerjaan latar belakang dan halaman"
 
 msgid "Backlog"
 msgstr "Backlog"
+
+msgid "Backlog actions"
+msgstr "Tindakan backlog"
 
 msgid "Badge"
 msgstr "Badge"
@@ -3896,6 +3940,9 @@ msgstr "Ciutkan semua file"
 msgid "Collapse file"
 msgstr "Ciutkan file"
 
+msgid "Collapse plan"
+msgstr "Ciutkan rencana"
+
 msgid "Collapse project"
 msgstr "Ciutkan proyek"
 
@@ -4396,6 +4443,9 @@ msgstr "Percakapan"
 msgid "Conversation · Message"
 msgstr "Percakapan · Pesan"
 
+msgid "Conversations"
+msgstr "Percakapan"
+
 msgid "Conversion"
 msgstr "Konversi"
 
@@ -4404,6 +4454,15 @@ msgstr "Konversi dari langkah sebelumnya"
 
 msgid "Conversion so far"
 msgstr "Konversi sejauh ini"
+
+msgid "Convert to note"
+msgstr "Ubah menjadi catatan"
+
+msgid "Convert to plan"
+msgstr "Ubah menjadi rencana"
+
+msgid "Convert to task"
+msgstr "Ubah menjadi tugas"
 
 msgid "Converted"
 msgstr "Terkonversi"
@@ -4429,6 +4488,9 @@ msgstr "Tautan Disalin"
 
 msgid "Copied terminal ID"
 msgstr "ID terminal disalin"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "Roadmap disalin sebagai Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Disalin ke clipboard."
@@ -4841,6 +4903,9 @@ msgstr "Tidak bisa menyalin path"
 msgid "Couldn't copy the image"
 msgstr "Gagal menyalin gambar"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "Tidak dapat menyalin Roadmap"
+
 msgid "Couldn't create workspace"
 msgstr "Tidak bisa membuat workspace"
 
@@ -4917,6 +4982,9 @@ msgstr "Tidak bisa menjangkau workspace cloud ini. Mungkin masih dibangunkan —
 msgid "Couldn't reach workspace"
 msgstr "Tidak bisa menjangkau workspace"
 
+msgid "Couldn't read the session to fork it"
+msgstr "Tidak dapat membaca sesi untuk mencabangkannya"
+
 msgid "Couldn't read this terminal's context."
 msgstr "Konteks terminal ini tidak bisa dibaca."
 
@@ -4990,6 +5058,9 @@ msgstr "Tidak bisa memulai workspace cloud"
 msgid "Couldn't start design mode on this page"
 msgstr "Tidak bisa memulai mode desain di halaman ini"
 
+msgid "Couldn't start the agent"
+msgstr "Tidak dapat memulai agen"
+
 msgid "Couldn't start workspace"
 msgstr "Tidak bisa memulai workspace"
 
@@ -5013,6 +5084,9 @@ msgstr "Tidak bisa memperbarui pull request"
 
 msgid "Couldn't update the queue"
 msgstr "Tidak dapat memperbarui antrean"
+
+msgid "Couldn't update the Roadmap"
+msgstr "Tidak dapat memperbarui Roadmap"
 
 msgid "Couldn't update thread"
 msgstr "Tidak bisa memperbarui thread"
@@ -5053,8 +5127,14 @@ msgstr "Buat tugas baru dari tampilan tugas desktop."
 msgid "Create a new workspace"
 msgstr "Buat workspace baru"
 
+msgid "Create a plan"
+msgstr "Buat rencana"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Buat proyek untuk mengelompokkan tugas dan workspace cloud."
+
+msgid "Create a task"
+msgstr "Buat tugas"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Buat tugas untuk memperbaiki bug login"
@@ -5539,6 +5619,9 @@ msgstr "Hapus gambar"
 msgid "Delete local branch on workspace removal"
 msgstr "Hapus branch lokal saat workspace dihapus"
 
+msgid "Delete milestone"
+msgstr "Hapus milestone"
+
 msgid "Delete organization"
 msgstr "Hapus organisasi"
 
@@ -5547,6 +5630,9 @@ msgstr "Hapus halaman"
 
 msgid "Delete permanently"
 msgstr "Hapus permanen"
+
+msgid "Delete plan"
+msgstr "Hapus rencana"
 
 msgid "Delete project"
 msgstr "Hapus proyek"
@@ -5710,6 +5796,9 @@ msgstr "Jelaskan apa yang Anda butuhkan. Superset membuat workspace terisolasi d
 
 msgid "Describe what you'd like to see built…"
 msgstr "Jelaskan apa yang ingin Anda lihat dibangun…"
+
+msgid "Describe where this project is going."
+msgstr "Jelaskan ke mana arah proyek ini."
 
 msgid "Description"
 msgstr "Deskripsi"
@@ -5996,6 +6085,10 @@ msgstr "Jangan Simpan"
 msgid "Done"
 msgstr "Selesai"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "Selesai"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Selesai — gaya chip bergaris yang dipakai presets bar kini menjadi bawaan untuk tiap tooltip, dan penimpaan salin-tempelnya sudah dihapus (bersih −90 baris)."
 
@@ -6239,6 +6332,12 @@ msgstr "Edit Skrip Run"
 
 msgid "Edit script"
 msgstr "Edit skrip"
+
+msgid "Edit summary"
+msgstr "Edit ringkasan"
+
+msgid "Edit vision"
+msgstr "Edit visi"
 
 msgid "Edit your comment…"
 msgstr "Edit komentar Anda…"
@@ -6537,6 +6636,9 @@ msgstr "Bentangkan semua file"
 msgid "Expand file"
 msgstr "Bentangkan file"
 
+msgid "Expand plan"
+msgstr "Luaskan rencana"
+
 msgid "Expand project"
 msgstr "Bentangkan proyek"
 
@@ -6554,9 +6656,6 @@ msgstr "Eksperimental"
 
 msgid "Expired"
 msgstr "Kedaluwarsa"
-
-msgid "Explain"
-msgstr "Jelaskan"
 
 msgid "Explain how this repository works…"
 msgstr "Jelaskan cara kerja repositori ini…"
@@ -6597,6 +6696,12 @@ msgstr "Editor eksternal"
 
 msgid "extra ${used} of ${limit}"
 msgstr "tambahan ${used} dari ${limit}"
+
+msgid "Extra instructions"
+msgstr "Instruksi tambahan"
+
+msgid "Extra instructions (optional)"
+msgstr "Instruksi tambahan (opsional)"
 
 msgid "Extra small"
 msgstr "Ekstra kecil"
@@ -7480,6 +7585,9 @@ msgstr "Lupakan {domain}"
 
 msgid "Fork args"
 msgstr "Argumen fork"
+
+msgid "Fork from here"
+msgstr "Cabangkan dari sini"
 
 msgid "Fork session"
 msgstr "Fork sesi"
@@ -8673,6 +8781,9 @@ msgstr "Bergabung"
 msgid "Joining…"
 msgstr "Bergabung…"
 
+msgid "Journal ({count})"
+msgstr "Jurnal ({count})"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Lompat ke editor favorit Anda dengan satu klik. VS Code, Cursor, Xcode, IDE JetBrains, atau terminal apa pun: buka worktree persis di tempat yang Anda butuhkan."
 
@@ -9208,6 +9319,9 @@ msgstr "Memuat review..."
 msgid "Loading terminal scripts..."
 msgstr "Memuat skrip terminal..."
 
+msgid "Loading the Roadmap…"
+msgstr "Memuat Roadmap…"
+
 msgid "Loading usage history…"
 msgstr "Memuat riwayat penggunaan…"
 
@@ -9598,6 +9712,24 @@ msgstr "Pertengahan 2026"
 msgid "Mid 2027"
 msgstr "Pertengahan 2027"
 
+msgid "Milestone"
+msgstr "Milestone"
+
+msgid "Milestone actions"
+msgstr "Tindakan milestone"
+
+msgid "Milestone status"
+msgstr "Status milestone"
+
+msgid "Milestone summary"
+msgstr "Ringkasan milestone"
+
+msgid "Milestone title"
+msgstr "Judul milestone"
+
+msgid "Milestones"
+msgstr "Milestone"
+
 msgid "Mine"
 msgstr "Milik saya"
 
@@ -9761,6 +9893,9 @@ msgstr "Tindakan lain untuk {0}"
 msgid "More create options"
 msgstr "Opsi pembuatan lainnya"
 
+msgid "More details"
+msgstr "Detail lebih lanjut"
+
 msgid "More options"
 msgstr "Opsi lainnya"
 
@@ -9783,6 +9918,9 @@ msgstr "Sebagian besar sejarah perangkat lunak"
 msgid "Move {count} to Group"
 msgstr "Pindahkan {count} ke Grup"
 
+msgid "Move down"
+msgstr "Pindahkan ke bawah"
+
 msgid "Move to Center"
 msgstr "Pindahkan ke tengah"
 
@@ -9794,6 +9932,9 @@ msgstr "Pindahkan ke kanan"
 
 msgid "Move to Tab"
 msgstr "Pindahkan ke Tab"
+
+msgid "Move up"
+msgstr "Pindahkan ke atas"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "Grup baru dari workspace"
 msgid "New issue"
 msgstr "Issue baru"
 
+msgid "New milestone title"
+msgstr "Judul milestone baru"
+
 msgid "New page"
 msgstr "Halaman baru"
 
 msgid "New password (min 8 characters)"
 msgstr "Kata sandi baru (min. 8 karakter)"
+
+msgid "New plan title"
+msgstr "Judul rencana baru"
 
 msgid "New project"
 msgstr "Proyek baru"
@@ -10417,11 +10564,17 @@ msgstr "Tidak ada pull request yang di-merge."
 msgid "No messages yet"
 msgstr "Belum ada pesan"
 
+msgid "No milestone"
+msgstr "Tanpa milestone"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Tidak ada simulator seluler yang tersedia di sini. Diperlukan sandbox cloud yang mendukung Limrun atau toolchain iOS/Android lokal."
 
 msgid "No name on file"
 msgstr "Tidak ada nama tersimpan"
+
+msgid "No notes yet."
+msgstr "Belum ada catatan."
 
 msgid "No open issues found."
 msgstr "Tidak ada issue terbuka."
@@ -10805,6 +10958,12 @@ msgstr "tidak diurutkan"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Tidak diperbarui"
+
+msgid "Note"
+msgstr "Catatan"
+
+msgid "Note (optional)"
+msgstr "Catatan (opsional)"
 
 msgid "Notes"
 msgstr "Catatan"
@@ -11464,6 +11623,9 @@ msgstr "membuka tugas di workspace"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Buka workspace di aplikasi yang dipilih di menu \"Buka di\" (VS Code, Cursor, dll.)"
 
+msgid "Open this conversation"
+msgstr "Buka percakapan ini"
+
 msgid "Open this run's workspace"
 msgstr "Buka workspace run ini"
 
@@ -11620,6 +11782,9 @@ msgstr "Host Lain"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Orang lain sedang menggunakan proyek ini. Ketik <0>{projectName}</0> untuk mengonfirmasi."
+
+msgid "Other plans"
+msgstr "Rencana lainnya"
 
 msgid "Other Team Members"
 msgstr "Anggota Tim Lainnya"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Dijeda"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "Dijeda"
+
 msgid "Pay now"
 msgstr "Bayar sekarang"
 
@@ -12018,10 +12187,23 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Paket"
 
+msgid "Plan actions"
+msgstr "Tindakan rencana"
+
 msgid "Plan restored"
 msgstr "Paket dipulihkan"
 
+msgid "Plan status"
+msgstr "Status rencana"
+
+msgid "Plan title"
+msgstr "Judul rencana"
+
 msgctxt "project state"
+msgid "Planned"
+msgstr "Direncanakan"
+
+msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Direncanakan"
 
@@ -12030,6 +12212,10 @@ msgstr "Merencanakan refactor tooltip"
 
 msgid "Plans"
 msgstr "Paket"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "Rencana"
 
 msgid "Plant Floor"
 msgstr "Lantai pabrik"
@@ -12372,6 +12558,12 @@ msgstr "Proyek tidak ditemukan."
 
 msgid "Project not set up on this host"
 msgstr "Proyek belum disiapkan di host ini"
+
+msgid "Project notes"
+msgstr "Catatan proyek"
+
+msgid "Project notes (Markdown)"
+msgstr "Catatan proyek (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Proyek siap — buka dari sidebar."
@@ -13032,8 +13224,14 @@ msgstr "Ganti nama grup"
 msgid "Rename host"
 msgstr "Ganti nama host"
 
+msgid "Rename milestone"
+msgstr "Ganti nama milestone"
+
 msgid "Rename page"
 msgstr "Ganti nama halaman"
+
+msgid "Rename plan"
+msgstr "Ganti nama rencana"
 
 msgid "Rename session"
 msgstr "Ganti nama sesi"
@@ -13564,6 +13762,9 @@ msgstr "Nada dering"
 
 msgid "Roadmap"
 msgstr "Roadmap"
+
+msgid "Roadmap actions"
+msgstr "Tindakan Roadmap"
 
 msgid "Rocket"
 msgstr "Roket"
@@ -14252,6 +14453,9 @@ msgstr "Agen yang dipilih bukan agen terminal"
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "Issue yang dipilih tersebar di beberapa repositori. Pilih issue dari satu repositori untuk menjalankannya."
+
+msgid "Selected text actions"
+msgstr "Tindakan teks terpilih"
 
 msgid "Selected workspace actions"
 msgstr "Aksi workspace terpilih"
@@ -15150,6 +15354,9 @@ msgstr "Star yang didapat per hari"
 msgid "Stars gained per week"
 msgstr "Star yang didapat per minggu"
 
+msgid "Start"
+msgstr "Mulai"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "Mulai"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId tidak cocok dengan host workspace"
 msgid "Task"
 msgstr "Tugas"
 
+msgid "Task actions"
+msgstr "Tindakan tugas"
+
 msgid "Task ID copied"
 msgstr "ID tugas disalin"
 
@@ -16053,6 +16263,9 @@ msgstr "Alamatnya tidak bisa dijangkau"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "Agen menyalin percakapan; cabang terbuka di sini"
 
+msgid "The agent did not start in time"
+msgstr "Agen tidak dimulai tepat waktu"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Agen memegang tugas dari tiket sampai diff. Manusia mereview hasilnya, bukan tiap ketukan tombolnya. Perhatian bergeser dari menulis kode ke menentukan pekerjaan dan menilainya. Satu engineer menjalankan beberapa agen sekaligus di workspace terisolasi."
 
@@ -16070,6 +16283,9 @@ msgstr "Perangkat terkait tidak bisa dijangkau saat ini"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "Pemilik otomatisasi ini tidak bisa lagi menggunakan workspace cloud di organisasi ini. Minta mereka memeriksa aksesnya, atau jalankan otomatisasi di perangkat."
+
+msgid "The backlog does not count toward plan progress."
+msgstr "Backlog tidak dihitung dalam progres rencana."
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "Agen terbaik akan berganti.<0/>Alur kerja Anda tidak perlu."
@@ -16277,6 +16493,12 @@ msgstr "Permintaan gagal."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Jawabannya: agen mereview agen, dan manusia mengambil sampel alih-alih membaca semuanya. Kepercayaan dibangun secara statistik, bukan per diff."
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "Roadmap diubah di tempat lain. Menampilkan versi terbaru."
+
+msgid "The Roadmap is not available here"
+msgstr "Roadmap tidak tersedia di sini"
+
 msgid "The rubric"
 msgstr "Rubriknya"
 
@@ -16449,6 +16671,9 @@ msgstr "Ini menutup workspace beserta terminalnya. File, branch, dan workspace l
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Workspace cloud ini sedang dibangunkan, yang bisa memakan waktu hingga 30 detik setelah tidak aktif."
+
+msgid "This conversation is not open here"
+msgstr "Percakapan ini tidak terbuka di sini"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Ini menghapus scrollback tersimpan yang dipakai untuk pemulihan setelah reboot/crash."
@@ -16712,6 +16937,9 @@ msgstr "Ini akan mengeluarkan semua perubahan dari staging dan membatalkannya. F
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Ini akan meng-unstage dan mengembalikan semua perubahan yang di-stage. File baru yang di-stage akan dihapus. Ini tidak bisa dibatalkan."
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "Workspace ini bukan bagian dari proyek, jadi tidak memiliki Roadmap."
+
 msgid "This workspace has no project to branch from"
 msgstr "Ruang kerja ini tidak memiliki proyek untuk dicabangkan"
 
@@ -16726,6 +16954,9 @@ msgstr "Host workspace ini sedang offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Host workspace ini menjalankan layanan host yang lebih lama dari yang didukung aplikasi ini. Perbarui untuk tersambung kembali; workspace dan berkasnya tidak tersentuh."
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "Host workspace ini menjalankan versi lama tanpa Roadmap. Perbarui host untuk merencanakan proyek ini di sini."
 
 msgid "Thorough reasoning effort"
 msgstr "Upaya penalaran menyeluruh"
@@ -17666,6 +17897,9 @@ msgstr "Lihat penggunaan"
 msgid "Violence or harassment"
 msgstr "Kekerasan atau pelecehan"
 
+msgid "Vision"
+msgstr "Visi"
+
 msgid "Visitors"
 msgstr "Pengunjung"
 
@@ -17927,6 +18161,12 @@ msgstr "Apa yang dilakukan konten: di halaman mana sesi dimulai, dan seberapa ba
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Yang menjadi acuannya sudah tidak ada di halaman, jadi tidak punya penanda."
 
+msgid "What this milestone means"
+msgstr "Arti milestone ini"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "Hasil rencana ini (Markdown)"
+
 msgid "What We're Building"
 msgstr "Yang Sedang Kami Bangun"
 
@@ -17959,6 +18199,9 @@ msgstr "Di peringkat berapa Anda?"
 
 msgid "Where does my code run?"
 msgstr "Di mana kode saya berjalan?"
+
+msgid "Where is this project going?"
+msgstr "Ke mana arah proyek ini?"
 
 msgid "Where serious teams are"
 msgstr "Tempat tim serius berada"
@@ -18040,6 +18283,18 @@ msgstr "Email kerja"
 
 msgid "Work from tickets"
 msgstr "Bekerja dari tiket"
+
+msgid "Work on milestone"
+msgstr "Kerjakan milestone"
+
+msgid "Work on plan"
+msgstr "Kerjakan rencana"
+
+msgid "Work on task"
+msgstr "Kerjakan tugas"
+
+msgid "Work on this"
+msgstr "Kerjakan ini"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Bekerja dengan agen Anda lintas alat favorit Anda"

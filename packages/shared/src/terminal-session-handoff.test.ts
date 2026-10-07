@@ -3,6 +3,7 @@ import {
 	boundTranscriptText,
 	buildBoundedTerminalSessionTranscript,
 	buildTerminalSessionHandoffPrompt,
+	cutTerminalTranscriptAtSelection,
 	TERMINAL_HANDOFF_MAX_CHARS,
 } from "./terminal-session-handoff";
 
@@ -129,6 +130,22 @@ describe("buildTerminalSessionHandoffPrompt", () => {
 		});
 		expect(prompt).toStartWith(
 			"Continue the work from a previous terminal session.",
+		);
+	});
+});
+
+describe("cutTerminalTranscriptAtSelection", () => {
+	const raw = "$ ls\r\n\u001b[32mfoo.ts\u001b[0m\r\nbar.ts\r\nlater output\r\n";
+
+	it("ends at the line holding the end of the selection", () => {
+		expect(cutTerminalTranscriptAtSelection(raw, "foo.ts\nbar")).toBe(
+			"$ ls\nfoo.ts\nbar.ts",
+		);
+	});
+
+	it("keeps everything when the selection is not in the output", () => {
+		expect(cutTerminalTranscriptAtSelection(raw, "redrawn text")).toBe(
+			"$ ls\nfoo.ts\nbar.ts\nlater output",
 		);
 	});
 });

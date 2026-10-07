@@ -13,21 +13,23 @@ export function buildChatHandoffTranscript(
 	groups: TurnGroup[],
 	snapshot: SessionSnapshot,
 	agentLabel: string,
+	/** Ends the transcript at this item, whose text is replaced by `text`. */
+	cut?: { itemId: string; text: string },
 ): string {
 	const lines: string[] = [];
 	for (const group of groups) {
 		for (const entry of group.entries) {
 			if (entry.kind !== "item") continue;
 			const { item } = entry;
+			const cutText = item.id === cut?.itemId ? cut.text : undefined;
 			if (item.kind === "user_message") {
-				const text = userMessageText(item as UserMessage).trim();
+				const text = (cutText ?? userMessageText(item as UserMessage)).trim();
 				if (text) lines.push(`User: ${text}`);
-				continue;
-			}
-			if (item.kind === "agent_message") {
-				const text = displayText(snapshot, item.id).trim();
+			} else if (item.kind === "agent_message") {
+				const text = (cutText ?? displayText(snapshot, item.id)).trim();
 				if (text) lines.push(`${agentLabel}: ${text}`);
 			}
+			if (cutText !== undefined) return lines.join("\n\n");
 		}
 	}
 	return lines.join("\n\n");

@@ -4,6 +4,7 @@ import {
 	LuFileDiff,
 	LuFolderTree,
 	LuGitPullRequestArrow,
+	LuMap,
 } from "react-icons/lu";
 import { TbWorld } from "react-icons/tb";
 import type { RightPaneKind } from "../../types";
@@ -38,6 +39,10 @@ export function RightPaneEmptyState({ onAdd }: RightPaneEmptyStateProps) {
 				<Button variant="outline" size="sm" onClick={() => onAdd("browser")}>
 					<TbWorld className="size-4" />
 					<Trans>Browser</Trans>
+				</Button>
+				<Button variant="outline" size="sm" onClick={() => onAdd("roadmap")}>
+					<LuMap className="size-4" />
+					<Trans>Roadmap</Trans>
 				</Button>
 			</div>
 		</div>

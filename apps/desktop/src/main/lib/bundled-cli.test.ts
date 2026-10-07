@@ -110,4 +110,22 @@ describe("bundled CLI", () => {
 
 		expect(status).toBe("missing");
 	});
+
+	it("points the shim at a copy that survives the bundled binary going away", () => {
+		const stableDir = path.join(tempDir, "lib");
+		installBundledCliShim({
+			binDir,
+			bundledCliPath,
+			platform: "linux",
+			stableDir,
+		});
+		rmSync(path.dirname(bundledCliPath), { recursive: true });
+
+		const stableCli = path.join(stableDir, "superset");
+		expect(readFileSync(stableCli, "utf-8")).toBe("#!/bin/sh\n");
+		expect(statSync(stableCli).mode & 0o111).not.toBe(0);
+		expect(readFileSync(path.join(binDir, "superset"), "utf-8")).toContain(
+			`exec '${stableCli}'`,
+		);
+	});
 });

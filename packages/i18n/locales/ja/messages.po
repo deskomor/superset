@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance}前"
 
+msgid "{done} of {total} tasks checked"
+msgstr "{total} 件中 {done} 件のタスクを完了"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {#秒間思考しました} other {#秒間思考しました}}"
 
@@ -1472,6 +1475,10 @@ msgstr "組織の一意の識別子(名前から自動生成)"
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "中止"
+
 msgid "About"
 msgstr "会社概要"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "アクティブ"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "進行中"
+
 msgid "active {lastActive}"
 msgstr "{lastActive}にアクティブ"
 
@@ -1607,8 +1618,14 @@ msgstr "コメントを追加…"
 msgid "Add a description…"
 msgstr "説明を追加…"
 
+msgid "Add a journal entry"
+msgstr "ジャーナルを追加"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "プロジェクト設定でライフサイクルの実行スクリプトを追加するか、ターミナルスクリプトをワークスペース実行に指定してください。"
+
+msgid "Add a note"
+msgstr "メモを追加"
 
 msgid "Add a project to see GitHub issues."
 msgstr "プロジェクトを追加するとGitHub issueが表示されます。"
@@ -1618,6 +1635,15 @@ msgstr "プロジェクトを追加するとプルリクエストが表示され
 
 msgid "Add a short summary…"
 msgstr "短い概要を追加…"
+
+msgid "Add a subtask"
+msgstr "サブタスクを追加"
+
+msgid "Add a summary"
+msgstr "概要を追加"
+
+msgid "Add a task"
+msgstr "タスクを追加"
 
 msgid "Add account"
 msgstr "アカウントを追加"
@@ -1689,11 +1715,17 @@ msgstr "コメントを受け取るエージェントを追加"
 msgid "Add member"
 msgstr "メンバーを追加"
 
+msgid "Add milestone"
+msgstr "マイルストーンを追加"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "サイドバーのメニューから追加して始めましょう。"
 
 msgid "Add photos or files"
 msgstr "写真やファイルを追加"
+
+msgid "Add plan"
+msgstr "計画を追加"
 
 msgid "Add project"
 msgstr "プロジェクトを追加"
@@ -1716,6 +1748,9 @@ msgstr "スクリプトを追加"
 msgid "Add setup commands, one per line..."
 msgstr "セットアップコマンドを1行に1つずつ追加..."
 
+msgid "Add subtask"
+msgstr "サブタスクを追加"
+
 msgid "Add tag…"
 msgstr "タグを追加…"
 
@@ -1736,6 +1771,9 @@ msgstr "テストが不足している箇所に追加"
 
 msgid "Add this label"
 msgstr "このラベルを追加"
+
+msgid "Add to chat"
+msgstr "チャットに追加"
 
 msgid "Add to Dictionary"
 msgstr "辞書に追加"
@@ -2446,6 +2484,9 @@ msgstr "承認を求める"
 msgid "Ask for this to be removed"
 msgstr "削除を依頼"
 
+msgid "Ask in side chat"
+msgstr "サイドチャットで質問"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "エージェントに依頼、@でファイルを指定、/コマンドを実行"
 
@@ -2788,6 +2829,9 @@ msgstr "バックグラウンド作業とページ"
 
 msgid "Backlog"
 msgstr "バックログ"
+
+msgid "Backlog actions"
+msgstr "バックログの操作"
 
 msgid "Badge"
 msgstr "Badge"
@@ -3896,6 +3940,9 @@ msgstr "すべてのファイルを折りたたむ"
 msgid "Collapse file"
 msgstr "ファイルを折りたたむ"
 
+msgid "Collapse plan"
+msgstr "計画を折りたたむ"
+
 msgid "Collapse project"
 msgstr "プロジェクトを折りたたむ"
 
@@ -4396,6 +4443,9 @@ msgstr "会話"
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
 
+msgid "Conversations"
+msgstr "会話"
+
 msgid "Conversion"
 msgstr "コンバージョン"
 
@@ -4404,6 +4454,15 @@ msgstr "前ステップからの転換率"
 
 msgid "Conversion so far"
 msgstr "ここまでの転換率"
+
+msgid "Convert to note"
+msgstr "メモに変換"
+
+msgid "Convert to plan"
+msgstr "計画に変換"
+
+msgid "Convert to task"
+msgstr "タスクに変換"
 
 msgid "Converted"
 msgstr "転換"
@@ -4429,6 +4488,9 @@ msgstr "リンクをコピーしました"
 
 msgid "Copied terminal ID"
 msgstr "ターミナルIDをコピーしました"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "ロードマップをMarkdownとしてコピーしました"
 
 msgid "Copied to clipboard."
 msgstr "クリップボードにコピーしました。"
@@ -4841,6 +4903,9 @@ msgstr "パスをコピーできませんでした"
 msgid "Couldn't copy the image"
 msgstr "画像をコピーできませんでした"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "ロードマップをコピーできませんでした"
+
 msgid "Couldn't create workspace"
 msgstr "ワークスペースを作成できませんでした"
 
@@ -4917,6 +4982,9 @@ msgstr "このクラウドワークスペースに接続できませんでした
 msgid "Couldn't reach workspace"
 msgstr "ワークスペースに接続できませんでした"
 
+msgid "Couldn't read the session to fork it"
+msgstr "分岐するためのセッションを読み取れませんでした"
+
 msgid "Couldn't read this terminal's context."
 msgstr "このターミナルのコンテキストを読み取れませんでした。"
 
@@ -4990,6 +5058,9 @@ msgstr "クラウドワークスペースを開始できませんでした"
 msgid "Couldn't start design mode on this page"
 msgstr "このページでデザインモードを開始できませんでした"
 
+msgid "Couldn't start the agent"
+msgstr "エージェントを起動できませんでした"
+
 msgid "Couldn't start workspace"
 msgstr "ワークスペースを開始できませんでした"
 
@@ -5013,6 +5084,9 @@ msgstr "プルリクエストを更新できませんでした"
 
 msgid "Couldn't update the queue"
 msgstr "キューを更新できませんでした"
+
+msgid "Couldn't update the Roadmap"
+msgstr "ロードマップを更新できませんでした"
 
 msgid "Couldn't update thread"
 msgstr "スレッドを更新できませんでした"
@@ -5053,8 +5127,14 @@ msgstr "デスクトップのタスクビューから新しいタスクを作成
 msgid "Create a new workspace"
 msgstr "新しいワークスペースを作成"
 
+msgid "Create a plan"
+msgstr "計画を作成"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "タスクとクラウドワークスペースをまとめるプロジェクトを作成します。"
+
+msgid "Create a task"
+msgstr "タスクを作成"
 
 msgid "Create a task for fixing the login bug"
 msgstr "ログインのバグを直すタスクを作って"
@@ -5539,6 +5619,9 @@ msgstr "画像を削除"
 msgid "Delete local branch on workspace removal"
 msgstr "ワークスペース削除時にローカルブランチも削除"
 
+msgid "Delete milestone"
+msgstr "マイルストーンを削除"
+
 msgid "Delete organization"
 msgstr "組織を削除"
 
@@ -5547,6 +5630,9 @@ msgstr "ページを削除"
 
 msgid "Delete permanently"
 msgstr "完全に削除"
+
+msgid "Delete plan"
+msgstr "計画を削除"
 
 msgid "Delete project"
 msgstr "プロジェクトを削除"
@@ -5710,6 +5796,9 @@ msgstr "必要なことを説明してください。Supersetがそのタスク�
 
 msgid "Describe what you'd like to see built…"
 msgstr "作ってほしいものを説明してください…"
+
+msgid "Describe where this project is going."
+msgstr "このプロジェクトの目指す方向を書きましょう。"
 
 msgid "Description"
 msgstr "説明"
@@ -5996,6 +6085,10 @@ msgstr "保存しない"
 msgid "Done"
 msgstr "完了"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "完了"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "完了 — プリセットバーで使っていた枠線付きチップスタイルをすべてのtooltipのデフォルトにし、コピペされたオーバーライドを削除しました(差し引き−90行)。"
 
@@ -6239,6 +6332,12 @@ msgstr "実行スクリプトを編集"
 
 msgid "Edit script"
 msgstr "スクリプトを編集"
+
+msgid "Edit summary"
+msgstr "概要を編集"
+
+msgid "Edit vision"
+msgstr "ビジョンを編集"
 
 msgid "Edit your comment…"
 msgstr "コメントを編集…"
@@ -6537,6 +6636,9 @@ msgstr "すべてのファイルを展開"
 msgid "Expand file"
 msgstr "ファイルを展開"
 
+msgid "Expand plan"
+msgstr "計画を展開"
+
 msgid "Expand project"
 msgstr "プロジェクトを展開"
 
@@ -6554,9 +6656,6 @@ msgstr "実験的機能"
 
 msgid "Expired"
 msgstr "期限切れ"
-
-msgid "Explain"
-msgstr "説明"
 
 msgid "Explain how this repository works…"
 msgstr "このリポジトリの仕組みを説明…"
@@ -6597,6 +6696,12 @@ msgstr "外部エディタ"
 
 msgid "extra ${used} of ${limit}"
 msgstr "追加分 ${limit}中${used}"
+
+msgid "Extra instructions"
+msgstr "追加の指示"
+
+msgid "Extra instructions (optional)"
+msgstr "追加の指示（任意）"
 
 msgid "Extra small"
 msgstr "極小"
@@ -7480,6 +7585,9 @@ msgstr "{domain}を削除"
 
 msgid "Fork args"
 msgstr "フォーク引数"
+
+msgid "Fork from here"
+msgstr "ここから分岐"
 
 msgid "Fork session"
 msgstr "セッションをフォーク"
@@ -8673,6 +8781,9 @@ msgstr "参加日"
 msgid "Joining…"
 msgstr "参加中…"
 
+msgid "Journal ({count})"
+msgstr "ジャーナル（{count}）"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "ワンクリックでお気に入りのエディタに移動できます。VS Code、Cursor、Xcode、JetBrainsのIDE、あるいは任意のターミナル。ワークツリーを必要な場所でそのまま開けます。"
 
@@ -9208,6 +9319,9 @@ msgstr "レビューを読み込み中..."
 msgid "Loading terminal scripts..."
 msgstr "ターミナルスクリプトを読み込み中..."
 
+msgid "Loading the Roadmap…"
+msgstr "ロードマップを読み込み中…"
+
 msgid "Loading usage history…"
 msgstr "使用履歴を読み込み中…"
 
@@ -9598,6 +9712,24 @@ msgstr "2026年半ば"
 msgid "Mid 2027"
 msgstr "2027年半ば"
 
+msgid "Milestone"
+msgstr "マイルストーン"
+
+msgid "Milestone actions"
+msgstr "マイルストーンの操作"
+
+msgid "Milestone status"
+msgstr "マイルストーンのステータス"
+
+msgid "Milestone summary"
+msgstr "マイルストーンの概要"
+
+msgid "Milestone title"
+msgstr "マイルストーンのタイトル"
+
+msgid "Milestones"
+msgstr "マイルストーン"
+
 msgid "Mine"
 msgstr "自分"
 
@@ -9761,6 +9893,9 @@ msgstr "{0} のその他の操作"
 msgid "More create options"
 msgstr "その他の作成オプション"
 
+msgid "More details"
+msgstr "詳しく説明"
+
 msgid "More options"
 msgstr "その他のオプション"
 
@@ -9783,6 +9918,9 @@ msgstr "ソフトウェアの歴史のほとんど"
 msgid "Move {count} to Group"
 msgstr "{count}件をグループへ移動"
 
+msgid "Move down"
+msgstr "下へ移動"
+
 msgid "Move to Center"
 msgstr "中央に移動"
 
@@ -9794,6 +9932,9 @@ msgstr "右側に移動"
 
 msgid "Move to Tab"
 msgstr "タブに移動"
+
+msgid "Move up"
+msgstr "上へ移動"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "ワークスペースから新規グループ"
 msgid "New issue"
 msgstr "新規issue"
 
+msgid "New milestone title"
+msgstr "新しいマイルストーンのタイトル"
+
 msgid "New page"
 msgstr "新しいページ"
 
 msgid "New password (min 8 characters)"
 msgstr "新しいパスワード(8文字以上)"
+
+msgid "New plan title"
+msgstr "新しい計画のタイトル"
 
 msgid "New project"
 msgstr "新規プロジェクト"
@@ -10417,11 +10564,17 @@ msgstr "マージ済みのプルリクエストはありません。"
 msgid "No messages yet"
 msgstr "メッセージはまだありません"
 
+msgid "No milestone"
+msgstr "マイルストーンなし"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "ここで利用できるモバイルシミュレーターがありません。Limrun対応のクラウドサンドボックスか、ローカルのiOS/Androidツールチェーンのいずれかが必要です。"
 
 msgid "No name on file"
 msgstr "登録された名前はありません"
+
+msgid "No notes yet."
+msgstr "メモはまだありません。"
 
 msgid "No open issues found."
 msgstr "オープンなIssueが見つかりません。"
@@ -10805,6 +10958,12 @@ msgstr "並べ替えなし"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "更新なし"
+
+msgid "Note"
+msgstr "メモ"
+
+msgid "Note (optional)"
+msgstr "メモ（任意）"
 
 msgid "Notes"
 msgstr "ノート"
@@ -11464,6 +11623,9 @@ msgstr "タスクをワークスペースで開く"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "「開く」メニューで選んだアプリ (VS Code、Cursorなど) でワークスペースを開く"
 
+msgid "Open this conversation"
+msgstr "この会話を開く"
+
 msgid "Open this run's workspace"
 msgstr "この実行のワークスペースを開く"
 
@@ -11620,6 +11782,9 @@ msgstr "その他のホスト"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "他のユーザーがこのプロジェクトを使用しています。確認のため <0>{projectName}</0> と入力してください。"
+
+msgid "Other plans"
+msgstr "その他の計画"
 
 msgid "Other Team Members"
 msgstr "他のチームメンバー"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "一時停止"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "一時停止中"
+
 msgid "Pay now"
 msgstr "今すぐ支払う"
 
@@ -12018,18 +12187,35 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "プラン"
 
+msgid "Plan actions"
+msgstr "計画の操作"
+
 msgid "Plan restored"
 msgstr "プランを復元しました"
+
+msgid "Plan status"
+msgstr "計画のステータス"
+
+msgid "Plan title"
+msgstr "計画のタイトル"
 
 msgctxt "project state"
 msgid "Planned"
 msgstr "計画中"
+
+msgctxt "roadmap status"
+msgid "Planned"
+msgstr "予定"
 
 msgid "Planning the tooltip refactor"
 msgstr "tooltipのリファクタリングを計画中"
 
 msgid "Plans"
 msgstr "プラン"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "計画"
 
 msgid "Plant Floor"
 msgstr "工場フロア"
@@ -12372,6 +12558,12 @@ msgstr "プロジェクトが見つかりません。"
 
 msgid "Project not set up on this host"
 msgstr "このホストにプロジェクトがセットアップされていません"
+
+msgid "Project notes"
+msgstr "プロジェクトのノート"
+
+msgid "Project notes (Markdown)"
+msgstr "プロジェクトのノート（Markdown）"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "プロジェクトの準備ができました — サイドバーから開いてください。"
@@ -13032,8 +13224,14 @@ msgstr "グループ名を変更"
 msgid "Rename host"
 msgstr "ホストの名前を変更"
 
+msgid "Rename milestone"
+msgstr "マイルストーンの名前を変更"
+
 msgid "Rename page"
 msgstr "ページの名前を変更"
+
+msgid "Rename plan"
+msgstr "計画の名前を変更"
 
 msgid "Rename session"
 msgstr "セッションの名前を変更"
@@ -13564,6 +13762,9 @@ msgstr "通知"
 
 msgid "Roadmap"
 msgstr "ロードマップ"
+
+msgid "Roadmap actions"
+msgstr "ロードマップの操作"
 
 msgid "Rocket"
 msgstr "ロケット"
@@ -14252,6 +14453,9 @@ msgstr "選択したエージェントはターミナルエージェントでは
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "選択したissueが複数のリポジトリにまたがっています。実行するには単一のリポジトリのissueを選択してください。"
+
+msgid "Selected text actions"
+msgstr "選択したテキストの操作"
 
 msgid "Selected workspace actions"
 msgstr "選択したワークスペースの操作"
@@ -15150,6 +15354,9 @@ msgstr "1日あたりの獲得スター"
 msgid "Stars gained per week"
 msgstr "1週間あたりの獲得スター"
 
+msgid "Start"
+msgstr "開始"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "開始日"
@@ -15813,6 +16020,9 @@ msgstr "targetHostIdがワークスペースのホストと一致しません"
 msgid "Task"
 msgstr "タスク"
 
+msgid "Task actions"
+msgstr "タスクの操作"
+
 msgid "Task ID copied"
 msgstr "タスク ID をコピーしました"
 
@@ -16053,6 +16263,9 @@ msgstr "アドレスに到達できません"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "エージェントが会話を複製し、分岐はここで開きます"
 
+msgid "The agent did not start in time"
+msgstr "エージェントが時間内に起動しませんでした"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "エージェントがチケットから差分までタスクを引き受けます。人間はキー入力ではなく結果をレビューします。関心はコードを書くことから、作業を仕様化し判断することへ移ります。エンジニア1人が独立したワークスペースで複数のエージェントを同時に動かします。"
 
@@ -16070,6 +16283,9 @@ msgstr "関連デバイスに現在接続できません"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "このオートメーションの所有者は、この組織でクラウドワークスペースを使用できなくなりました。所有者にアクセス権の確認を依頼するか、デバイス上でオートメーションを実行してください。"
+
+msgid "The backlog does not count toward plan progress."
+msgstr "バックログは計画の進捗に含まれません。"
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "最良のエージェントは変わります。<0/>ワークフローは変わるべきではありません。"
@@ -16277,6 +16493,12 @@ msgstr "リクエストに失敗しました。"
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "その答えは、エージェントがエージェントをレビューし、人間はすべてを読む代わりに抜き取りで確認することです。信頼は差分ごとではなく、統計的に積み上げられます。"
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "ロードマップが別の場所で変更されました。最新版を表示しています。"
+
+msgid "The Roadmap is not available here"
+msgstr "ここではロードマップを利用できません"
+
 msgid "The rubric"
 msgstr "ルーブリック"
 
@@ -16449,6 +16671,9 @@ msgstr "ワークスペースとそのターミナルを閉じます。プロジ
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "このクラウドワークスペースを起動しています。しばらく使われていなかった場合は、最大30秒かかることがあります。"
+
+msgid "This conversation is not open here"
+msgstr "この会話はここでは開かれていません"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "再起動やクラッシュからの復旧に使う保存済みスクロールバックを削除します。"
@@ -16712,6 +16937,9 @@ msgstr "ステージされたすべての変更をステージから外して元
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "ステージ済みの変更をすべてステージ解除して元に戻します。ステージ済みの新規ファイルは削除されます。元に戻せません。"
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "このワークスペースはプロジェクトに属していないため、ロードマップがありません。"
+
 msgid "This workspace has no project to branch from"
 msgstr "このワークスペースには分岐元のプロジェクトがありません"
 
@@ -16726,6 +16954,9 @@ msgstr "このワークスペースのホストはオフラインです"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "このワークスペースのホストは、このアプリが対応するより古いホストサービスを実行しています。更新して再接続してください。ワークスペースとファイルはそのまま残ります。"
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "このワークスペースのホストはロードマップに対応していない古いバージョンです。ここでこのプロジェクトを計画するには更新してください。"
 
 msgid "Thorough reasoning effort"
 msgstr "徹底的な推論"
@@ -17666,6 +17897,9 @@ msgstr "使用量を表示"
 msgid "Violence or harassment"
 msgstr "暴力または嫌がらせ"
 
+msgid "Vision"
+msgstr "ビジョン"
+
 msgid "Visitors"
 msgstr "訪問者"
 
@@ -17927,6 +18161,12 @@ msgstr "コンテンツの状況: セッションがどのページから始ま�
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "これらが書かれた対象はページ上に存在しないため、ピンがありません。"
 
+msgid "What this milestone means"
+msgstr "このマイルストーンの意味"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "この計画で実現すること（Markdown）"
+
 msgid "What We're Building"
 msgstr "いま作っているもの"
 
@@ -17959,6 +18199,9 @@ msgstr "あなたの順位は?"
 
 msgid "Where does my code run?"
 msgstr "コードはどこで実行されますか?"
+
+msgid "Where is this project going?"
+msgstr "このプロジェクトはどこへ向かっていますか？"
 
 msgid "Where serious teams are"
 msgstr "本気のチームの現在地"
@@ -18040,6 +18283,18 @@ msgstr "勤務先のメールアドレス"
 
 msgid "Work from tickets"
 msgstr "チケットから作業を始める"
+
+msgid "Work on milestone"
+msgstr "マイルストーンに取り組む"
+
+msgid "Work on plan"
+msgstr "計画に取り組む"
+
+msgid "Work on task"
+msgstr "タスクに取り組む"
+
+msgid "Work on this"
+msgstr "これに取り組む"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "お気に入りのツールでエージェントと連携"

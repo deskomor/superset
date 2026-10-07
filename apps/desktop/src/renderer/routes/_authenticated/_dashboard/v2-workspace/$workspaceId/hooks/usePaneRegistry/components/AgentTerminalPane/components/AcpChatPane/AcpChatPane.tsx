@@ -28,11 +28,13 @@ export function AcpChatPane({
 	isActive,
 	onSessionInfo,
 	onFirstPromptSent,
+	onDraftPlaced,
 	onOpenFile,
 	onModeChange,
 	onSessionCreated,
 	onSwitchAgent,
 	pendingFirstPrompt,
+	pendingDraft,
 	sessionId,
 	terminalId,
 	workspaceId,
@@ -48,6 +50,8 @@ export function AcpChatPane({
 	sessionId: string | null;
 	pendingFirstPrompt?: UserContent[] | null;
 	onFirstPromptSent?: (() => void) | undefined;
+	pendingDraft: string | null;
+	onDraftPlaced: () => void;
 	onSessionCreated: (sessionId: string) => void;
 	onModeChange?: (modeId: string) => void;
 	onSessionInfo: (info: { harnessSessionId?: string; title?: string }) => void;
@@ -341,6 +345,9 @@ export function AcpChatPane({
 			client={client}
 			key={sessionId}
 			onFirstPromptSent={onFirstPromptSent ?? NOOP}
+			pendingDraft={pendingDraft}
+			onDraftPlaced={onDraftPlaced}
+			agentId={agent?.id}
 			agentLabel={agentLabel}
 			agentSwitch={agentSwitch}
 			onModeChange={onModeChange}

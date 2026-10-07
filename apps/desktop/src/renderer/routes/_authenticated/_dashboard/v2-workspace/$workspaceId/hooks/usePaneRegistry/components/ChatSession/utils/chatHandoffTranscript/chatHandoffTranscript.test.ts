@@ -94,4 +94,18 @@ describe("buildChatHandoffTranscript", () => {
 		);
 		expect(text).toBe("User: add a test");
 	});
+
+	it("ends at the cut message, with only its text up to the cut", () => {
+		const twoTurns = [
+			...groups,
+			{ turnId: "t2", turn: null, entries: [userItem("u2", "next step")] },
+		] as unknown as TurnGroup[];
+		const text = buildChatHandoffTranscript(
+			twoTurns,
+			snapshotWith({ a1: "Done. Then more." }),
+			"Claude",
+			{ itemId: "a1", text: "Done." },
+		);
+		expect(text).toBe("User: add a test\n\nClaude: Done.");
+	});
 });

@@ -55,6 +55,8 @@ export interface TerminalPaneData {
 		name: string;
 		mimeType: string;
 	}>;
+	/** Text placed in the chat's input once, without sending it. */
+	pendingDraft?: string;
 	chatModelId?: string;
 	/** A model picked from the curated catalog, whose id the agent may not share. */
 	chatModelLabel?: string;
@@ -132,6 +134,10 @@ export interface ReviewPaneData {
 	kind: "review";
 }
 
+export interface RoadmapPaneData {
+	kind: "roadmap";
+}
+
 /**
  * Pointer to one subagent's transcript. The transcript itself is fetched
  * from the host on every read; only this pointer is persisted.
@@ -179,4 +185,5 @@ export type PaneViewerData =
 	| FilesPaneData
 	| ChangesListPaneData
 	| ReviewPaneData
+	| RoadmapPaneData
 	| SubagentPaneData;

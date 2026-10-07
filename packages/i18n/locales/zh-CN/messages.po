@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance}前"
 
+msgid "{done} of {total} tasks checked"
+msgstr "已勾选 {done}/{total} 个任务"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {思考了#秒} other {思考了#秒}}"
 
@@ -1472,6 +1475,10 @@ msgstr "组织的唯一标识符（根据名称自动生成）"
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "已放弃"
+
 msgid "About"
 msgstr "关于"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "活跃"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "进行中"
+
 msgid "active {lastActive}"
 msgstr "{lastActive}活跃"
 
@@ -1607,8 +1618,14 @@ msgstr "添加评论…"
 msgid "Add a description…"
 msgstr "添加描述…"
 
+msgid "Add a journal entry"
+msgstr "添加日志条目"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "在项目设置中添加生命周期运行脚本，或将某个终端脚本标记为工作区运行命令。"
+
+msgid "Add a note"
+msgstr "添加备注"
 
 msgid "Add a project to see GitHub issues."
 msgstr "添加项目以查看GitHub议题。"
@@ -1618,6 +1635,15 @@ msgstr "添加一个项目来查看拉取请求。"
 
 msgid "Add a short summary…"
 msgstr "添加简短摘要…"
+
+msgid "Add a subtask"
+msgstr "添加子任务"
+
+msgid "Add a summary"
+msgstr "添加摘要"
+
+msgid "Add a task"
+msgstr "添加任务"
 
 msgid "Add account"
 msgstr "添加账户"
@@ -1689,11 +1715,17 @@ msgstr "添加监听智能体"
 msgid "Add member"
 msgstr "添加成员"
 
+msgid "Add milestone"
+msgstr "添加里程碑"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "从侧边栏菜单中添加一个即可开始。"
 
 msgid "Add photos or files"
 msgstr "添加照片或文件"
+
+msgid "Add plan"
+msgstr "添加计划"
 
 msgid "Add project"
 msgstr "添加项目"
@@ -1716,6 +1748,9 @@ msgstr "添加脚本"
 msgid "Add setup commands, one per line..."
 msgstr "添加设置命令，每行一条..."
 
+msgid "Add subtask"
+msgstr "添加子任务"
+
 msgid "Add tag…"
 msgstr "添加标签…"
 
@@ -1736,6 +1771,9 @@ msgstr "给缺测试的地方补测试"
 
 msgid "Add this label"
 msgstr "添加此标签"
+
+msgid "Add to chat"
+msgstr "添加到聊天"
 
 msgid "Add to Dictionary"
 msgstr "添加到词典"
@@ -2446,6 +2484,9 @@ msgstr "请求批准"
 msgid "Ask for this to be removed"
 msgstr "请求移除"
 
+msgid "Ask in side chat"
+msgstr "在侧边聊天中提问"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "向智能体提问，用 @ 提及文件，运行 /命令"
 
@@ -2788,6 +2829,9 @@ msgstr "后台工作和页面"
 
 msgid "Backlog"
 msgstr "待规划"
+
+msgid "Backlog actions"
+msgstr "待规划操作"
 
 msgid "Badge"
 msgstr "徽章"
@@ -3896,6 +3940,9 @@ msgstr "折叠所有文件"
 msgid "Collapse file"
 msgstr "折叠文件"
 
+msgid "Collapse plan"
+msgstr "收起计划"
+
 msgid "Collapse project"
 msgstr "收起项目"
 
@@ -4396,6 +4443,9 @@ msgstr "对话"
 msgid "Conversation · Message"
 msgstr "对话 · 消息"
 
+msgid "Conversations"
+msgstr "对话"
+
 msgid "Conversion"
 msgstr "转化"
 
@@ -4404,6 +4454,15 @@ msgstr "较上一步转化率"
 
 msgid "Conversion so far"
 msgstr "累计转化率"
+
+msgid "Convert to note"
+msgstr "转为备注"
+
+msgid "Convert to plan"
+msgstr "转为计划"
+
+msgid "Convert to task"
+msgstr "转为任务"
 
 msgid "Converted"
 msgstr "已转化"
@@ -4429,6 +4488,9 @@ msgstr "已复制链接"
 
 msgid "Copied terminal ID"
 msgstr "已复制终端ID"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "已将路线图复制为 Markdown"
 
 msgid "Copied to clipboard."
 msgstr "已复制到剪贴板。"
@@ -4841,6 +4903,9 @@ msgstr "无法复制路径"
 msgid "Couldn't copy the image"
 msgstr "无法复制图片"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "无法复制路线图"
+
 msgid "Couldn't create workspace"
 msgstr "无法创建工作区"
 
@@ -4917,6 +4982,9 @@ msgstr "无法连接到此云工作区。它可能仍在唤醒中——请重试
 msgid "Couldn't reach workspace"
 msgstr "无法连接到工作区"
 
+msgid "Couldn't read the session to fork it"
+msgstr "无法读取会话以进行分叉"
+
 msgid "Couldn't read this terminal's context."
 msgstr "无法读取该终端的上下文。"
 
@@ -4990,6 +5058,9 @@ msgstr "无法启动云端工作区"
 msgid "Couldn't start design mode on this page"
 msgstr "无法在此页面启动设计模式"
 
+msgid "Couldn't start the agent"
+msgstr "无法启动智能体"
+
 msgid "Couldn't start workspace"
 msgstr "无法启动工作区"
 
@@ -5013,6 +5084,9 @@ msgstr "无法更新拉取请求"
 
 msgid "Couldn't update the queue"
 msgstr "无法更新队列"
+
+msgid "Couldn't update the Roadmap"
+msgstr "无法更新路线图"
 
 msgid "Couldn't update thread"
 msgstr "无法更新讨论"
@@ -5053,8 +5127,14 @@ msgstr "在桌面端任务视图中创建新任务。"
 msgid "Create a new workspace"
 msgstr "创建新工作区"
 
+msgid "Create a plan"
+msgstr "创建计划"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "创建项目，将任务和云工作区归到一起。"
+
+msgid "Create a task"
+msgstr "创建任务"
 
 msgid "Create a task for fixing the login bug"
 msgstr "创建一个任务，修复登录的bug"
@@ -5539,6 +5619,9 @@ msgstr "删除图片"
 msgid "Delete local branch on workspace removal"
 msgstr "移除工作区时删除本地分支"
 
+msgid "Delete milestone"
+msgstr "删除里程碑"
+
 msgid "Delete organization"
 msgstr "删除组织"
 
@@ -5547,6 +5630,9 @@ msgstr "删除页面"
 
 msgid "Delete permanently"
 msgstr "永久删除"
+
+msgid "Delete plan"
+msgstr "删除计划"
 
 msgid "Delete project"
 msgstr "删除项目"
@@ -5710,6 +5796,9 @@ msgstr "描述你的需求。Superset会为该任务创建隔离的工作区和�
 
 msgid "Describe what you'd like to see built…"
 msgstr "描述你希望实现的功能…"
+
+msgid "Describe where this project is going."
+msgstr "描述这个项目的发展方向。"
 
 msgid "Description"
 msgstr "说明"
@@ -5996,6 +6085,10 @@ msgstr "不保存"
 msgid "Done"
 msgstr "完成"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "已完成"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "完成——预设栏使用的带边框chip样式现在是所有tooltip的默认样式，复制粘贴出来的样式覆盖也都移除了（净减90行）。"
 
@@ -6239,6 +6332,12 @@ msgstr "编辑运行脚本"
 
 msgid "Edit script"
 msgstr "编辑脚本"
+
+msgid "Edit summary"
+msgstr "编辑摘要"
+
+msgid "Edit vision"
+msgstr "编辑愿景"
 
 msgid "Edit your comment…"
 msgstr "编辑你的评论…"
@@ -6537,6 +6636,9 @@ msgstr "展开所有文件"
 msgid "Expand file"
 msgstr "展开文件"
 
+msgid "Expand plan"
+msgstr "展开计划"
+
 msgid "Expand project"
 msgstr "展开项目"
 
@@ -6554,9 +6656,6 @@ msgstr "实验功能"
 
 msgid "Expired"
 msgstr "已过期"
-
-msgid "Explain"
-msgstr "解释"
 
 msgid "Explain how this repository works…"
 msgstr "讲讲这个仓库是怎么运作的…"
@@ -6597,6 +6696,12 @@ msgstr "外部编辑器"
 
 msgid "extra ${used} of ${limit}"
 msgstr "额外用量${used}/${limit}"
+
+msgid "Extra instructions"
+msgstr "附加说明"
+
+msgid "Extra instructions (optional)"
+msgstr "附加说明（可选）"
 
 msgid "Extra small"
 msgstr "超小"
@@ -7480,6 +7585,9 @@ msgstr "忘记{domain}"
 
 msgid "Fork args"
 msgstr "分叉参数"
+
+msgid "Fork from here"
+msgstr "从此处分叉"
 
 msgid "Fork session"
 msgstr "分叉会话"
@@ -8673,6 +8781,9 @@ msgstr "加入时间"
 msgid "Joining…"
 msgstr "正在加入…"
 
+msgid "Journal ({count})"
+msgstr "日志（{count}）"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "一键跳进你喜欢的编辑器。VS Code、Cursor、Xcode、JetBrains系列IDE或任意终端：在你需要的地方打开worktree。"
 
@@ -9208,6 +9319,9 @@ msgstr "正在加载评审..."
 msgid "Loading terminal scripts..."
 msgstr "正在加载终端脚本..."
 
+msgid "Loading the Roadmap…"
+msgstr "正在加载路线图…"
+
 msgid "Loading usage history…"
 msgstr "正在加载用量历史…"
 
@@ -9598,6 +9712,24 @@ msgstr "2026年中"
 msgid "Mid 2027"
 msgstr "2027年中"
 
+msgid "Milestone"
+msgstr "里程碑"
+
+msgid "Milestone actions"
+msgstr "里程碑操作"
+
+msgid "Milestone status"
+msgstr "里程碑状态"
+
+msgid "Milestone summary"
+msgstr "里程碑摘要"
+
+msgid "Milestone title"
+msgstr "里程碑标题"
+
+msgid "Milestones"
+msgstr "里程碑"
+
 msgid "Mine"
 msgstr "我的"
 
@@ -9761,6 +9893,9 @@ msgstr "{0}的更多操作"
 msgid "More create options"
 msgstr "更多创建选项"
 
+msgid "More details"
+msgstr "更多详情"
+
 msgid "More options"
 msgstr "更多选项"
 
@@ -9783,6 +9918,9 @@ msgstr "软件史的大部分时间"
 msgid "Move {count} to Group"
 msgstr "将{count}个移动到分组"
 
+msgid "Move down"
+msgstr "下移"
+
 msgid "Move to Center"
 msgstr "移到中间"
 
@@ -9794,6 +9932,9 @@ msgstr "移到右侧"
 
 msgid "Move to Tab"
 msgstr "移动到标签页"
+
+msgid "Move up"
+msgstr "上移"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "以此工作区新建分组"
 msgid "New issue"
 msgstr "新建议题"
 
+msgid "New milestone title"
+msgstr "新里程碑标题"
+
 msgid "New page"
 msgstr "新建页面"
 
 msgid "New password (min 8 characters)"
 msgstr "新密码（至少8个字符）"
+
+msgid "New plan title"
+msgstr "新计划标题"
 
 msgid "New project"
 msgstr "新建项目"
@@ -10417,11 +10564,17 @@ msgstr "没有已合并的拉取请求。"
 msgid "No messages yet"
 msgstr "还没有消息"
 
+msgid "No milestone"
+msgstr "无里程碑"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "此处没有可用的移动模拟器。需要支持 Limrun 的云沙箱，或本地 iOS/Android 工具链。"
 
 msgid "No name on file"
 msgstr "未登记姓名"
+
+msgid "No notes yet."
+msgstr "暂无笔记。"
 
 msgid "No open issues found."
 msgstr "未找到打开的议题。"
@@ -10805,6 +10958,12 @@ msgstr "未排序"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "未更新"
+
+msgid "Note"
+msgstr "备注"
+
+msgid "Note (optional)"
+msgstr "备注（可选）"
 
 msgid "Notes"
 msgstr "笔记"
@@ -11464,6 +11623,9 @@ msgstr "在工作区中打开任务"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "在“打开方式”菜单中选定的应用（VS Code、Cursor等）中打开工作区"
 
+msgid "Open this conversation"
+msgstr "打开此对话"
+
 msgid "Open this run's workspace"
 msgstr "打开此次运行的工作区"
 
@@ -11620,6 +11782,9 @@ msgstr "其他主机"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "其他人正在使用此项目。输入 <0>{projectName}</0> 以确认。"
+
+msgid "Other plans"
+msgstr "其他计划"
 
 msgid "Other Team Members"
 msgstr "其他团队成员"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "已暂停"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "已暂停"
+
 msgid "Pay now"
 msgstr "立即支付"
 
@@ -12018,18 +12187,35 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "方案"
 
+msgid "Plan actions"
+msgstr "计划操作"
+
 msgid "Plan restored"
 msgstr "方案已恢复"
+
+msgid "Plan status"
+msgstr "计划状态"
+
+msgid "Plan title"
+msgstr "计划标题"
 
 msgctxt "project state"
 msgid "Planned"
 msgstr "已计划"
+
+msgctxt "roadmap status"
+msgid "Planned"
+msgstr "已规划"
 
 msgid "Planning the tooltip refactor"
 msgstr "正在规划tooltip重构"
 
 msgid "Plans"
 msgstr "方案"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "计划"
 
 msgid "Plant Floor"
 msgstr "车间"
@@ -12372,6 +12558,12 @@ msgstr "找不到该项目。"
 
 msgid "Project not set up on this host"
 msgstr "项目未在此主机上设置"
+
+msgid "Project notes"
+msgstr "项目笔记"
+
+msgid "Project notes (Markdown)"
+msgstr "项目笔记（Markdown）"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "项目已就绪，可从侧边栏打开。"
@@ -13032,8 +13224,14 @@ msgstr "重命名分组"
 msgid "Rename host"
 msgstr "重命名主机"
 
+msgid "Rename milestone"
+msgstr "重命名里程碑"
+
 msgid "Rename page"
 msgstr "重命名页面"
+
+msgid "Rename plan"
+msgstr "重命名计划"
 
 msgid "Rename session"
 msgstr "重命名会话"
@@ -13564,6 +13762,9 @@ msgstr "提示音"
 
 msgid "Roadmap"
 msgstr "路线图"
+
+msgid "Roadmap actions"
+msgstr "路线图操作"
 
 msgid "Rocket"
 msgstr "火箭"
@@ -14252,6 +14453,9 @@ msgstr "所选智能体不是终端智能体"
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "所选议题跨越多个仓库。请选择同一仓库中的议题后再运行。"
+
+msgid "Selected text actions"
+msgstr "所选文本操作"
 
 msgid "Selected workspace actions"
 msgstr "选中工作区的操作"
@@ -15150,6 +15354,9 @@ msgstr "每日新增星标"
 msgid "Stars gained per week"
 msgstr "每周新增星标"
 
+msgid "Start"
+msgstr "开始"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "开始日期"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId与该工作区的主机不匹配"
 msgid "Task"
 msgstr "任务"
 
+msgid "Task actions"
+msgstr "任务操作"
+
 msgid "Task ID copied"
 msgstr "已复制任务 ID"
 
@@ -16053,6 +16263,9 @@ msgstr "无法访问该地址"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "智能体复制该对话，分支在此打开"
 
+msgid "The agent did not start in time"
+msgstr "代理未能及时启动"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "智能体从工单一路负责到差异。人类审查结果，而不是击键过程。注意力从写代码转向定义工作和判断成果。一名工程师在隔离工作区里同时跑好几个智能体。"
 
@@ -16070,6 +16283,9 @@ msgstr "关联的设备现在连不上"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "该自动化的所有者已无法在此组织中使用云端工作区。请让其检查访问权限，或在设备上运行该自动化。"
+
+msgid "The backlog does not count toward plan progress."
+msgstr "待规划项不计入计划进度。"
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "最好的智能体会变。<0/>你的工作流不该变。"
@@ -16277,6 +16493,12 @@ msgstr "请求失败。"
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "应对办法是：让智能体审查智能体，人类改为抽样而不是通读。信任靠统计建立，而不是逐个差异建立。"
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "路线图已在其他地方更改，正在显示最新版本。"
+
+msgid "The Roadmap is not available here"
+msgstr "此处无法使用路线图"
+
 msgid "The rubric"
 msgstr "评分表"
 
@@ -16449,6 +16671,9 @@ msgstr "这将关闭该工作区及其终端。项目的文件、分支和其他
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "正在唤醒此云工作区。如果它已闲置一段时间，可能需要最多 30 秒。"
+
+msgid "This conversation is not open here"
+msgstr "此对话未在此处打开"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "这将删除用于重启/崩溃恢复的已保存回滚缓冲。"
@@ -16712,6 +16937,9 @@ msgstr "这将取消暂存并还原所有已暂存的更改。已暂存的新文
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "这将取消暂存并还原所有已暂存的更改。已暂存的新文件将被删除。此操作无法撤销。"
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "此工作区不属于任何项目，因此没有路线图。"
+
 msgid "This workspace has no project to branch from"
 msgstr "此工作区没有可供分叉的项目"
 
@@ -16726,6 +16954,9 @@ msgstr "此工作区的主机已离线"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "此工作区的主机运行的主机服务版本低于此应用支持的版本。更新后即可重新连接；工作区及其文件不受影响。"
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "此工作区的主机运行的是不含路线图的旧版本。请更新后在此规划该项目。"
 
 msgid "Thorough reasoning effort"
 msgstr "深入的推理投入"
@@ -17666,6 +17897,9 @@ msgstr "查看用量"
 msgid "Violence or harassment"
 msgstr "暴力或骚扰"
 
+msgid "Vision"
+msgstr "愿景"
+
 msgid "Visitors"
 msgstr "访客"
 
@@ -17927,6 +18161,12 @@ msgstr "内容的表现：会话从哪些页面开始，以及发布了多少。
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "这些评论所针对的内容已不在页面上，因此没有标记。"
 
+msgid "What this milestone means"
+msgstr "此里程碑的含义"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "此计划要交付的内容（Markdown）"
+
 msgid "What We're Building"
 msgstr "我们正在构建什么"
 
@@ -17959,6 +18199,9 @@ msgstr "你排第几？"
 
 msgid "Where does my code run?"
 msgstr "我的代码在哪里运行？"
+
+msgid "Where is this project going?"
+msgstr "这个项目将走向何方？"
 
 msgid "Where serious teams are"
 msgstr "认真的团队都在这里"
@@ -18040,6 +18283,18 @@ msgstr "工作邮箱"
 
 msgid "Work from tickets"
 msgstr "从工单开始工作"
+
+msgid "Work on milestone"
+msgstr "处理里程碑"
+
+msgid "Work on plan"
+msgstr "处理计划"
+
+msgid "Work on task"
+msgstr "处理任务"
+
+msgid "Work on this"
+msgstr "处理此项"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "在你常用的工具里与智能体协作"

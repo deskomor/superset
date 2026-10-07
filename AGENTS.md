@@ -92,6 +92,21 @@ Desktop, host-service, and cli share one version; cut releases on a dedicated br
 `scripts/release/README.md`. A *canary* is a separate thing: `bash scripts/release-canary.sh
 [commit]` builds the rolling internal `desktop-canary` prerelease, not a versioned release.
 
+### "release" in this fork
+
+When the user says "release", do all of it without asking. In this fork this replaces the
+dedicated-branch rule above: release from `main`.
+
+1. Run the checks for the changed code (tests, `tsc` against the baseline count, `bun run check:i18n`),
+   then commit everything and push `main` to `origin` (`deskomor/superset-prime`).
+2. `bun scripts/release/linux.ts deskomor/superset-prime` tags the next `vX.Y.Z` and pushes it. Watch the
+   `Release (Linux)` run with `gh run watch` until it passes.
+3. `gh release download vX.Y.Z` the AppImage and `latest-linux.yml`, check the sha512, then replace
+   `~/Applications/Superset-x86_64.AppImage` (copy to `.new`, `chmod +x`, `mv`).
+4. Restart: send SIGTERM to the main `Superset-x86_64.AppImage` process only, then
+   `setsid -f ~/Applications/Superset-x86_64.AppImage --no-sandbox >/dev/null 2>&1`. Never kill
+   `terminal-host.js` or `pty-daemon.js`; they keep the user's terminals alive.
+
 ## Plugins
 
 First-party plugins live in `plugins/<name>/`: a `plugin.json` manifest and `skills/`. A plugin

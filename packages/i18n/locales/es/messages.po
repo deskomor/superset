@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "hace {distance}"
 
+msgid "{done} of {total} tasks checked"
+msgstr "{done} de {total} tareas marcadas"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Pensó durante # segundo} other {Pensó durante # segundos}}"
 
@@ -1472,6 +1475,10 @@ msgstr "Un identificador único para la organización (generado a partir del nom
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "Abandonado"
+
 msgid "About"
 msgstr "Acerca de"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Activo"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "Activo"
+
 msgid "active {lastActive}"
 msgstr "activo {lastActive}"
 
@@ -1607,8 +1618,14 @@ msgstr "Añade un comentario…"
 msgid "Add a description…"
 msgstr "Añade una descripción…"
 
+msgid "Add a journal entry"
+msgstr "Añadir una entrada al diario"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Añade un script de ejecución del ciclo de vida en la configuración del proyecto o marca un script de terminal como la ejecución del espacio de trabajo."
+
+msgid "Add a note"
+msgstr "Añadir una nota"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Añade un proyecto para ver los issues de GitHub."
@@ -1618,6 +1635,15 @@ msgstr "Añade un proyecto para ver pull requests."
 
 msgid "Add a short summary…"
 msgstr "Añade un breve resumen…"
+
+msgid "Add a subtask"
+msgstr "Añadir una subtarea"
+
+msgid "Add a summary"
+msgstr "Añadir un resumen"
+
+msgid "Add a task"
+msgstr "Añadir una tarea"
 
 msgid "Add account"
 msgstr "Añadir cuenta"
@@ -1689,11 +1715,17 @@ msgstr "Añadir agente que recibe comentarios"
 msgid "Add member"
 msgstr "Añadir miembro"
 
+msgid "Add milestone"
+msgstr "Añadir hito"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Añade uno desde el menú de la barra lateral para empezar."
 
 msgid "Add photos or files"
 msgstr "Añadir fotos o archivos"
+
+msgid "Add plan"
+msgstr "Añadir plan"
 
 msgid "Add project"
 msgstr "Añadir proyecto"
@@ -1716,6 +1748,9 @@ msgstr "Añadir script"
 msgid "Add setup commands, one per line..."
 msgstr "Añade comandos de setup, uno por línea..."
 
+msgid "Add subtask"
+msgstr "Añadir subtarea"
+
 msgid "Add tag…"
 msgstr "Añadir etiqueta…"
 
@@ -1736,6 +1771,9 @@ msgstr "Añadir pruebas donde faltan"
 
 msgid "Add this label"
 msgstr "Añadir esta etiqueta"
+
+msgid "Add to chat"
+msgstr "Añadir al chat"
 
 msgid "Add to Dictionary"
 msgstr "Añadir al diccionario"
@@ -2446,6 +2484,9 @@ msgstr "Pedir aprobación"
 msgid "Ask for this to be removed"
 msgstr "Pedir que se elimine"
 
+msgid "Ask in side chat"
+msgstr "Preguntar en un chat lateral"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "Pregunta al agente, @menciona archivos, usa /comandos"
 
@@ -2788,6 +2829,9 @@ msgstr "Trabajo en segundo plano y páginas"
 
 msgid "Backlog"
 msgstr "Backlog"
+
+msgid "Backlog actions"
+msgstr "Acciones del backlog"
 
 msgid "Badge"
 msgstr "Insignia"
@@ -3896,6 +3940,9 @@ msgstr "Contraer todos los archivos"
 msgid "Collapse file"
 msgstr "Contraer archivo"
 
+msgid "Collapse plan"
+msgstr "Contraer plan"
+
 msgid "Collapse project"
 msgstr "Contraer el proyecto"
 
@@ -4396,6 +4443,9 @@ msgstr "Conversación"
 msgid "Conversation · Message"
 msgstr "Conversación · Mensaje"
 
+msgid "Conversations"
+msgstr "Conversaciones"
+
 msgid "Conversion"
 msgstr "Conversión"
 
@@ -4404,6 +4454,15 @@ msgstr "Conversión desde el anterior"
 
 msgid "Conversion so far"
 msgstr "Conversión hasta ahora"
+
+msgid "Convert to note"
+msgstr "Convertir en nota"
+
+msgid "Convert to plan"
+msgstr "Convertir en plan"
+
+msgid "Convert to task"
+msgstr "Convertir en tarea"
 
 msgid "Converted"
 msgstr "Convertidos"
@@ -4429,6 +4488,9 @@ msgstr "Enlace copiado"
 
 msgid "Copied terminal ID"
 msgstr "ID de la terminal copiado"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "Hoja de ruta copiada como Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Copiado al portapapeles."
@@ -4841,6 +4903,9 @@ msgstr "No se pudo copiar la ruta"
 msgid "Couldn't copy the image"
 msgstr "No se pudo copiar la imagen"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "No se pudo copiar la hoja de ruta"
+
 msgid "Couldn't create workspace"
 msgstr "No se pudo crear el espacio de trabajo"
 
@@ -4917,6 +4982,9 @@ msgstr "No se pudo conectar con este espacio de trabajo en la nube. Es posible q
 msgid "Couldn't reach workspace"
 msgstr "No se pudo conectar con el espacio de trabajo"
 
+msgid "Couldn't read the session to fork it"
+msgstr "No se pudo leer la sesión para bifurcarla"
+
 msgid "Couldn't read this terminal's context."
 msgstr "No se pudo leer el contexto de este terminal."
 
@@ -4990,6 +5058,9 @@ msgstr "No se pudo iniciar el espacio de trabajo en la nube"
 msgid "Couldn't start design mode on this page"
 msgstr "No se pudo iniciar el modo diseño en esta página"
 
+msgid "Couldn't start the agent"
+msgstr "No se pudo iniciar el agente"
+
 msgid "Couldn't start workspace"
 msgstr "No se pudo iniciar el espacio de trabajo"
 
@@ -5013,6 +5084,9 @@ msgstr "No se pudo actualizar la pull request"
 
 msgid "Couldn't update the queue"
 msgstr "No se pudo actualizar la cola"
+
+msgid "Couldn't update the Roadmap"
+msgstr "No se pudo actualizar la hoja de ruta"
 
 msgid "Couldn't update thread"
 msgstr "No se pudo actualizar el hilo"
@@ -5053,8 +5127,14 @@ msgstr "Crea una tarea nueva desde la vista de tareas del escritorio."
 msgid "Create a new workspace"
 msgstr "Crear un espacio de trabajo nuevo"
 
+msgid "Create a plan"
+msgstr "Crear un plan"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Crea un proyecto para agrupar tareas y espacios de trabajo en la nube."
+
+msgid "Create a task"
+msgstr "Crear una tarea"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Crea una tarea para arreglar el error de inicio de sesión"
@@ -5539,6 +5619,9 @@ msgstr "Eliminar imagen"
 msgid "Delete local branch on workspace removal"
 msgstr "Eliminar la rama local al quitar el espacio de trabajo"
 
+msgid "Delete milestone"
+msgstr "Eliminar hito"
+
 msgid "Delete organization"
 msgstr "Eliminar la organización"
 
@@ -5547,6 +5630,9 @@ msgstr "Eliminar la página"
 
 msgid "Delete permanently"
 msgstr "Eliminar definitivamente"
+
+msgid "Delete plan"
+msgstr "Eliminar plan"
 
 msgid "Delete project"
 msgstr "Eliminar el proyecto"
@@ -5710,6 +5796,9 @@ msgstr "Describe lo que necesitas. Superset crea un espacio de trabajo aislado y
 
 msgid "Describe what you'd like to see built…"
 msgstr "Describe lo que te gustaría que se construyera…"
+
+msgid "Describe where this project is going."
+msgstr "Describe hacia dónde va este proyecto."
 
 msgid "Description"
 msgstr "Descripción"
@@ -5996,6 +6085,10 @@ msgstr "No guardar"
 msgid "Done"
 msgstr "Listo"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "Hecho"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Listo: el estilo de chip con borde que usa la barra de presets es ahora el predeterminado de todos los tooltips, y se han quitado las anulaciones copiadas y pegadas (neto −90 líneas)."
 
@@ -6239,6 +6332,12 @@ msgstr "Editar el script de ejecución"
 
 msgid "Edit script"
 msgstr "Editar el script"
+
+msgid "Edit summary"
+msgstr "Editar resumen"
+
+msgid "Edit vision"
+msgstr "Editar visión"
 
 msgid "Edit your comment…"
 msgstr "Edita tu comentario…"
@@ -6537,6 +6636,9 @@ msgstr "Expandir todos los archivos"
 msgid "Expand file"
 msgstr "Expandir archivo"
 
+msgid "Expand plan"
+msgstr "Expandir plan"
+
 msgid "Expand project"
 msgstr "Expandir el proyecto"
 
@@ -6554,9 +6656,6 @@ msgstr "Experimental"
 
 msgid "Expired"
 msgstr "Caducado"
-
-msgid "Explain"
-msgstr "Explicar"
 
 msgid "Explain how this repository works…"
 msgstr "Explicar cómo funciona este repositorio…"
@@ -6597,6 +6696,12 @@ msgstr "Editor externo"
 
 msgid "extra ${used} of ${limit}"
 msgstr "extra: ${used} de ${limit}"
+
+msgid "Extra instructions"
+msgstr "Instrucciones adicionales"
+
+msgid "Extra instructions (optional)"
+msgstr "Instrucciones adicionales (opcional)"
 
 msgid "Extra small"
 msgstr "Muy pequeño"
@@ -7480,6 +7585,9 @@ msgstr "Olvidar {domain}"
 
 msgid "Fork args"
 msgstr "Argumentos de fork"
+
+msgid "Fork from here"
+msgstr "Bifurcar desde aquí"
 
 msgid "Fork session"
 msgstr "Bifurcar sesión"
@@ -8673,6 +8781,9 @@ msgstr "Se unió"
 msgid "Joining…"
 msgstr "Uniéndose…"
 
+msgid "Journal ({count})"
+msgstr "Diario ({count})"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Salta a tu editor favorito con un clic. VS Code, Cursor, Xcode, los IDE de JetBrains o cualquier terminal: abre los worktrees justo donde los necesitas."
 
@@ -9208,6 +9319,9 @@ msgstr "Cargando la revisión..."
 msgid "Loading terminal scripts..."
 msgstr "Cargando los scripts de terminal..."
 
+msgid "Loading the Roadmap…"
+msgstr "Cargando la hoja de ruta…"
+
 msgid "Loading usage history…"
 msgstr "Cargando el historial de uso…"
 
@@ -9598,6 +9712,24 @@ msgstr "Mediados de 2026"
 msgid "Mid 2027"
 msgstr "Mediados de 2027"
 
+msgid "Milestone"
+msgstr "Hito"
+
+msgid "Milestone actions"
+msgstr "Acciones del hito"
+
+msgid "Milestone status"
+msgstr "Estado del hito"
+
+msgid "Milestone summary"
+msgstr "Resumen del hito"
+
+msgid "Milestone title"
+msgstr "Título del hito"
+
+msgid "Milestones"
+msgstr "Hitos"
+
 msgid "Mine"
 msgstr "Mías"
 
@@ -9761,6 +9893,9 @@ msgstr "Más acciones para {0}"
 msgid "More create options"
 msgstr "Más opciones de creación"
 
+msgid "More details"
+msgstr "Más detalles"
+
 msgid "More options"
 msgstr "Más opciones"
 
@@ -9783,6 +9918,9 @@ msgstr "Casi toda la historia del software"
 msgid "Move {count} to Group"
 msgstr "Mover {count} a un grupo"
 
+msgid "Move down"
+msgstr "Bajar"
+
 msgid "Move to Center"
 msgstr "Mover al centro"
 
@@ -9794,6 +9932,9 @@ msgstr "Mover a la derecha"
 
 msgid "Move to Tab"
 msgstr "Mover a una pestaña"
+
+msgid "Move up"
+msgstr "Subir"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "Nuevo grupo desde el espacio de trabajo"
 msgid "New issue"
 msgstr "Nuevo issue"
 
+msgid "New milestone title"
+msgstr "Título del nuevo hito"
+
 msgid "New page"
 msgstr "Nueva página"
 
 msgid "New password (min 8 characters)"
 msgstr "Contraseña nueva (mín. 8 caracteres)"
+
+msgid "New plan title"
+msgstr "Título del nuevo plan"
 
 msgid "New project"
 msgstr "Nuevo proyecto"
@@ -10417,11 +10564,17 @@ msgstr "No hay pull requests fusionadas."
 msgid "No messages yet"
 msgstr "Aún no hay mensajes"
 
+msgid "No milestone"
+msgstr "Sin hito"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "No hay ningún simulador móvil disponible aquí. Se necesita un entorno aislado en la nube compatible con Limrun o una cadena de herramientas local de iOS/Android."
 
 msgid "No name on file"
 msgstr "No hay ningún nombre registrado"
+
+msgid "No notes yet."
+msgstr "Aún no hay notas."
 
 msgid "No open issues found."
 msgstr "No se encontraron issues abiertos."
@@ -10805,6 +10958,12 @@ msgstr "sin ordenar"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Sin actualizar"
+
+msgid "Note"
+msgstr "Nota"
+
+msgid "Note (optional)"
+msgstr "Nota (opcional)"
 
 msgid "Notes"
 msgstr "Notas"
@@ -11464,6 +11623,9 @@ msgstr "abrir la tarea en un espacio de trabajo"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Abrir el espacio de trabajo en la app elegida en el menú «Abrir en» (VS Code, Cursor, etc.)"
 
+msgid "Open this conversation"
+msgstr "Abrir esta conversación"
+
 msgid "Open this run's workspace"
 msgstr "Abrir el espacio de trabajo de esta ejecución"
 
@@ -11620,6 +11782,9 @@ msgstr "Otros hosts"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Otras personas están usando este proyecto. Escribe <0>{projectName}</0> para confirmar."
+
+msgid "Other plans"
+msgstr "Otros planes"
 
 msgid "Other Team Members"
 msgstr "Otros miembros del equipo"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "En pausa"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "En pausa"
+
 msgid "Pay now"
 msgstr "Pagar ahora"
 
@@ -12018,16 +12187,33 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Plan"
 
+msgid "Plan actions"
+msgstr "Acciones del plan"
+
 msgid "Plan restored"
 msgstr "Plan restaurado"
+
+msgid "Plan status"
+msgstr "Estado del plan"
+
+msgid "Plan title"
+msgstr "Título del plan"
 
 msgctxt "project state"
 msgid "Planned"
 msgstr "Planificado"
 
+msgctxt "roadmap status"
+msgid "Planned"
+msgstr "Previsto"
+
 msgid "Planning the tooltip refactor"
 msgstr "Planificando la refactorización de los tooltips"
 
+msgid "Plans"
+msgstr "Planes"
+
+msgctxt "roadmap"
 msgid "Plans"
 msgstr "Planes"
 
@@ -12372,6 +12558,12 @@ msgstr "Proyecto no encontrado."
 
 msgid "Project not set up on this host"
 msgstr "El proyecto no está configurado en este host"
+
+msgid "Project notes"
+msgstr "Notas del proyecto"
+
+msgid "Project notes (Markdown)"
+msgstr "Notas del proyecto (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Proyecto listo: ábrelo desde la barra lateral."
@@ -13032,8 +13224,14 @@ msgstr "Cambiar nombre del grupo"
 msgid "Rename host"
 msgstr "Cambiar el nombre del host"
 
+msgid "Rename milestone"
+msgstr "Cambiar nombre del hito"
+
 msgid "Rename page"
 msgstr "Cambiar el nombre de la página"
+
+msgid "Rename plan"
+msgstr "Cambiar nombre del plan"
 
 msgid "Rename session"
 msgstr "Cambiar el nombre de la sesión"
@@ -13564,6 +13762,9 @@ msgstr "Tonos"
 
 msgid "Roadmap"
 msgstr "Hoja de ruta"
+
+msgid "Roadmap actions"
+msgstr "Acciones de la hoja de ruta"
 
 msgid "Rocket"
 msgstr "Cohete"
@@ -14252,6 +14453,9 @@ msgstr "El agente seleccionado no es un agente de terminal"
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "Los issues seleccionados abarcan varios repositorios. Selecciona issues de un solo repositorio para ejecutarlos."
+
+msgid "Selected text actions"
+msgstr "Acciones del texto seleccionado"
 
 msgid "Selected workspace actions"
 msgstr "Acciones de los espacios de trabajo seleccionados"
@@ -15150,6 +15354,9 @@ msgstr "Estrellas ganadas por día"
 msgid "Stars gained per week"
 msgstr "Estrellas ganadas por semana"
 
+msgid "Start"
+msgstr "Iniciar"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "Inicio"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId no coincide con el host del espacio de trabajo"
 msgid "Task"
 msgstr "Tarea"
 
+msgid "Task actions"
+msgstr "Acciones de la tarea"
+
 msgid "Task ID copied"
 msgstr "ID de la tarea copiado"
 
@@ -16053,6 +16263,9 @@ msgstr "No se puede acceder a la dirección"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "El agente copia la conversación; la rama se abre aquí"
 
+msgid "The agent did not start in time"
+msgstr "El agente no se inició a tiempo"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "El agente se encarga de una tarea desde el ticket hasta el diff. La persona revisa el resultado, no las pulsaciones. La atención pasa de escribir código a especificar el trabajo y juzgarlo. Un ingeniero ejecuta varios agentes a la vez en espacios de trabajo aislados."
 
@@ -16070,6 +16283,9 @@ msgstr "El dispositivo asociado no está accesible ahora mismo"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "El propietario de la automatización ya no puede usar espacios de trabajo en la nube en esta organización. Pídele que revise su acceso o ejecuta la automatización en un dispositivo."
+
+msgid "The backlog does not count toward plan progress."
+msgstr "El backlog no cuenta para el progreso de los planes."
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "El mejor agente cambiará.<0/>Tu flujo de trabajo, no."
@@ -16277,6 +16493,12 @@ msgstr "La solicitud falló."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "La respuesta: los agentes revisan a los agentes, y las personas hacen muestreos en lugar de leerlo todo. La confianza se gana de forma estadística, no diff a diff."
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "La hoja de ruta cambió en otro lugar. Se muestra la versión más reciente."
+
+msgid "The Roadmap is not available here"
+msgstr "La hoja de ruta no está disponible aquí"
+
 msgid "The rubric"
 msgstr "La rúbrica"
 
@@ -16449,6 +16671,9 @@ msgstr "Esto cierra el espacio de trabajo y sus terminales. Los archivos, las ra
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Este espacio de trabajo en la nube se está reactivando, lo que puede tardar hasta 30 segundos tras un periodo de inactividad."
+
+msgid "This conversation is not open here"
+msgstr "Esta conversación no está abierta aquí"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Esto elimina el historial guardado que se usa para recuperarse tras un reinicio o un cierre inesperado."
@@ -16712,6 +16937,9 @@ msgstr "Esto quitará de preparación y revertirá todos los cambios preparados.
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Esto quitará de preparados y revertirá todos los cambios preparados. Los archivos nuevos preparados se eliminarán. Esto no se puede deshacer."
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "Este espacio de trabajo no pertenece a ningún proyecto, así que no tiene hoja de ruta."
+
 msgid "This workspace has no project to branch from"
 msgstr "Este espacio de trabajo no tiene un proyecto desde el que bifurcar"
 
@@ -16726,6 +16954,9 @@ msgstr "El host de este espacio de trabajo está sin conexión"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "El host de este espacio de trabajo ejecuta un servicio de host más antiguo del que admite esta app. Actualízalo para reconectar; el espacio de trabajo y sus archivos no se tocan."
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "El host de este espacio de trabajo usa una versión antigua sin hoja de ruta. Actualízalo para planificar este proyecto aquí."
 
 msgid "Thorough reasoning effort"
 msgstr "Esfuerzo de razonamiento exhaustivo"
@@ -17666,6 +17897,9 @@ msgstr "Ver uso"
 msgid "Violence or harassment"
 msgstr "Violencia o acoso"
 
+msgid "Vision"
+msgstr "Visión"
+
 msgid "Visitors"
 msgstr "Visitantes"
 
@@ -17927,6 +18161,12 @@ msgstr "Qué está haciendo el contenido: en qué páginas empiezan las sesiones
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Aquello sobre lo que se escribieron ya no está en la página, así que no tienen marcador."
 
+msgid "What this milestone means"
+msgstr "Qué significa este hito"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "Qué entrega este plan (Markdown)"
+
 msgid "What We're Building"
 msgstr "Lo que estamos construyendo"
 
@@ -17959,6 +18199,9 @@ msgstr "¿En qué puesto estás?"
 
 msgid "Where does my code run?"
 msgstr "¿Dónde se ejecuta mi código?"
+
+msgid "Where is this project going?"
+msgstr "¿Hacia dónde va este proyecto?"
 
 msgid "Where serious teams are"
 msgstr "Donde están los equipos serios"
@@ -18040,6 +18283,18 @@ msgstr "Correo electrónico de trabajo"
 
 msgid "Work from tickets"
 msgstr "Trabajar desde los tickets"
+
+msgid "Work on milestone"
+msgstr "Trabajar en el hito"
+
+msgid "Work on plan"
+msgstr "Trabajar en el plan"
+
+msgid "Work on task"
+msgstr "Trabajar en la tarea"
+
+msgid "Work on this"
+msgstr "Trabajar en esto"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Trabaja con tus agentes en tus herramientas favoritas"

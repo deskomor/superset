@@ -125,6 +125,10 @@
 			"types": "./src/sandbox-gate.ts",
 			"default": "./src/sandbox-gate.ts"
 		},
+		"./roadmap": {
+			"types": "./src/roadmap/index.ts",
+			"default": "./src/roadmap/index.ts"
+		},
 		"./sentry": {
 			"types": "./src/sentry.ts",
 			"default": "./src/sentry.ts"

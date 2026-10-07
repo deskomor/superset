@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} назад"
 
+msgid "{done} of {total} tasks checked"
+msgstr "Отмечено задач: {done} из {total}"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Думал # секунду} few {Думал # секунды} many {Думал # секунд} other {Думал # секунды}}"
 
@@ -1472,6 +1475,10 @@ msgstr "Уникальный идентификатор организации (
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "Отменён"
+
 msgid "About"
 msgstr "О нас"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "В сети"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "Активен"
+
 msgid "active {lastActive}"
 msgstr "активность {lastActive}"
 
@@ -1607,8 +1618,14 @@ msgstr "Добавьте комментарий…"
 msgid "Add a description…"
 msgstr "Добавьте описание…"
 
+msgid "Add a journal entry"
+msgstr "Добавить запись в журнал"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Добавьте скрипт запуска в настройках проекта или отметьте скрипт терминала как запуск рабочей области."
+
+msgid "Add a note"
+msgstr "Добавить заметку"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Добавьте проект, чтобы видеть задачи GitHub."
@@ -1618,6 +1635,15 @@ msgstr "Добавьте проект, чтобы видеть пул-рекве
 
 msgid "Add a short summary…"
 msgstr "Добавьте краткое описание…"
+
+msgid "Add a subtask"
+msgstr "Добавить подзадачу"
+
+msgid "Add a summary"
+msgstr "Добавить описание"
+
+msgid "Add a task"
+msgstr "Добавить задачу"
 
 msgid "Add account"
 msgstr "Добавить аккаунт"
@@ -1689,11 +1715,17 @@ msgstr "Добавить агента для получения коммента
 msgid "Add member"
 msgstr "Добавить участника"
 
+msgid "Add milestone"
+msgstr "Добавить этап"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Добавьте агента из меню в боковой панели, чтобы начать."
 
 msgid "Add photos or files"
 msgstr "Добавить фото или файлы"
+
+msgid "Add plan"
+msgstr "Добавить план"
 
 msgid "Add project"
 msgstr "Добавить проект"
@@ -1716,6 +1748,9 @@ msgstr "Добавить скрипт"
 msgid "Add setup commands, one per line..."
 msgstr "Добавьте команды установки, по одной в строке..."
 
+msgid "Add subtask"
+msgstr "Добавить подзадачу"
+
 msgid "Add tag…"
 msgstr "Добавить тег…"
 
@@ -1736,6 +1771,9 @@ msgstr "Добавить тесты там, где их нет"
 
 msgid "Add this label"
 msgstr "Добавить эту метку"
+
+msgid "Add to chat"
+msgstr "Добавить в чат"
 
 msgid "Add to Dictionary"
 msgstr "Добавить в словарь"
@@ -2446,6 +2484,9 @@ msgstr "Запрашивать одобрение"
 msgid "Ask for this to be removed"
 msgstr "Попросить удалить"
 
+msgid "Ask in side chat"
+msgstr "Спросить в боковом чате"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "Спросите агента, @упомяните файлы, используйте /команды"
 
@@ -2788,6 +2829,9 @@ msgstr "Фоновая работа и страницы"
 
 msgid "Backlog"
 msgstr "Бэклог"
+
+msgid "Backlog actions"
+msgstr "Действия с бэклогом"
 
 msgid "Badge"
 msgstr "Значок"
@@ -3896,6 +3940,9 @@ msgstr "Свернуть все файлы"
 msgid "Collapse file"
 msgstr "Свернуть файл"
 
+msgid "Collapse plan"
+msgstr "Свернуть план"
+
 msgid "Collapse project"
 msgstr "Свернуть проект"
 
@@ -4396,6 +4443,9 @@ msgstr "Диалог"
 msgid "Conversation · Message"
 msgstr "Диалог · сообщение"
 
+msgid "Conversations"
+msgstr "Диалоги"
+
 msgid "Conversion"
 msgstr "Конверсия"
 
@@ -4404,6 +4454,15 @@ msgstr "Конверсия от предыдущего"
 
 msgid "Conversion so far"
 msgstr "Конверсия на текущий момент"
+
+msgid "Convert to note"
+msgstr "Преобразовать в заметку"
+
+msgid "Convert to plan"
+msgstr "Преобразовать в план"
+
+msgid "Convert to task"
+msgstr "Преобразовать в задачу"
 
 msgid "Converted"
 msgstr "Сконвертировались"
@@ -4429,6 +4488,9 @@ msgstr "Ссылка скопирована"
 
 msgid "Copied terminal ID"
 msgstr "ID терминала скопирован"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "Дорожная карта скопирована в формате Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Скопировано в буфер обмена."
@@ -4841,6 +4903,9 @@ msgstr "Не удалось скопировать путь"
 msgid "Couldn't copy the image"
 msgstr "Не удалось скопировать изображение"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "Не удалось скопировать дорожную карту"
+
 msgid "Couldn't create workspace"
 msgstr "Не удалось создать рабочую область"
 
@@ -4917,6 +4982,9 @@ msgstr "Не удалось подключиться к этому облачн�
 msgid "Couldn't reach workspace"
 msgstr "Не удалось подключиться к рабочей области"
 
+msgid "Couldn't read the session to fork it"
+msgstr "Не удалось прочитать сеанс для ответвления"
+
 msgid "Couldn't read this terminal's context."
 msgstr "Не удалось прочитать контекст этого терминала."
 
@@ -4990,6 +5058,9 @@ msgstr "Не удалось запустить облачную рабочую �
 msgid "Couldn't start design mode on this page"
 msgstr "Не удалось запустить режим дизайна на этой странице"
 
+msgid "Couldn't start the agent"
+msgstr "Не удалось запустить агента"
+
 msgid "Couldn't start workspace"
 msgstr "Не удалось запустить рабочую область"
 
@@ -5013,6 +5084,9 @@ msgstr "Не удалось обновить пул-реквест"
 
 msgid "Couldn't update the queue"
 msgstr "Не удалось обновить очередь"
+
+msgid "Couldn't update the Roadmap"
+msgstr "Не удалось обновить дорожную карту"
 
 msgid "Couldn't update thread"
 msgstr "Не удалось обновить ветку обсуждения"
@@ -5053,8 +5127,14 @@ msgstr "Создайте задачу из раздела задач в прил
 msgid "Create a new workspace"
 msgstr "Создать новую рабочую область"
 
+msgid "Create a plan"
+msgstr "Создать план"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Создайте проект, чтобы объединить задачи и облачные рабочие области."
+
+msgid "Create a task"
+msgstr "Создать задачу"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Создай задачу на исправление бага со входом"
@@ -5539,6 +5619,9 @@ msgstr "Удалить изображение"
 msgid "Delete local branch on workspace removal"
 msgstr "Удалять локальную ветку при удалении рабочей области"
 
+msgid "Delete milestone"
+msgstr "Удалить этап"
+
 msgid "Delete organization"
 msgstr "Удалить организацию"
 
@@ -5547,6 +5630,9 @@ msgstr "Удалить страницу"
 
 msgid "Delete permanently"
 msgstr "Удалить навсегда"
+
+msgid "Delete plan"
+msgstr "Удалить план"
 
 msgid "Delete project"
 msgstr "Удалить проект"
@@ -5710,6 +5796,9 @@ msgstr "Опишите, что нужно. Superset создаст изолир�
 
 msgid "Describe what you'd like to see built…"
 msgstr "Опишите, что вы хотели бы увидеть…"
+
+msgid "Describe where this project is going."
+msgstr "Опишите, куда движется этот проект."
 
 msgid "Description"
 msgstr "Описание"
@@ -5996,6 +6085,10 @@ msgstr "Не сохранять"
 msgid "Done"
 msgstr "Готово"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "Готово"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Готово — стиль чипа с рамкой, который используется в панели пресетов, теперь по умолчанию для всех подсказок, а скопированные переопределения удалены (итого −90 строк)."
 
@@ -6239,6 +6332,12 @@ msgstr "Изменить скрипт запуска"
 
 msgid "Edit script"
 msgstr "Изменить скрипт"
+
+msgid "Edit summary"
+msgstr "Изменить описание"
+
+msgid "Edit vision"
+msgstr "Изменить видение"
 
 msgid "Edit your comment…"
 msgstr "Измените комментарий…"
@@ -6537,6 +6636,9 @@ msgstr "Развернуть все файлы"
 msgid "Expand file"
 msgstr "Развернуть файл"
 
+msgid "Expand plan"
+msgstr "Развернуть план"
+
 msgid "Expand project"
 msgstr "Развернуть проект"
 
@@ -6554,9 +6656,6 @@ msgstr "Экспериментальные"
 
 msgid "Expired"
 msgstr "Истёк"
-
-msgid "Explain"
-msgstr "Объяснить"
 
 msgid "Explain how this repository works…"
 msgstr "Объясни, как устроен этот репозиторий…"
@@ -6597,6 +6696,12 @@ msgstr "Внешний редактор"
 
 msgid "extra ${used} of ${limit}"
 msgstr "сверх лимита ${used} из ${limit}"
+
+msgid "Extra instructions"
+msgstr "Дополнительные инструкции"
+
+msgid "Extra instructions (optional)"
+msgstr "Дополнительные инструкции (необязательно)"
 
 msgid "Extra small"
 msgstr "Очень маленький"
@@ -7480,6 +7585,9 @@ msgstr "Забыть {domain}"
 
 msgid "Fork args"
 msgstr "Аргументы форка"
+
+msgid "Fork from here"
+msgstr "Ответвить отсюда"
 
 msgid "Fork session"
 msgstr "Форкнуть сессию"
@@ -8673,6 +8781,9 @@ msgstr "Присоединился"
 msgid "Joining…"
 msgstr "Присоединение…"
 
+msgid "Journal ({count})"
+msgstr "Журнал ({count})"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Переходите в любимый редактор одним кликом. VS Code, Cursor, Xcode, IDE от JetBrains или любой терминал: открывайте worktree ровно там, где нужно."
 
@@ -9208,6 +9319,9 @@ msgstr "Загрузка ревью..."
 msgid "Loading terminal scripts..."
 msgstr "Загрузка скриптов терминала..."
 
+msgid "Loading the Roadmap…"
+msgstr "Загрузка дорожной карты…"
+
 msgid "Loading usage history…"
 msgstr "Загрузка истории использования…"
 
@@ -9598,6 +9712,24 @@ msgstr "Середина 2026"
 msgid "Mid 2027"
 msgstr "Середина 2027"
 
+msgid "Milestone"
+msgstr "Этап"
+
+msgid "Milestone actions"
+msgstr "Действия с этапом"
+
+msgid "Milestone status"
+msgstr "Статус этапа"
+
+msgid "Milestone summary"
+msgstr "Описание этапа"
+
+msgid "Milestone title"
+msgstr "Название этапа"
+
+msgid "Milestones"
+msgstr "Этапы"
+
 msgid "Mine"
 msgstr "Мои"
 
@@ -9761,6 +9893,9 @@ msgstr "Другие действия для {0}"
 msgid "More create options"
 msgstr "Другие варианты создания"
 
+msgid "More details"
+msgstr "Подробнее"
+
 msgid "More options"
 msgstr "Ещё"
 
@@ -9783,6 +9918,9 @@ msgstr "Почти вся история софта"
 msgid "Move {count} to Group"
 msgstr "Переместить {count} в группу"
 
+msgid "Move down"
+msgstr "Переместить вниз"
+
 msgid "Move to Center"
 msgstr "Переместить в центр"
 
@@ -9794,6 +9932,9 @@ msgstr "Переместить вправо"
 
 msgid "Move to Tab"
 msgstr "Переместить во вкладку"
+
+msgid "Move up"
+msgstr "Переместить вверх"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "Новая группа из рабочей области"
 msgid "New issue"
 msgstr "Новая задача"
 
+msgid "New milestone title"
+msgstr "Название нового этапа"
+
 msgid "New page"
 msgstr "Новая страница"
 
 msgid "New password (min 8 characters)"
 msgstr "Новый пароль (мин. 8 символов)"
+
+msgid "New plan title"
+msgstr "Название нового плана"
 
 msgid "New project"
 msgstr "Новый проект"
@@ -10417,11 +10564,17 @@ msgstr "Нет объединённых пул-реквестов."
 msgid "No messages yet"
 msgstr "Сообщений пока нет"
 
+msgid "No milestone"
+msgstr "Без этапа"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Здесь нет доступного мобильного симулятора. Нужна облачная песочница с поддержкой Limrun или локальный набор инструментов iOS/Android."
 
 msgid "No name on file"
 msgstr "Имя не указано"
+
+msgid "No notes yet."
+msgstr "Заметок пока нет."
 
 msgid "No open issues found."
 msgstr "Открытых задач не найдено."
@@ -10805,6 +10958,12 @@ msgstr "без сортировки"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Нет обновлений"
+
+msgid "Note"
+msgstr "Заметка"
+
+msgid "Note (optional)"
+msgstr "Заметка (необязательно)"
 
 msgid "Notes"
 msgstr "Заметки"
@@ -11464,6 +11623,9 @@ msgstr "открыть задачу в рабочей области"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Открыть рабочую область в приложении, выбранном в меню «Открыть в» (VS Code, Cursor и др.)"
 
+msgid "Open this conversation"
+msgstr "Открыть этот диалог"
+
 msgid "Open this run's workspace"
 msgstr "Открыть рабочую область этого запуска"
 
@@ -11620,6 +11782,9 @@ msgstr "Другие хосты"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Этим проектом пользуются другие люди. Введите <0>{projectName}</0> для подтверждения."
+
+msgid "Other plans"
+msgstr "Другие планы"
 
 msgid "Other Team Members"
 msgstr "Другие участники команды"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Приостановлен"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "Приостановлен"
+
 msgid "Pay now"
 msgstr "Оплатить"
 
@@ -12018,10 +12187,23 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Тариф"
 
+msgid "Plan actions"
+msgstr "Действия с планом"
+
 msgid "Plan restored"
 msgstr "Тариф восстановлен"
 
+msgid "Plan status"
+msgstr "Статус плана"
+
+msgid "Plan title"
+msgstr "Название плана"
+
 msgctxt "project state"
+msgid "Planned"
+msgstr "Запланирован"
+
+msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Запланирован"
 
@@ -12030,6 +12212,10 @@ msgstr "Планируем рефакторинг tooltip"
 
 msgid "Plans"
 msgstr "Тарифы"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "Планы"
 
 msgid "Plant Floor"
 msgstr "Цех"
@@ -12372,6 +12558,12 @@ msgstr "Проект не найден."
 
 msgid "Project not set up on this host"
 msgstr "Проект не настроен на этом хосте"
+
+msgid "Project notes"
+msgstr "Заметки проекта"
+
+msgid "Project notes (Markdown)"
+msgstr "Заметки проекта (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Проект готов — откройте его из боковой панели."
@@ -13032,8 +13224,14 @@ msgstr "Переименовать группу"
 msgid "Rename host"
 msgstr "Переименовать хост"
 
+msgid "Rename milestone"
+msgstr "Переименовать этап"
+
 msgid "Rename page"
 msgstr "Переименовать страницу"
+
+msgid "Rename plan"
+msgstr "Переименовать план"
 
 msgid "Rename session"
 msgstr "Переименовать сессию"
@@ -13564,6 +13762,9 @@ msgstr "Мелодии"
 
 msgid "Roadmap"
 msgstr "Дорожная карта"
+
+msgid "Roadmap actions"
+msgstr "Действия с дорожной картой"
 
 msgid "Rocket"
 msgstr "Ракета"
@@ -14252,6 +14453,9 @@ msgstr "Выбранный агент не является терминальн
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "Выбранные задачи относятся к разным репозиториям. Выберите задачи из одного репозитория, чтобы запустить их."
+
+msgid "Selected text actions"
+msgstr "Действия с выделенным текстом"
 
 msgid "Selected workspace actions"
 msgstr "Действия с выбранными рабочими областями"
@@ -15150,6 +15354,9 @@ msgstr "Звёзд в день"
 msgid "Stars gained per week"
 msgstr "Звёзд в неделю"
 
+msgid "Start"
+msgstr "Запустить"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "Начало"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId не совпадает с хостом рабочей об
 msgid "Task"
 msgstr "Задача"
 
+msgid "Task actions"
+msgstr "Действия с задачей"
+
 msgid "Task ID copied"
 msgstr "ID задачи скопирован"
 
@@ -16053,6 +16263,9 @@ msgstr "Адрес недоступен"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "Агент копирует разговор; ветвь откроется здесь"
 
+msgid "The agent did not start in time"
+msgstr "Агент не запустился вовремя"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Агент ведёт задачу от тикета до diff. Человек проверяет результат, а не нажатия клавиш. Внимание смещается с написания кода на постановку задач и оценку результата. Один инженер ведёт несколько агентов одновременно в изолированных рабочих областях."
 
@@ -16070,6 +16283,9 @@ msgstr "Связанное устройство сейчас недоступн�
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "Владелец автоматизации больше не может использовать облачные рабочие области в этой организации. Попросите его проверить доступ или запустите автоматизацию на устройстве."
+
+msgid "The backlog does not count toward plan progress."
+msgstr "Бэклог не учитывается в прогрессе планов."
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "Лучший агент будет меняться.<0/>Ваш процесс — нет."
@@ -16277,6 +16493,12 @@ msgstr "Запрос завершился ошибкой."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Ответ: агенты проверяют агентов, а люди читают выборочно, а не всё подряд. Доверие зарабатывается статистически, а не по каждому diff."
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "Дорожная карта изменена в другом месте. Показана последняя версия."
+
+msgid "The Roadmap is not available here"
+msgstr "Дорожная карта здесь недоступна"
+
 msgid "The rubric"
 msgstr "Рубрика"
 
@@ -16449,6 +16671,9 @@ msgstr "Рабочая область и её терминалы будут за
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Облачное рабочее пространство запускается. После простоя это может занять до 30 секунд."
+
+msgid "This conversation is not open here"
+msgstr "Этот диалог здесь не открыт"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Это удалит сохранённую прокрутку, используемую для восстановления после перезагрузки или сбоя."
@@ -16712,6 +16937,9 @@ msgstr "Все индексированные изменения будут уд
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Это снимет индексацию и откатит все проиндексированные изменения. Проиндексированные новые файлы будут удалены. Отменить нельзя."
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "Эта рабочая область не относится ни к одному проекту, поэтому у неё нет дорожной карты."
+
 msgid "This workspace has no project to branch from"
 msgstr "В этом рабочем пространстве нет проекта для ответвления"
 
@@ -16726,6 +16954,9 @@ msgstr "Хост этой рабочей области офлайн"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Хост этого рабочего пространства работает на более старой службе хоста, чем поддерживает приложение. Обновите её, чтобы переподключиться; рабочее пространство и файлы останутся нетронутыми."
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "Хост этой рабочей области использует старую версию без дорожной карты. Обновите его, чтобы планировать этот проект здесь."
 
 msgid "Thorough reasoning effort"
 msgstr "Тщательные рассуждения"
@@ -17666,6 +17897,9 @@ msgstr "Посмотреть использование"
 msgid "Violence or harassment"
 msgstr "Насилие или травля"
 
+msgid "Vision"
+msgstr "Видение"
+
 msgid "Visitors"
 msgstr "Посетители"
 
@@ -17927,6 +18161,12 @@ msgstr "Что делает контент: с каких страниц нач�
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Того, к чему они были написаны, больше нет на странице, поэтому у них нет метки."
 
+msgid "What this milestone means"
+msgstr "Что означает этот этап"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "Что даст этот план (Markdown)"
+
 msgid "What We're Building"
 msgstr "Что мы строим"
 
@@ -17959,6 +18199,9 @@ msgstr "Какое у вас место?"
 
 msgid "Where does my code run?"
 msgstr "Где выполняется мой код?"
+
+msgid "Where is this project going?"
+msgstr "Куда движется этот проект?"
 
 msgid "Where serious teams are"
 msgstr "Где сейчас серьёзные команды"
@@ -18040,6 +18283,18 @@ msgstr "Рабочая электронная почта"
 
 msgid "Work from tickets"
 msgstr "Работа из тикетов"
+
+msgid "Work on milestone"
+msgstr "Работать над этапом"
+
+msgid "Work on plan"
+msgstr "Работать над планом"
+
+msgid "Work on task"
+msgstr "Работать над задачей"
+
+msgid "Work on this"
+msgstr "Работать над этим"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Работайте с агентами в любимых инструментах"

@@ -840,6 +840,9 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance}前"
 
+msgid "{done} of {total} tasks checked"
+msgstr "已勾選 {done}/{total} 個任務"
+
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {思考了#秒} other {思考了#秒}}"
 
@@ -1472,6 +1475,10 @@ msgstr "組織的唯一識別符號（根據名稱自動生成）"
 msgid "Aa"
 msgstr "Aa"
 
+msgctxt "roadmap status"
+msgid "Abandoned"
+msgstr "已放棄"
+
 msgid "About"
 msgstr "關於"
 
@@ -1566,6 +1573,10 @@ msgctxt "presence"
 msgid "Active"
 msgstr "活躍"
 
+msgctxt "roadmap status"
+msgid "Active"
+msgstr "進行中"
+
 msgid "active {lastActive}"
 msgstr "{lastActive}活躍"
 
@@ -1607,8 +1618,14 @@ msgstr "新增留言…"
 msgid "Add a description…"
 msgstr "新增描述…"
 
+msgid "Add a journal entry"
+msgstr "新增日誌項目"
+
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "在專案設定中新增生命週期執行指令碼，或將某個終端指令碼標記為工作區執行命令。"
+
+msgid "Add a note"
+msgstr "新增備註"
 
 msgid "Add a project to see GitHub issues."
 msgstr "新增專案以檢視GitHub議題。"
@@ -1618,6 +1635,15 @@ msgstr "新增一個專案來檢視拉取請求。"
 
 msgid "Add a short summary…"
 msgstr "新增簡短摘要…"
+
+msgid "Add a subtask"
+msgstr "新增子任務"
+
+msgid "Add a summary"
+msgstr "新增摘要"
+
+msgid "Add a task"
+msgstr "新增任務"
 
 msgid "Add account"
 msgstr "新增帳戶"
@@ -1689,11 +1715,17 @@ msgstr "新增監聽代理"
 msgid "Add member"
 msgstr "新增成員"
 
+msgid "Add milestone"
+msgstr "新增里程碑"
+
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "從側邊欄選單中新增一個即可開始。"
 
 msgid "Add photos or files"
 msgstr "新增照片或檔案"
+
+msgid "Add plan"
+msgstr "新增計劃"
 
 msgid "Add project"
 msgstr "新增專案"
@@ -1716,6 +1748,9 @@ msgstr "新增指令碼"
 msgid "Add setup commands, one per line..."
 msgstr "新增設定命令，每行一條..."
 
+msgid "Add subtask"
+msgstr "新增子任務"
+
 msgid "Add tag…"
 msgstr "新增標籤…"
 
@@ -1736,6 +1771,9 @@ msgstr "給缺測試的地方補測試"
 
 msgid "Add this label"
 msgstr "新增此標籤"
+
+msgid "Add to chat"
+msgstr "加入聊天"
 
 msgid "Add to Dictionary"
 msgstr "新增到詞典"
@@ -2446,6 +2484,9 @@ msgstr "要求批准"
 msgid "Ask for this to be removed"
 msgstr "請求移除"
 
+msgid "Ask in side chat"
+msgstr "在側邊聊天中提問"
+
 msgid "Ask the agent, @mention files, run /commands"
 msgstr "向代理提問，用 @ 提及檔案，執行 /命令"
 
@@ -2788,6 +2829,9 @@ msgstr "背景工作與頁面"
 
 msgid "Backlog"
 msgstr "待規劃"
+
+msgid "Backlog actions"
+msgstr "待規劃操作"
 
 msgid "Badge"
 msgstr "徽章"
@@ -3896,6 +3940,9 @@ msgstr "摺疊所有檔案"
 msgid "Collapse file"
 msgstr "摺疊檔案"
 
+msgid "Collapse plan"
+msgstr "收合計劃"
+
 msgid "Collapse project"
 msgstr "收起專案"
 
@@ -4396,6 +4443,9 @@ msgstr "對話"
 msgid "Conversation · Message"
 msgstr "對話 · 訊息"
 
+msgid "Conversations"
+msgstr "對話"
+
 msgid "Conversion"
 msgstr "轉換"
 
@@ -4404,6 +4454,15 @@ msgstr "較上一步轉換率"
 
 msgid "Conversion so far"
 msgstr "累計轉換率"
+
+msgid "Convert to note"
+msgstr "轉為備註"
+
+msgid "Convert to plan"
+msgstr "轉為計劃"
+
+msgid "Convert to task"
+msgstr "轉為任務"
 
 msgid "Converted"
 msgstr "已轉換"
@@ -4429,6 +4488,9 @@ msgstr "已複製連結"
 
 msgid "Copied terminal ID"
 msgstr "已複製終端ID"
+
+msgid "Copied the Roadmap as Markdown"
+msgstr "已將路線圖複製為 Markdown"
 
 msgid "Copied to clipboard."
 msgstr "已複製到剪貼簿。"
@@ -4841,6 +4903,9 @@ msgstr "無法複製路徑"
 msgid "Couldn't copy the image"
 msgstr "無法複製圖片"
 
+msgid "Couldn't copy the Roadmap"
+msgstr "無法複製路線圖"
+
 msgid "Couldn't create workspace"
 msgstr "無法建立工作區"
 
@@ -4917,6 +4982,9 @@ msgstr "無法連線到此雲端工作區。它可能仍在喚醒中——請重
 msgid "Couldn't reach workspace"
 msgstr "無法連線到工作區"
 
+msgid "Couldn't read the session to fork it"
+msgstr "無法讀取工作階段以進行分支"
+
 msgid "Couldn't read this terminal's context."
 msgstr "無法讀取這個終端的上下文。"
 
@@ -4990,6 +5058,9 @@ msgstr "無法啟動雲端工作區"
 msgid "Couldn't start design mode on this page"
 msgstr "無法在此頁面啟動設計模式"
 
+msgid "Couldn't start the agent"
+msgstr "無法啟動代理程式"
+
 msgid "Couldn't start workspace"
 msgstr "無法啟動工作區"
 
@@ -5013,6 +5084,9 @@ msgstr "無法更新拉取請求"
 
 msgid "Couldn't update the queue"
 msgstr "無法更新佇列"
+
+msgid "Couldn't update the Roadmap"
+msgstr "無法更新路線圖"
 
 msgid "Couldn't update thread"
 msgstr "無法更新討論"
@@ -5053,8 +5127,14 @@ msgstr "在桌面端任務檢視中建立新任務。"
 msgid "Create a new workspace"
 msgstr "建立新工作區"
 
+msgid "Create a plan"
+msgstr "建立計畫"
+
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "建立專案，將任務與雲端工作區歸在一起。"
+
+msgid "Create a task"
+msgstr "建立任務"
 
 msgid "Create a task for fixing the login bug"
 msgstr "建立一個任務，修復登入的bug"
@@ -5539,6 +5619,9 @@ msgstr "刪除圖片"
 msgid "Delete local branch on workspace removal"
 msgstr "移除工作區時刪除本地分支"
 
+msgid "Delete milestone"
+msgstr "刪除里程碑"
+
 msgid "Delete organization"
 msgstr "刪除組織"
 
@@ -5547,6 +5630,9 @@ msgstr "刪除頁面"
 
 msgid "Delete permanently"
 msgstr "永久刪除"
+
+msgid "Delete plan"
+msgstr "刪除計劃"
 
 msgid "Delete project"
 msgstr "刪除專案"
@@ -5710,6 +5796,9 @@ msgstr "描述你的需求。Superset會為該任務建立隔離的工作區和�
 
 msgid "Describe what you'd like to see built…"
 msgstr "描述你希望實現的功能…"
+
+msgid "Describe where this project is going."
+msgstr "描述這個專案的發展方向。"
 
 msgid "Description"
 msgstr "說明"
@@ -5996,6 +6085,10 @@ msgstr "不儲存"
 msgid "Done"
 msgstr "完成"
 
+msgctxt "roadmap status"
+msgid "Done"
+msgstr "已完成"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "完成——預設欄使用的帶邊框chip樣式現在是所有tooltip的預設樣式，複製貼上出來的樣式覆蓋也都移除了（淨減90行）。"
 
@@ -6239,6 +6332,12 @@ msgstr "編輯執行指令碼"
 
 msgid "Edit script"
 msgstr "編輯指令碼"
+
+msgid "Edit summary"
+msgstr "編輯摘要"
+
+msgid "Edit vision"
+msgstr "編輯願景"
 
 msgid "Edit your comment…"
 msgstr "編輯你的留言…"
@@ -6537,6 +6636,9 @@ msgstr "展開所有檔案"
 msgid "Expand file"
 msgstr "展開檔案"
 
+msgid "Expand plan"
+msgstr "展開計劃"
+
 msgid "Expand project"
 msgstr "展開專案"
 
@@ -6554,9 +6656,6 @@ msgstr "實驗功能"
 
 msgid "Expired"
 msgstr "已過期"
-
-msgid "Explain"
-msgstr "解釋"
 
 msgid "Explain how this repository works…"
 msgstr "講講這個儲存庫是怎麼運作的…"
@@ -6597,6 +6696,12 @@ msgstr "外部編輯器"
 
 msgid "extra ${used} of ${limit}"
 msgstr "額外用量${used}/${limit}"
+
+msgid "Extra instructions"
+msgstr "額外說明"
+
+msgid "Extra instructions (optional)"
+msgstr "額外說明（選填）"
 
 msgid "Extra small"
 msgstr "超小"
@@ -7480,6 +7585,9 @@ msgstr "忘記{domain}"
 
 msgid "Fork args"
 msgstr "分支參數"
+
+msgid "Fork from here"
+msgstr "從此處分支"
 
 msgid "Fork session"
 msgstr "分支會話"
@@ -8673,6 +8781,9 @@ msgstr "加入時間"
 msgid "Joining…"
 msgstr "正在加入…"
 
+msgid "Journal ({count})"
+msgstr "日誌（{count}）"
+
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "一鍵跳進你喜歡的編輯器。VS Code、Cursor、Xcode、JetBrains系列IDE或任意終端：在你需要的地方開啟worktree。"
 
@@ -9208,6 +9319,9 @@ msgstr "正在載入評審..."
 msgid "Loading terminal scripts..."
 msgstr "正在載入終端指令碼..."
 
+msgid "Loading the Roadmap…"
+msgstr "正在載入路線圖…"
+
 msgid "Loading usage history…"
 msgstr "正在載入用量歷史…"
 
@@ -9598,6 +9712,24 @@ msgstr "2026年中"
 msgid "Mid 2027"
 msgstr "2027年中"
 
+msgid "Milestone"
+msgstr "里程碑"
+
+msgid "Milestone actions"
+msgstr "里程碑操作"
+
+msgid "Milestone status"
+msgstr "里程碑狀態"
+
+msgid "Milestone summary"
+msgstr "里程碑摘要"
+
+msgid "Milestone title"
+msgstr "里程碑標題"
+
+msgid "Milestones"
+msgstr "里程碑"
+
 msgid "Mine"
 msgstr "我的"
 
@@ -9761,6 +9893,9 @@ msgstr "{0}的更多操作"
 msgid "More create options"
 msgstr "更多建立選項"
 
+msgid "More details"
+msgstr "更多詳情"
+
 msgid "More options"
 msgstr "更多選項"
 
@@ -9783,6 +9918,9 @@ msgstr "軟體史的大部分時間"
 msgid "Move {count} to Group"
 msgstr "將{count}個移動到群組"
 
+msgid "Move down"
+msgstr "下移"
+
 msgid "Move to Center"
 msgstr "移到中間"
 
@@ -9794,6 +9932,9 @@ msgstr "移到右側"
 
 msgid "Move to Tab"
 msgstr "移動到分頁"
+
+msgid "Move up"
+msgstr "上移"
 
 msgid "MRR"
 msgstr "MRR"
@@ -9994,11 +10135,17 @@ msgstr "以此工作區新建群組"
 msgid "New issue"
 msgstr "新建議題"
 
+msgid "New milestone title"
+msgstr "新里程碑標題"
+
 msgid "New page"
 msgstr "新增頁面"
 
 msgid "New password (min 8 characters)"
 msgstr "新密碼（至少8個字元）"
+
+msgid "New plan title"
+msgstr "新計劃標題"
 
 msgid "New project"
 msgstr "新建專案"
@@ -10417,11 +10564,17 @@ msgstr "沒有已合併的拉取請求。"
 msgid "No messages yet"
 msgstr "還沒有訊息"
 
+msgid "No milestone"
+msgstr "無里程碑"
+
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "此處沒有可用的行動模擬器。需要支援 Limrun 的雲端沙盒，或本機 iOS/Android 工具鏈。"
 
 msgid "No name on file"
 msgstr "未登記姓名"
+
+msgid "No notes yet."
+msgstr "尚無筆記。"
 
 msgid "No open issues found."
 msgstr "未找到開啟的議題。"
@@ -10805,6 +10958,12 @@ msgstr "未排序"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "未更新"
+
+msgid "Note"
+msgstr "備註"
+
+msgid "Note (optional)"
+msgstr "備註（選填）"
 
 msgid "Notes"
 msgstr "筆記"
@@ -11464,6 +11623,9 @@ msgstr "在工作區中開啟任務"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "在「開啟方式」選單中選定的應用（VS Code、Cursor等）中開啟工作區"
 
+msgid "Open this conversation"
+msgstr "開啟此對話"
+
 msgid "Open this run's workspace"
 msgstr "開啟此次執行的工作區"
 
@@ -11620,6 +11782,9 @@ msgstr "其他主機"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "其他人正在使用此專案。輸入 <0>{projectName}</0> 以確認。"
+
+msgid "Other plans"
+msgstr "其他計劃"
 
 msgid "Other Team Members"
 msgstr "其他團隊成員"
@@ -11854,6 +12019,10 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "已暫停"
 
+msgctxt "roadmap status"
+msgid "Paused"
+msgstr "已暫停"
+
 msgid "Pay now"
 msgstr "立即支付"
 
@@ -12018,10 +12187,23 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "方案"
 
+msgid "Plan actions"
+msgstr "計劃操作"
+
 msgid "Plan restored"
 msgstr "方案已恢復"
 
+msgid "Plan status"
+msgstr "計劃狀態"
+
+msgid "Plan title"
+msgstr "計劃標題"
+
 msgctxt "project state"
+msgid "Planned"
+msgstr "已規劃"
+
+msgctxt "roadmap status"
 msgid "Planned"
 msgstr "已規劃"
 
@@ -12030,6 +12212,10 @@ msgstr "正在規劃tooltip重構"
 
 msgid "Plans"
 msgstr "方案"
+
+msgctxt "roadmap"
+msgid "Plans"
+msgstr "計劃"
 
 msgid "Plant Floor"
 msgstr "廠房"
@@ -12372,6 +12558,12 @@ msgstr "找不到該專案。"
 
 msgid "Project not set up on this host"
 msgstr "專案未在此主機上設定"
+
+msgid "Project notes"
+msgstr "專案筆記"
+
+msgid "Project notes (Markdown)"
+msgstr "專案筆記（Markdown）"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "專案已就緒，可從側邊欄開啟。"
@@ -13032,8 +13224,14 @@ msgstr "重新命名群組"
 msgid "Rename host"
 msgstr "重新命名主機"
 
+msgid "Rename milestone"
+msgstr "重新命名里程碑"
+
 msgid "Rename page"
 msgstr "重新命名頁面"
+
+msgid "Rename plan"
+msgstr "重新命名計劃"
 
 msgid "Rename session"
 msgstr "重新命名會話"
@@ -13564,6 +13762,9 @@ msgstr "提示音"
 
 msgid "Roadmap"
 msgstr "路線圖"
+
+msgid "Roadmap actions"
+msgstr "路線圖操作"
 
 msgid "Rocket"
 msgstr "火箭"
@@ -14252,6 +14453,9 @@ msgstr "所選代理程式不是終端代理程式"
 
 msgid "Selected issues span multiple repositories. Select issues from a single repository to run them."
 msgstr "所選議題跨越多個儲存庫。請選擇同一儲存庫中的議題後再執行。"
+
+msgid "Selected text actions"
+msgstr "所選文字動作"
 
 msgid "Selected workspace actions"
 msgstr "選中工作區的操作"
@@ -15150,6 +15354,9 @@ msgstr "每日新增星標"
 msgid "Stars gained per week"
 msgstr "每週新增星標"
 
+msgid "Start"
+msgstr "開始"
+
 msgctxt "project date"
 msgid "Start"
 msgstr "開始日期"
@@ -15813,6 +16020,9 @@ msgstr "targetHostId與該工作區的主機不匹配"
 msgid "Task"
 msgstr "任務"
 
+msgid "Task actions"
+msgstr "任務操作"
+
 msgid "Task ID copied"
 msgstr "已複製任務 ID"
 
@@ -16053,6 +16263,9 @@ msgstr "無法存取該地址"
 msgid "The agent copies the conversation; the branch opens here"
 msgstr "代理複製該對話，分支在此開啟"
 
+msgid "The agent did not start in time"
+msgstr "代理程式未能及時啟動"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "代理程式從工單一路負責到差異。人類審查結果，而不是擊鍵過程。注意力從寫程式碼轉向定義工作和判斷成果。一名工程師在隔離工作區裡同時跑好幾個代理程式。"
 
@@ -16070,6 +16283,9 @@ msgstr "關聯的裝置現在連不上"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "此自動化的擁有者已無法在此組織中使用雲端工作區。請對方檢查存取權限，或在裝置上執行此自動化。"
+
+msgid "The backlog does not count toward plan progress."
+msgstr "待規劃項目不計入計劃進度。"
 
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "最好的代理程式會變。<0/>你的工作流不該變。"
@@ -16277,6 +16493,12 @@ msgstr "請求失敗。"
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "應對辦法是：讓代理程式審查代理程式，人類改為抽樣而不是通讀。信任靠統計建立，而不是逐個差異建立。"
 
+msgid "The Roadmap changed elsewhere. Showing the latest version."
+msgstr "路線圖已在其他地方變更，正在顯示最新版本。"
+
+msgid "The Roadmap is not available here"
+msgstr "此處無法使用路線圖"
+
 msgid "The rubric"
 msgstr "評分表"
 
@@ -16449,6 +16671,9 @@ msgstr "這將關閉該工作區及其終端機。專案的檔案、分支和其
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "正在喚醒此雲端工作區。如果它已閒置一段時間，可能需要最多 30 秒。"
+
+msgid "This conversation is not open here"
+msgstr "此對話未在此處開啟"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "這將刪除用於重啟/崩潰恢復的已儲存回滾緩衝。"
@@ -16712,6 +16937,9 @@ msgstr "這將取消暫存並還原所有已暫存的變更。已暫存的新檔
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "這將取消暫存並還原所有已暫存的更改。已暫存的新檔案將被刪除。此操作無法復原。"
 
+msgid "This workspace does not belong to a project, so it has no Roadmap."
+msgstr "此工作區不屬於任何專案，因此沒有路線圖。"
+
 msgid "This workspace has no project to branch from"
 msgstr "此工作區沒有可供分叉的專案"
 
@@ -16726,6 +16954,9 @@ msgstr "此工作區的主機已離線"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "此工作區的主機執行的主機服務版本低於此應用程式支援的版本。更新後即可重新連線；工作區及其檔案不受影響。"
+
+msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
+msgstr "此工作區的主機執行的是不含路線圖的舊版本。請更新後在此規劃這個專案。"
 
 msgid "Thorough reasoning effort"
 msgstr "深入的推理投入"
@@ -17666,6 +17897,9 @@ msgstr "檢視用量"
 msgid "Violence or harassment"
 msgstr "暴力或騷擾"
 
+msgid "Vision"
+msgstr "願景"
+
 msgid "Visitors"
 msgstr "訪客"
 
@@ -17927,6 +18161,12 @@ msgstr "內容的表現：工作階段從哪些頁面開始，以及發佈了多
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "這些評論所針對的內容已不在頁面上，因此沒有標記。"
 
+msgid "What this milestone means"
+msgstr "此里程碑的意義"
+
+msgid "What this plan delivers (Markdown)"
+msgstr "此計劃要交付的內容（Markdown）"
+
 msgid "What We're Building"
 msgstr "我們正在構建什麼"
 
@@ -17959,6 +18199,9 @@ msgstr "你排第幾？"
 
 msgid "Where does my code run?"
 msgstr "我的程式碼在哪裡執行？"
+
+msgid "Where is this project going?"
+msgstr "這個專案將走向何方？"
 
 msgid "Where serious teams are"
 msgstr "認真的團隊都在這裡"
@@ -18040,6 +18283,18 @@ msgstr "工作電子郵件"
 
 msgid "Work from tickets"
 msgstr "從工單開始工作"
+
+msgid "Work on milestone"
+msgstr "處理里程碑"
+
+msgid "Work on plan"
+msgstr "處理計劃"
+
+msgid "Work on task"
+msgstr "處理任務"
+
+msgid "Work on this"
+msgstr "處理此項目"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "在你常用的工具裡與代理程式協作"

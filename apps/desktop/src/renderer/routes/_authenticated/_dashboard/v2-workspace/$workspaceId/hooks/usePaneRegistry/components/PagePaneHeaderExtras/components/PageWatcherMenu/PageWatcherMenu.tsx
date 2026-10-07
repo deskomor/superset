@@ -28,8 +28,8 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/components/AgentSessionPicker";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { AgentIcon } from "renderer/routes/_authenticated/settings/agents/components/V2AgentsSettings/components/AgentIcon";
+import { waitForTerminalAgent } from "../../../../../../utils/waitForTerminalAgent";
 import type { CreateNewAgentSession } from "../../../../../useAgentSessionLauncher";
-import { waitForPageAgent } from "./utils/waitForPageAgent";
 
 const WATCHING_REFRESH_MS = 30_000;
 const IDLE_REFRESH_MS = 5 * 60_000;
@@ -146,7 +146,7 @@ export function PageWatcherMenu({
 				prompt: `Watch the Superset Page with ID ${page.id} for reader comments. Read it with superset pages get ${page.id}. Load the Superset Pages skill (superset-page or superset:page) and follow it when handling comments. The app will register this terminal as the page watcher. Do not republish or change the page until a reader requests a change. After reading, wait for comments to be delivered to this session.`,
 			});
 			if (!result) return;
-			const binding = await waitForPageAgent({
+			const binding = await waitForTerminalAgent({
 				client,
 				workspaceId,
 				terminalId: result.terminalId,

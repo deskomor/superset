@@ -6,6 +6,7 @@ import { workspaceTrpc } from "@superset/workspace-client";
 import { terminalQueryColors } from "renderer/lib/terminal/terminal-query-colors";
 import type { OpenFile } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/types";
 import "@xterm/xterm/css/xterm.css";
+import { cutTerminalTranscriptAtSelection } from "@superset/shared/terminal-session-handoff";
 import {
 	useCallback,
 	useEffect,
@@ -14,6 +15,7 @@ import {
 	useState,
 	useSyncExternalStore,
 } from "react";
+import { useTerminalAgentBinding } from "renderer/hooks/host-service/useTerminalAgentBindings";
 import { useTerminalAppearance } from "renderer/hooks/useTerminalAppearance";
 import { useHotkey } from "renderer/hotkeys";
 import {
@@ -26,14 +28,17 @@ import {
 	useTerminalFolderPolicy,
 	useUrlLinkAction,
 } from "renderer/lib/clickPolicy";
-import { getTerminalSelectionForCopy } from "renderer/lib/terminal/terminal-copy";
+import {
+	getTerminalSelectionForCopy,
+	trimTerminalSelection,
+} from "renderer/lib/terminal/terminal-copy";
 import {
 	type ConnectionState,
 	terminalRuntimeRegistry,
 } from "renderer/lib/terminal/terminal-runtime-registry";
 import { useOpenInExternalEditor } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/useOpenInExternalEditor";
 import { useRevealInFinder } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/hooks/useRevealInFinder";
-import { useExplainSelectionSource } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/providers/ExplainSelectionProvider";
+import { useSelectionActionSource } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/providers/SelectionActionsProvider";
 import type {
 	PaneViewerData,
 	TerminalPaneData,
@@ -490,7 +495,17 @@ export function TerminalPane({
 
 	useCopyOnSelect({ terminalId, terminalInstanceId, connectionState });
 
-	useExplainSelectionSource(containerRef, {
+	const agentBinding = useTerminalAgentBinding(workspaceId, terminalId);
+	const readTerminalTranscript = async () =>
+		(
+			await workspaceTrpcUtils.terminal.transcript.fetch({
+				workspaceId,
+				terminalId,
+			})
+		).text;
+	const agentId = agentBinding?.definitionId ?? agentBinding?.agentId;
+	useSelectionActionSource(containerRef, {
+		agentId,
 		readSelection: () => {
 			const xterm = terminalRuntimeRegistry.getTerminal(
 				terminalId,
@@ -498,12 +513,33 @@ export function TerminalPane({
 			);
 			return xterm?.hasSelection() ? getTerminalSelectionForCopy(xterm) : "";
 		},
+		// A plain shell would run a pasted multi-line quote, so only agents take one.
+		insertText: agentBinding
+			? (text) => {
+					const xterm = terminalRuntimeRegistry.getTerminal(
+						terminalId,
+						terminalInstanceId,
+					);
+					xterm?.paste(trimTerminalSelection(text));
+					xterm?.focus();
+				}
+			: undefined,
 		readContext: async () => {
-			const { text } = await workspaceTrpcUtils.terminal.transcript.fetch({
-				workspaceId,
-				terminalId,
-			});
-			return text ? { kind: "terminal", transcript: text } : null;
+			const transcript = await readTerminalTranscript();
+			return transcript
+				? { kind: "terminal", transcript, sourceLabel: agentId, agentId }
+				: null;
+		},
+		readContextUpTo: async ({ text }) => {
+			const transcript = await readTerminalTranscript();
+			return transcript
+				? {
+						kind: "terminal",
+						transcript: cutTerminalTranscriptAtSelection(transcript, text),
+						sourceLabel: agentId,
+						agentId,
+					}
+				: null;
 		},
 	});
 

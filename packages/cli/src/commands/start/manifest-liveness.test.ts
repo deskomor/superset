@@ -2,7 +2,7 @@ import { afterAll, describe, expect, test } from "bun:test";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import type { CliContext } from "../../lib/command";
+import type { StartAuth } from "./command";
 
 const originalSupersetHomeDir = process.env.SUPERSET_HOME_DIR;
 const originalSupersetOrganizationId = process.env.SUPERSET_ORGANIZATION_ID;
@@ -16,7 +16,7 @@ delete process.env.SUPERSET_ORGANIZATION_ID;
 // Imports below must come after SUPERSET_HOME_DIR is set: config.ts and
 // manifest.ts both read it once at module load.
 const { readManifest, writeManifest } = await import("../../lib/host/manifest");
-const startCommand = (await import("./command")).default;
+const { runStart } = await import("./command");
 
 afterAll(() => {
 	if (originalSupersetHomeDir === undefined) {
@@ -34,31 +34,21 @@ afterAll(() => {
 
 const ORG = { id: "org-1", slug: "org-1", name: "Palette" };
 
-function makeCtx(): CliContext {
-	return {
-		api: {
-			user: { myOrganizations: { query: async () => [ORG] } },
-		},
-		config: {},
+const fakeAuth = async () =>
+	({
+		api: { user: { myOrganizations: { query: async () => [ORG] } } },
 		bearer: "bearer-token",
-		authSource: "apiKey",
-	} as unknown as CliContext;
-}
+		authConfigPath: undefined,
+	}) as unknown as StartAuth;
 
 type Result = { data: Record<string, unknown>; message?: string };
 
 function run(): Promise<Result> {
-	return startCommand.run({
-		ctx: makeCtx(),
-		args: {},
-		options: {
-			daemon: undefined,
-			autoUpdate: undefined,
-			port: undefined,
-			org: undefined,
-		},
-		signal: new AbortController().signal,
-	} as never) as Promise<Result>;
+	return runStart(
+		{},
+		new AbortController().signal,
+		fakeAuth,
+	) as Promise<Result>;
 }
 
 describe("superset start manifest liveness", () => {

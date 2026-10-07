@@ -14,9 +14,10 @@ export interface ManifestOwnerDeps {
 /**
  * Whether the live process at `manifest.pid` is actually the host-service
  * that wrote the manifest. Callers must already know the pid is alive —
- * OSes recycle pids, so that alone never proves it. Match its command
- * against the host binary first; fall back to an authenticated ping of the
- * manifest's own endpoint when the command can't be read (e.g. Windows).
+ * OSes recycle pids, so that alone never proves it. A command that matches
+ * the host binary is enough; otherwise ask the manifest's own endpoint with
+ * its secret, since the desktop runs its host-service under its own binary
+ * and a command can't always be read (e.g. Windows).
  */
 export async function verifyManifestOwner(
 	manifest: HostServiceManifest,
@@ -24,7 +25,7 @@ export async function verifyManifestOwner(
 ): Promise<boolean> {
 	const inspectCommand = deps.inspectCommand ?? inspectProcessCommand;
 	const command = await inspectCommand(manifest.pid);
-	if (command !== null) return looksLikeHostProcess(command);
+	if (command !== null && looksLikeHostProcess(command)) return true;
 
 	const probeHealthy =
 		deps.probeHealthy ??

@@ -16,8 +16,10 @@ import { workspaceTrpc } from "@superset/workspace-client";
 import {
 	memo,
 	type KeyboardEvent as ReactKeyboardEvent,
+	type Ref,
 	useCallback,
 	useEffect,
+	useImperativeHandle,
 	useMemo,
 	useRef,
 } from "react";
@@ -34,6 +36,7 @@ import { useUploadAttachments } from "./hooks/useUploadAttachments";
 export type ComposerProps = {
 	workspaceId: string;
 	draftKey: string;
+	inputRef?: Ref<PromptInputHandle>;
 	availableCommands: AvailableCommand[];
 	configOptions?: SessionConfigOption[];
 	onSetConfigOption?: (configId: string, value: string) => unknown;
@@ -86,6 +89,7 @@ export const Composer = memo(function Composer({
 	disabled,
 	draftKey,
 	history,
+	inputRef,
 	isActive,
 	onCancelTurn,
 	onSend,
@@ -98,6 +102,15 @@ export const Composer = memo(function Composer({
 	const uploadAttachments = useUploadAttachments(workspaceId);
 	const { storedDraft, onChange, clearDraft } = useComposerDraft(draftKey);
 	const promptInputRef = useRef<PromptInputHandle>(null);
+	useImperativeHandle(
+		inputRef,
+		() => ({
+			appendText: (text) => promptInputRef.current?.appendText(text),
+			focus: () => promptInputRef.current?.focus(),
+			openFileDialog: () => promptInputRef.current?.openFileDialog(),
+		}),
+		[],
+	);
 	const queueActions = useQueueActions(promptQueue, promptInputRef);
 	useHotkey("FOCUS_CHAT_INPUT", () => promptInputRef.current?.focus(), {
 		enabled: Boolean(isActive),

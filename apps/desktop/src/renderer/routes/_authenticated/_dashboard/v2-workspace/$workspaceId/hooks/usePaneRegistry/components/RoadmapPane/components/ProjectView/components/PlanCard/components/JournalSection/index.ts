@@ -1,0 +1,1 @@
+export { JournalSection } from "./JournalSection";
