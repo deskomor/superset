@@ -16937,9 +16937,6 @@ msgstr "Все индексированные изменения будут уд
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Это снимет индексацию и откатит все проиндексированные изменения. Проиндексированные новые файлы будут удалены. Отменить нельзя."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Эта рабочая область не относится ни к одному проекту, поэтому у неё нет дорожной карты."
-
 msgid "This workspace has no project to branch from"
 msgstr "В этом рабочем пространстве нет проекта для ответвления"
 

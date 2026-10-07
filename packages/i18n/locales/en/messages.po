@@ -16937,9 +16937,6 @@ msgstr "This will unstage and revert all staged changes. Staged new files will b
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "This workspace does not belong to a project, so it has no Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "This workspace has no project to branch from"
 

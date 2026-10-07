@@ -16937,9 +16937,6 @@ msgstr "ステージされたすべての変更をステージから外して元
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "ステージ済みの変更をすべてステージ解除して元に戻します。ステージ済みの新規ファイルは削除されます。元に戻せません。"
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "このワークスペースはプロジェクトに属していないため、ロードマップがありません。"
-
 msgid "This workspace has no project to branch from"
 msgstr "このワークスペースには分岐元のプロジェクトがありません"
 

@@ -8,7 +8,6 @@ import {
 	MAX_HOST_LOG_BYTES,
 	openRotatingLogFd,
 } from "@superset/shared/rotating-log";
-import type { ApiClient } from "../api-client";
 import { SUPERSET_HOME_DIR } from "../config";
 import { env, isDesktopBundled } from "../env";
 import {
@@ -18,7 +17,6 @@ import {
 	hostServiceLogPath,
 	writeManifest,
 } from "./manifest";
-import { getRelayUrl } from "./relay-url";
 
 const HEALTH_POLL_INTERVAL_MS = 200;
 const HEALTH_POLL_TIMEOUT_MS = 10_000;
@@ -27,7 +25,6 @@ export interface SpawnHostOptions {
 	organizationId: string;
 	sessionToken: string;
 	authConfigPath?: string;
-	api: ApiClient;
 	port?: number;
 	daemon: boolean;
 	autoUpdate?: boolean;
@@ -127,7 +124,6 @@ export async function spawnHostService(
 	const port = options.port ?? (await findFreePort());
 	const secret = randomBytes(32).toString("hex");
 	const migrationsFolder = resolveMigrationsFolder();
-	const relayUrl = await getRelayUrl(options.api);
 
 	// Daemon output goes to the same per-org host-service.log the desktop
 	// writes — with stdio ignored, a failed cloud registration was logged
@@ -148,13 +144,14 @@ export async function spawnHostService(
 		detached: options.daemon,
 		env: {
 			...process.env,
+			// This fork never exposes the host through upstream's relay.
+			RELAY_URL: undefined,
 			ORGANIZATION_ID: options.organizationId,
 			AUTH_TOKEN: options.sessionToken,
 			...(options.authConfigPath
 				? { SUPERSET_AUTH_CONFIG_PATH: options.authConfigPath }
 				: {}),
 			SUPERSET_API_URL: env.SUPERSET_API_URL,
-			RELAY_URL: relayUrl,
 			PORT: String(port),
 			HOST_SERVICE_PORT: String(port),
 			HOST_SERVICE_SECRET: secret,

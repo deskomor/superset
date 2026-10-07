@@ -125,7 +125,7 @@ describe("findByPath walkAllRemotes (v1 importer)", () => {
 		expect(calls).toHaveLength(0);
 	});
 
-	it("still walks cloud remotes when no local row exists", async () => {
+	it("never asks the cloud when no local row exists", async () => {
 		const db = createTestDb();
 		const { api, calls } = createRecordingApiStub();
 		const ctx = createTestContext(db, api);
@@ -139,7 +139,7 @@ describe("findByPath walkAllRemotes (v1 importer)", () => {
 		});
 
 		expect(result.candidates).toHaveLength(0);
-		expect(calls).toContain("v2Project.findByGitHubRemote");
+		expect(calls).toHaveLength(0);
 	});
 });
 

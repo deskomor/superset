@@ -14,7 +14,6 @@ import { isLocalCheckoutWorkspace } from "../trpc/router/workspace-cleanup/is-lo
 import type { HostServiceContext } from "../types";
 import {
 	archiveLocalWorkspace,
-	trackWorkspaceDeleted,
 	unarchiveLocalWorkspace,
 } from "../workspaces/local-workspace-store";
 import { emitProjectChanged, getLocalProject } from "./local-project-store";
@@ -263,9 +262,6 @@ async function purgeProject(
 		settings: [],
 		occurredAt: Date.now(),
 	});
-	for (const row of rows) {
-		if (row.archivedAt === project.deletedAt) trackWorkspaceDeleted(ctx, row);
-	}
 }
 
 /**

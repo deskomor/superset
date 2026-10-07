@@ -16937,9 +16937,6 @@ msgstr "Isso removerá da preparação e reverterá todas as alterações prepar
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Isso remove do stage e reverte todas as alterações no stage. Arquivos novos no stage serão excluídos. Não dá para desfazer."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Esta área de trabalho não pertence a um projeto, então não tem Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "Este workspace não tem projeto do qual ramificar"
 

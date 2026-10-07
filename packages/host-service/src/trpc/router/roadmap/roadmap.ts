@@ -23,6 +23,7 @@ const scopeSchema = z.object({
 	projectId: z.string().min(1).optional(),
 });
 
+/** Roadmap key: the project id, or `session-<workspaceId>` for a workspace without a project. */
 function resolveProjectId(
 	ctx: HostServiceContext,
 	scope: z.infer<typeof scopeSchema>,
@@ -50,14 +51,12 @@ function resolveProjectId(
 		.from(workspaces)
 		.where(eq(workspaces.id, scope.workspaceId))
 		.get();
-	if (!workspace?.projectId)
+	if (!workspace)
 		throw new TRPCError({
 			code: "NOT_FOUND",
-			message: workspace
-				? "This workspace has no project, so it has no Roadmap."
-				: `Workspace not found: ${scope.workspaceId}`,
+			message: `Workspace not found: ${scope.workspaceId}`,
 		});
-	return workspace.projectId;
+	return workspace.projectId ?? `session-${scope.workspaceId}`;
 }
 
 async function withRoadmapErrors<T>(run: () => Promise<T>): Promise<T> {

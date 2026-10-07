@@ -16937,9 +16937,6 @@ msgstr "Ini akan mengeluarkan semua perubahan dari staging dan membatalkannya. F
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Ini akan meng-unstage dan mengembalikan semua perubahan yang di-stage. File baru yang di-stage akan dihapus. Ini tidak bisa dibatalkan."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Workspace ini bukan bagian dari proyek, jadi tidak memiliki Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "Ruang kerja ini tidak memiliki proyek untuk dicabangkan"
 

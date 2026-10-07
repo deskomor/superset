@@ -117,7 +117,6 @@ export async function runStart(
 			organizationId: organization.id,
 			sessionToken: auth.bearer,
 			authConfigPath: auth.authConfigPath,
-			api: auth.api,
 			port: options.port ?? undefined,
 			daemon: options.daemon ?? false,
 			autoUpdate: options.autoUpdate ?? false,
@@ -126,7 +125,6 @@ export async function runStart(
 		spinner.stop(
 			`Host service running on port ${result.port} (pid ${result.pid})`,
 		);
-		p.log.info("Connected to relay — machine is now accessible.");
 
 		if (options.daemon) {
 			p.outro("Running in background.");

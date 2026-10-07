@@ -16937,9 +16937,6 @@ msgstr "Tutte le modifiche in staging verranno rimosse dallo staging e annullate
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Questo toglierà dallo stage e annullerà tutte le modifiche in stage. I nuovi file in stage verranno eliminati. L'operazione non può essere annullata."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Questo workspace non appartiene a un progetto, quindi non ha una Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "Questo workspace non ha un progetto da cui diramare"
 

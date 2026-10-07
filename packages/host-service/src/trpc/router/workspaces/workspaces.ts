@@ -504,22 +504,6 @@ async function registerLocalWorkspace(args: {
 		});
 	}
 
-	void ctx.api.v2Workspace.trackCreated
-		.mutate({
-			workspaceId: localRow.id,
-			organizationId: ctx.organizationId,
-			projectId: args.projectId,
-			branch: args.branch,
-			type: "worktree",
-			hostId: ctx.clientMachineId,
-		})
-		.catch((err) => {
-			console.warn(
-				`[workspaces.create] failed to report workspace creation for ${localRow.id}:`,
-				err,
-			);
-		});
-
 	return toCloudShape(localRow, ctx.organizationId);
 }
 
@@ -774,24 +758,6 @@ export const workspacesRouter = router({
 				resolvedBranch = row.branch;
 				worktreePath = repoPath;
 				workspaceRow = toCloudShape(row, ctx.organizationId);
-				if (!alreadyExists)
-					void ctx.api.v2Workspace.trackCreated
-						.mutate({
-							workspaceId: row.id,
-							organizationId: ctx.organizationId,
-							projectId: input.projectId,
-							branch: row.branch,
-							// The cloud's activation event predates local workspaces;
-							// "main" is its name for a workspace on the checkout.
-							type: "main",
-							hostId: ctx.clientMachineId,
-						})
-						.catch((err) => {
-							console.warn(
-								`[workspaces.create] failed to report workspace creation for ${row.id}:`,
-								err,
-							);
-						});
 			} else if (input.pr !== undefined) {
 				const releaseCreateLock = await acquireWorkspaceCreateLock(
 					`pr:${input.projectId}:${input.pr}`,

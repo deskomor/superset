@@ -16937,9 +16937,6 @@ msgstr "Toutes les modifications indexées seront désindexées et annulées. Le
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Cette action désindexera et annulera toutes les modifications indexées. Les nouveaux fichiers indexés seront supprimés. Cette action est irréversible."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Cet espace de travail n'appartient à aucun projet, il n'a donc pas de feuille de route."
-
 msgid "This workspace has no project to branch from"
 msgstr "Cet espace de travail n'a aucun projet depuis lequel dupliquer"
 

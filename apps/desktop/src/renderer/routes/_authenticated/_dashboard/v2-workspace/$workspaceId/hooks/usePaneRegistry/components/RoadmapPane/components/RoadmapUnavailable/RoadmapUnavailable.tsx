@@ -13,9 +13,10 @@ export function RoadmapUnavailable({
 	error,
 	onRetry,
 }: RoadmapUnavailableProps) {
-	const notFound =
-		error instanceof TRPCClientError && error.data?.code === "NOT_FOUND";
-	const hostTooOld = notFound && /no procedure/i.test(error.message);
+	const hostTooOld =
+		error instanceof TRPCClientError &&
+		error.data?.code === "NOT_FOUND" &&
+		/no procedure/i.test(error.message);
 
 	return (
 		<div className="flex h-full flex-col items-center justify-center gap-2 p-6 text-center">
@@ -29,15 +30,11 @@ export function RoadmapUnavailable({
 						This workspace's host runs an older version without the Roadmap.
 						Update it to plan this project here.
 					</Trans>
-				) : notFound ? (
-					<Trans>
-						This workspace does not belong to a project, so it has no Roadmap.
-					</Trans>
 				) : (
 					errorMessage(error)
 				)}
 			</p>
-			{!notFound && (
+			{!hostTooOld && (
 				<Button size="xs" variant="outline" onClick={onRetry}>
 					<Trans>Try again</Trans>
 				</Button>

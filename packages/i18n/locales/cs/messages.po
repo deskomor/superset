@@ -16937,9 +16937,6 @@ msgstr "Tím se všechny připravené změny odeberou z indexu a vrátí zpět. 
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Tímto zrušíte přípravu a vrátíte všechny připravené změny. Připravené nové soubory budou smazány. Tuto akci nelze vrátit zpět."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Tento pracovní prostor nepatří k žádnému projektu, takže nemá roadmapu."
-
 msgid "This workspace has no project to branch from"
 msgstr "Tento pracovní prostor nemá projekt, ze kterého by šlo větvit"
 

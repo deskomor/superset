@@ -16937,9 +16937,6 @@ msgstr "这将取消暂存并还原所有已暂存的更改。已暂存的新文
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "这将取消暂存并还原所有已暂存的更改。已暂存的新文件将被删除。此操作无法撤销。"
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "此工作区不属于任何项目，因此没有路线图。"
-
 msgid "This workspace has no project to branch from"
 msgstr "此工作区没有可供分叉的项目"
 

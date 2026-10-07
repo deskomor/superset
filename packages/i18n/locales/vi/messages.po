@@ -16937,9 +16937,6 @@ msgstr "Thao tác này sẽ bỏ staging và hoàn tác mọi thay đổi đã �
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Thao tác này sẽ bỏ stage và hoàn nguyên toàn bộ thay đổi đã stage. Các tệp mới đã stage sẽ bị xóa. Không thể hoàn tác."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Workspace này không thuộc dự án nào nên không có lộ trình."
-
 msgid "This workspace has no project to branch from"
 msgstr "Workspace này không có dự án để tạo nhánh"
 

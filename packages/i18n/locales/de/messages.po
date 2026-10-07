@@ -16937,9 +16937,6 @@ msgstr "Alle vorgemerkten Änderungen werden aus dem Index entfernt und zurückg
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Damit werden alle gestageden Änderungen aus dem Index genommen und zurückgesetzt. Gestagede neue Dateien werden gelöscht. Das lässt sich nicht rückgängig machen."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Dieser Arbeitsbereich gehört zu keinem Projekt und hat daher keine Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "Dieser Workspace hat kein Projekt, von dem aus verzweigt werden kann"
 

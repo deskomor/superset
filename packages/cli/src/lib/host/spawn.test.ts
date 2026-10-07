@@ -5,7 +5,6 @@ import * as realChildProcess from "node:child_process";
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
-import type { ApiClient } from "../api-client";
 
 const originalFetch = globalThis.fetch;
 const originalSupersetHomeDir = process.env.SUPERSET_HOME_DIR;
@@ -55,16 +54,6 @@ const { SUPERSET_CONFIG_PATH } = await import("../config");
 const { hostServiceLogPath } = await import("./manifest");
 const { describeHostExit, spawnHostService } = await import("./spawn");
 
-function createApi(): ApiClient {
-	return {
-		analytics: {
-			featureFlagPayload: {
-				query: async () => null,
-			},
-		},
-	} as unknown as ApiClient;
-}
-
 afterEach(() => {
 	spawnCalls.length = 0;
 	exitListeners.length = 0;
@@ -94,7 +83,6 @@ describe("spawnHostService", () => {
 				spawnHostService({
 					organizationId: "00000000-0000-0000-0000-000000000001",
 					sessionToken: "session-token",
-					api: createApi(),
 					port: 54879,
 					daemon: true,
 				}),
@@ -112,7 +100,6 @@ describe("spawnHostService", () => {
 				spawnHostService({
 					organizationId: "00000000-0000-0000-0000-000000000001",
 					sessionToken: "session-token",
-					api: createApi(),
 					port: 54879,
 					daemon: true,
 				}),
@@ -136,7 +123,6 @@ describe("spawnHostService", () => {
 			spawnHostService({
 				organizationId,
 				sessionToken: "session-token",
-				api: createApi(),
 				port: 54879,
 				daemon: false,
 			}),
@@ -157,7 +143,6 @@ describe("spawnHostService", () => {
 			organizationId: "00000000-0000-0000-0000-000000000001",
 			sessionToken: "session-token",
 			authConfigPath: SUPERSET_CONFIG_PATH,
-			api: createApi(),
 			port: 54879,
 			daemon: true,
 		});
@@ -178,7 +163,6 @@ describe("spawnHostService", () => {
 		const { exited } = await spawnHostService({
 			organizationId: "00000000-0000-0000-0000-000000000001",
 			sessionToken: "session-token",
-			api: createApi(),
 			port: 54879,
 			daemon: false,
 		});
@@ -205,7 +189,6 @@ test("passes the auto-update opt-in to the host", async () => {
 	await spawnHostService({
 		organizationId: "00000000-0000-0000-0000-000000000001",
 		sessionToken: "session-token",
-		api: createApi(),
 		port: 54879,
 		daemon: true,
 		autoUpdate: true,

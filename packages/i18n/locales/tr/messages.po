@@ -16937,9 +16937,6 @@ msgstr "Bu işlem, hazırlanmış tüm değişiklikleri hazırlıktan çıkarır
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Bu işlem, hazırlanmış tüm değişiklikleri hazırlıktan çıkarır ve geri alır. Hazırlanmış yeni dosyalar silinir. Bu geri alınamaz."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Bu çalışma alanı bir projeye ait değil, bu yüzden yol haritası yok."
-
 msgid "This workspace has no project to branch from"
 msgstr "Bu çalışma alanının çatallanacak bir projesi yok"
 

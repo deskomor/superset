@@ -16937,9 +16937,6 @@ msgstr "Dit haalt alle gestagede wijzigingen uit staging en draait ze terug. Ges
 msgid "This will unstage and revert all staged changes. Staged new files will be deleted. This cannot be undone."
 msgstr "Hiermee worden alle gestagede wijzigingen ge-unstaged en teruggedraaid. Gestagede nieuwe bestanden worden verwijderd. Dit kan niet ongedaan worden gemaakt."
 
-msgid "This workspace does not belong to a project, so it has no Roadmap."
-msgstr "Deze werkruimte hoort bij geen enkel project en heeft dus geen Roadmap."
-
 msgid "This workspace has no project to branch from"
 msgstr "Deze workspace heeft geen project om vanaf af te splitsen"
 
