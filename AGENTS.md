@@ -98,8 +98,9 @@ When the user says "release", do all of it without asking. In this fork this rep
 dedicated-branch rule above: release from `main`.
 
 1. Run the checks for the changed code (tests, `tsc` against the baseline count, `bun run check:i18n`),
-   then commit everything and push `main` to `origin` (`deskomor/superset-prime`).
-2. `bun scripts/release/linux.ts deskomor/superset-prime` tags the next `vX.Y.Z` and pushes it. Watch the
+   then commit everything and push `main` to `origin` (`deskomor/superset`, a GitHub fork of
+   `superset-sh/superset`; the `upstream` remote tracks it).
+2. `bun scripts/release/linux.ts deskomor/superset` tags the next `vX.Y.Z` and pushes it. Watch the
    `Release (Linux)` run with `gh run watch` until it passes.
 3. `gh release download vX.Y.Z` the AppImage and `latest-linux.yml`, check the sha512, then replace
    `~/Applications/Superset-x86_64.AppImage` (copy to `.new`, `chmod +x`, `mv`).
