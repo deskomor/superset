@@ -8,7 +8,6 @@ import {
 	LuFileDiff,
 	LuFolderTree,
 	LuGitPullRequestArrow,
-	LuMap,
 } from "react-icons/lu";
 import { TbMessageCirclePlus, TbWorld } from "react-icons/tb";
 import type { RightPaneKind } from "../../types";
@@ -40,12 +39,6 @@ export function RightPaneAddMenu({
 				<LuGitPullRequestArrow className="size-4" />
 				<span>
 					<Trans>Review</Trans>
-				</span>
-			</DropdownMenuItem>
-			<DropdownMenuItem className="gap-2" onClick={() => onAdd("roadmap")}>
-				<LuMap className="size-4" />
-				<span>
-					<Trans>Roadmap</Trans>
 				</span>
 			</DropdownMenuItem>
 			<DropdownMenuSeparator />

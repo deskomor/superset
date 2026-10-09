@@ -840,9 +840,6 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} geleden"
 
-msgid "{done} of {total} tasks checked"
-msgstr "{done} van {total} taken afgevinkt"
-
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {# seconde nagedacht} other {# seconden nagedacht}}"
 
@@ -1475,10 +1472,6 @@ msgstr "Een unieke identifier voor je organisatie (automatisch afgeleid van de n
 msgid "Aa"
 msgstr "Aa"
 
-msgctxt "roadmap status"
-msgid "Abandoned"
-msgstr "Opgegeven"
-
 msgid "About"
 msgstr "Over ons"
 
@@ -1573,10 +1566,6 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Actief"
 
-msgctxt "roadmap status"
-msgid "Active"
-msgstr "Actief"
-
 msgid "active {lastActive}"
 msgstr "actief {lastActive}"
 
@@ -1618,14 +1607,8 @@ msgstr "Voeg een reactie toe…"
 msgid "Add a description…"
 msgstr "Voeg een beschrijving toe…"
 
-msgid "Add a journal entry"
-msgstr "Logboekregel toevoegen"
-
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Voeg een lifecycle-runscript toe in de projectinstellingen of markeer een terminalscript als de run van de werkruimte."
-
-msgid "Add a note"
-msgstr "Notitie toevoegen"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Voeg een project toe om GitHub-issues te zien."
@@ -1635,15 +1618,6 @@ msgstr "Voeg een project toe om pull requests te zien."
 
 msgid "Add a short summary…"
 msgstr "Voeg een korte samenvatting toe…"
-
-msgid "Add a subtask"
-msgstr "Subtaak toevoegen"
-
-msgid "Add a summary"
-msgstr "Samenvatting toevoegen"
-
-msgid "Add a task"
-msgstr "Taak toevoegen"
 
 msgid "Add account"
 msgstr "Account toevoegen"
@@ -1715,17 +1689,11 @@ msgstr "Luisterende agent toevoegen"
 msgid "Add member"
 msgstr "Lid toevoegen"
 
-msgid "Add milestone"
-msgstr "Mijlpaal toevoegen"
-
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Voeg er een toe via het menu in de zijbalk om te beginnen."
 
 msgid "Add photos or files"
 msgstr "Foto's of bestanden toevoegen"
-
-msgid "Add plan"
-msgstr "Plan toevoegen"
 
 msgid "Add project"
 msgstr "Project toevoegen"
@@ -1747,9 +1715,6 @@ msgstr "Script toevoegen"
 
 msgid "Add setup commands, one per line..."
 msgstr "Voeg setupcommando's toe, één per regel..."
-
-msgid "Add subtask"
-msgstr "Subtaak toevoegen"
 
 msgid "Add tag…"
 msgstr "Tag toevoegen…"
@@ -2829,9 +2794,6 @@ msgstr "Achtergrondwerk en pagina's"
 
 msgid "Backlog"
 msgstr "Backlog"
-
-msgid "Backlog actions"
-msgstr "Backlogacties"
 
 msgid "Badge"
 msgstr "Badge"
@@ -3940,9 +3902,6 @@ msgstr "Alle bestanden inklappen"
 msgid "Collapse file"
 msgstr "Bestand inklappen"
 
-msgid "Collapse plan"
-msgstr "Plan inklappen"
-
 msgid "Collapse project"
 msgstr "Project inklappen"
 
@@ -4443,9 +4402,6 @@ msgstr "Gesprek"
 msgid "Conversation · Message"
 msgstr "Gesprek · Bericht"
 
-msgid "Conversations"
-msgstr "Gesprekken"
-
 msgid "Conversion"
 msgstr "Conversie"
 
@@ -4454,15 +4410,6 @@ msgstr "Conversie sinds vorige"
 
 msgid "Conversion so far"
 msgstr "Conversie tot nu toe"
-
-msgid "Convert to note"
-msgstr "Omzetten naar notitie"
-
-msgid "Convert to plan"
-msgstr "Omzetten naar plan"
-
-msgid "Convert to task"
-msgstr "Omzetten naar taak"
 
 msgid "Converted"
 msgstr "Geconverteerd"
@@ -4488,9 +4435,6 @@ msgstr "Link gekopieerd"
 
 msgid "Copied terminal ID"
 msgstr "Terminal-ID gekopieerd"
-
-msgid "Copied the Roadmap as Markdown"
-msgstr "Roadmap gekopieerd als Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Gekopieerd naar klembord."
@@ -4903,9 +4847,6 @@ msgstr "Kan het pad niet kopiëren"
 msgid "Couldn't copy the image"
 msgstr "Afbeelding kopiëren mislukt"
 
-msgid "Couldn't copy the Roadmap"
-msgstr "Kan de Roadmap niet kopiëren"
-
 msgid "Couldn't create workspace"
 msgstr "Kan werkruimte niet aanmaken"
 
@@ -5058,9 +4999,6 @@ msgstr "Kan cloudwerkruimte niet starten"
 msgid "Couldn't start design mode on this page"
 msgstr "Kan de designmodus niet starten op deze pagina"
 
-msgid "Couldn't start the agent"
-msgstr "Kan de agent niet starten"
-
 msgid "Couldn't start workspace"
 msgstr "Kan werkruimte niet starten"
 
@@ -5084,9 +5022,6 @@ msgstr "Kan pull request niet bijwerken"
 
 msgid "Couldn't update the queue"
 msgstr "Kan de wachtrij niet bijwerken"
-
-msgid "Couldn't update the Roadmap"
-msgstr "Kan de Roadmap niet bijwerken"
 
 msgid "Couldn't update thread"
 msgstr "Kan thread niet bijwerken"
@@ -5127,14 +5062,8 @@ msgstr "Maak een nieuwe taak vanuit de takenweergave op de desktop."
 msgid "Create a new workspace"
 msgstr "Een nieuwe werkruimte aanmaken"
 
-msgid "Create a plan"
-msgstr "Plan maken"
-
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Maak een project om taken en cloudwerkruimtes te groeperen."
-
-msgid "Create a task"
-msgstr "Taak maken"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Maak een taak voor het fixen van de loginbug"
@@ -5619,9 +5548,6 @@ msgstr "Afbeelding verwijderen"
 msgid "Delete local branch on workspace removal"
 msgstr "Lokale branch verwijderen bij verwijderen werkruimte"
 
-msgid "Delete milestone"
-msgstr "Mijlpaal verwijderen"
-
 msgid "Delete organization"
 msgstr "Organisatie verwijderen"
 
@@ -5630,9 +5556,6 @@ msgstr "Pagina verwijderen"
 
 msgid "Delete permanently"
 msgstr "Definitief verwijderen"
-
-msgid "Delete plan"
-msgstr "Plan verwijderen"
 
 msgid "Delete project"
 msgstr "Project verwijderen"
@@ -5796,9 +5719,6 @@ msgstr "Beschrijf wat je nodig hebt. Superset maakt een geïsoleerde werkruimte 
 
 msgid "Describe what you'd like to see built…"
 msgstr "Beschrijf wat je gebouwd wilt zien…"
-
-msgid "Describe where this project is going."
-msgstr "Beschrijf waar dit project naartoe gaat."
 
 msgid "Description"
 msgstr "Beschrijving"
@@ -6085,10 +6005,6 @@ msgstr "Niet opslaan"
 msgid "Done"
 msgstr "Klaar"
 
-msgctxt "roadmap status"
-msgid "Done"
-msgstr "Klaar"
-
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Klaar — de omkaderde chipstijl van de presetsbalk is nu de standaard voor elke tooltip, en de gekopieerde overrides zijn verwijderd (netto −90 regels)."
 
@@ -6332,12 +6248,6 @@ msgstr "Run-script bewerken"
 
 msgid "Edit script"
 msgstr "Script bewerken"
-
-msgid "Edit summary"
-msgstr "Samenvatting bewerken"
-
-msgid "Edit vision"
-msgstr "Visie bewerken"
 
 msgid "Edit your comment…"
 msgstr "Bewerk je reactie…"
@@ -6636,9 +6546,6 @@ msgstr "Alle bestanden uitklappen"
 msgid "Expand file"
 msgstr "Bestand uitklappen"
 
-msgid "Expand plan"
-msgstr "Plan uitklappen"
-
 msgid "Expand project"
 msgstr "Project uitklappen"
 
@@ -6696,12 +6603,6 @@ msgstr "Externe editor"
 
 msgid "extra ${used} of ${limit}"
 msgstr "extra ${used} van ${limit}"
-
-msgid "Extra instructions"
-msgstr "Extra instructies"
-
-msgid "Extra instructions (optional)"
-msgstr "Extra instructies (optioneel)"
 
 msgid "Extra small"
 msgstr "Extra klein"
@@ -8781,9 +8682,6 @@ msgstr "Lid sinds"
 msgid "Joining…"
 msgstr "Meedoen…"
 
-msgid "Journal ({count})"
-msgstr "Logboek ({count})"
-
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Spring met één klik in je favoriete editor. VS Code, Cursor, Xcode, JetBrains-IDE's of welke terminal dan ook: open worktrees precies waar je ze nodig hebt."
 
@@ -9319,9 +9217,6 @@ msgstr "Review laden..."
 msgid "Loading terminal scripts..."
 msgstr "Terminalscripts laden..."
 
-msgid "Loading the Roadmap…"
-msgstr "Roadmap laden…"
-
 msgid "Loading usage history…"
 msgstr "Gebruiksgeschiedenis laden…"
 
@@ -9712,24 +9607,6 @@ msgstr "Medio 2026"
 msgid "Mid 2027"
 msgstr "Medio 2027"
 
-msgid "Milestone"
-msgstr "Mijlpaal"
-
-msgid "Milestone actions"
-msgstr "Mijlpaalacties"
-
-msgid "Milestone status"
-msgstr "Mijlpaalstatus"
-
-msgid "Milestone summary"
-msgstr "Samenvatting van mijlpaal"
-
-msgid "Milestone title"
-msgstr "Titel van mijlpaal"
-
-msgid "Milestones"
-msgstr "Mijlpalen"
-
 msgid "Mine"
 msgstr "Mijn"
 
@@ -9918,9 +9795,6 @@ msgstr "Het grootste deel van de softwaregeschiedenis"
 msgid "Move {count} to Group"
 msgstr "{count} naar groep verplaatsen"
 
-msgid "Move down"
-msgstr "Omlaag verplaatsen"
-
 msgid "Move to Center"
 msgstr "Naar het midden verplaatsen"
 
@@ -9932,9 +9806,6 @@ msgstr "Naar rechts verplaatsen"
 
 msgid "Move to Tab"
 msgstr "Verplaatsen naar tabblad"
-
-msgid "Move up"
-msgstr "Omhoog verplaatsen"
 
 msgid "MRR"
 msgstr "MRR"
@@ -10135,17 +10006,11 @@ msgstr "Nieuwe groep van werkruimte"
 msgid "New issue"
 msgstr "Nieuwe issue"
 
-msgid "New milestone title"
-msgstr "Titel van nieuwe mijlpaal"
-
 msgid "New page"
 msgstr "Nieuwe pagina"
 
 msgid "New password (min 8 characters)"
 msgstr "Nieuw wachtwoord (min. 8 tekens)"
-
-msgid "New plan title"
-msgstr "Titel van nieuw plan"
 
 msgid "New project"
 msgstr "Nieuw project"
@@ -10564,17 +10429,11 @@ msgstr "Geen gemergede pull requests."
 msgid "No messages yet"
 msgstr "Nog geen berichten"
 
-msgid "No milestone"
-msgstr "Geen mijlpaal"
-
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Hier is geen mobiele simulator beschikbaar. Hiervoor is een Limrun-compatibele cloudsandbox of een lokale iOS/Android-toolchain nodig."
 
 msgid "No name on file"
 msgstr "Geen naam bekend"
-
-msgid "No notes yet."
-msgstr "Nog geen notities."
 
 msgid "No open issues found."
 msgstr "Geen open issues gevonden."
@@ -10958,12 +10817,6 @@ msgstr "niet gesorteerd"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Geen updates"
-
-msgid "Note"
-msgstr "Notitie"
-
-msgid "Note (optional)"
-msgstr "Notitie (optioneel)"
 
 msgid "Notes"
 msgstr "Notities"
@@ -11623,9 +11476,6 @@ msgstr "de taak in een werkruimte openen"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "De werkruimte openen in de app die is gekozen in het menu 'Openen in' (VS Code, Cursor, enz.)"
 
-msgid "Open this conversation"
-msgstr "Dit gesprek openen"
-
 msgid "Open this run's workspace"
 msgstr "Werkruimte van deze run openen"
 
@@ -11782,9 +11632,6 @@ msgstr "Andere hosts"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Anderen gebruiken dit project. Typ <0>{projectName}</0> om te bevestigen."
-
-msgid "Other plans"
-msgstr "Andere plannen"
 
 msgid "Other Team Members"
 msgstr "Andere teamleden"
@@ -12019,10 +11866,6 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Gepauzeerd"
 
-msgctxt "roadmap status"
-msgid "Paused"
-msgstr "Gepauzeerd"
-
 msgid "Pay now"
 msgstr "Nu betalen"
 
@@ -12187,33 +12030,16 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Plan"
 
-msgid "Plan actions"
-msgstr "Planacties"
-
 msgid "Plan restored"
 msgstr "Plan hersteld"
 
-msgid "Plan status"
-msgstr "Planstatus"
-
-msgid "Plan title"
-msgstr "Plantitel"
-
 msgctxt "project state"
-msgid "Planned"
-msgstr "Gepland"
-
-msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Gepland"
 
 msgid "Planning the tooltip refactor"
 msgstr "De tooltip-refactor plannen"
 
-msgid "Plans"
-msgstr "Plannen"
-
-msgctxt "roadmap"
 msgid "Plans"
 msgstr "Plannen"
 
@@ -12558,12 +12384,6 @@ msgstr "Project niet gevonden."
 
 msgid "Project not set up on this host"
 msgstr "Project is niet ingesteld op deze host"
-
-msgid "Project notes"
-msgstr "Projectnotities"
-
-msgid "Project notes (Markdown)"
-msgstr "Projectnotities (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Project klaar — open het via de zijbalk."
@@ -13224,14 +13044,8 @@ msgstr "Groepsnaam wijzigen"
 msgid "Rename host"
 msgstr "Host hernoemen"
 
-msgid "Rename milestone"
-msgstr "Mijlpaal hernoemen"
-
 msgid "Rename page"
 msgstr "Pagina hernoemen"
-
-msgid "Rename plan"
-msgstr "Plan hernoemen"
 
 msgid "Rename session"
 msgstr "Sessienaam wijzigen"
@@ -13762,9 +13576,6 @@ msgstr "Beltonen"
 
 msgid "Roadmap"
 msgstr "Roadmap"
-
-msgid "Roadmap actions"
-msgstr "Roadmapacties"
 
 msgid "Rocket"
 msgstr "Raket"
@@ -15354,9 +15165,6 @@ msgstr "Nieuwe sterren per dag"
 msgid "Stars gained per week"
 msgstr "Nieuwe sterren per week"
 
-msgid "Start"
-msgstr "Starten"
-
 msgctxt "project date"
 msgid "Start"
 msgstr "Start"
@@ -16020,9 +15828,6 @@ msgstr "targetHostId komt niet overeen met de host van de werkruimte"
 msgid "Task"
 msgstr "Taak"
 
-msgid "Task actions"
-msgstr "Taakacties"
-
 msgid "Task ID copied"
 msgstr "Taak-ID gekopieerd"
 
@@ -16284,9 +16089,6 @@ msgstr "Het bijbehorende apparaat is nu niet bereikbaar"
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "De eigenaar van de automatisering kan in deze organisatie geen cloudwerkruimtes meer gebruiken. Vraag diegene de toegang te controleren, of voer de automatisering uit op een apparaat."
 
-msgid "The backlog does not count toward plan progress."
-msgstr "De backlog telt niet mee voor de voortgang van plannen."
-
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "De beste agent verandert.<0/>Jouw workflow niet."
 
@@ -16493,12 +16295,6 @@ msgstr "Het verzoek is mislukt."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Het antwoord: agents reviewen agents, en mensen nemen steekproeven in plaats van alles te lezen. Vertrouwen wordt statistisch verdiend, niet per diff."
 
-msgid "The Roadmap changed elsewhere. Showing the latest version."
-msgstr "De Roadmap is elders gewijzigd. De nieuwste versie wordt getoond."
-
-msgid "The Roadmap is not available here"
-msgstr "De Roadmap is hier niet beschikbaar"
-
 msgid "The rubric"
 msgstr "De rubric"
 
@@ -16671,9 +16467,6 @@ msgstr "Hiermee sluit je de werkruimte en de bijbehorende terminals. De bestande
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Deze cloudwerkruimte wordt gewekt. Na inactiviteit kan dat tot 30 seconden duren."
-
-msgid "This conversation is not open here"
-msgstr "Dit gesprek is hier niet geopend"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Hiermee wordt de opgeslagen scrollback voor herstel na herstart of crash verwijderd."
@@ -16951,9 +16744,6 @@ msgstr "De host van deze werkruimte is offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "De host van deze werkruimte draait een oudere hostservice dan deze app ondersteunt. Werk hem bij om opnieuw te verbinden; de werkruimte en de bestanden blijven onaangeroerd."
-
-msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
-msgstr "De host van deze werkruimte draait een oudere versie zonder Roadmap. Werk hem bij om dit project hier te plannen."
 
 msgid "Thorough reasoning effort"
 msgstr "Grondige redeneerinspanning"
@@ -17894,9 +17684,6 @@ msgstr "Gebruik bekijken"
 msgid "Violence or harassment"
 msgstr "Geweld of intimidatie"
 
-msgid "Vision"
-msgstr "Visie"
-
 msgid "Visitors"
 msgstr "Bezoekers"
 
@@ -18158,12 +17945,6 @@ msgstr "Wat de content doet: op welke pagina's sessies beginnen en hoeveel er wo
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Waar deze op sloegen staat niet meer op de pagina, dus ze hebben geen markering."
 
-msgid "What this milestone means"
-msgstr "Wat deze mijlpaal betekent"
-
-msgid "What this plan delivers (Markdown)"
-msgstr "Wat dit plan oplevert (Markdown)"
-
 msgid "What We're Building"
 msgstr "Wat we bouwen"
 
@@ -18196,9 +17977,6 @@ msgstr "Waar sta jij?"
 
 msgid "Where does my code run?"
 msgstr "Waar draait mijn code?"
-
-msgid "Where is this project going?"
-msgstr "Waar gaat dit project naartoe?"
 
 msgid "Where serious teams are"
 msgstr "Waar serieuze teams staan"
@@ -18280,18 +18058,6 @@ msgstr "Zakelijk e-mailadres"
 
 msgid "Work from tickets"
 msgstr "Werken vanuit tickets"
-
-msgid "Work on milestone"
-msgstr "Aan mijlpaal werken"
-
-msgid "Work on plan"
-msgstr "Aan plan werken"
-
-msgid "Work on task"
-msgstr "Aan taak werken"
-
-msgid "Work on this"
-msgstr "Hieraan werken"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Werk met je agents in je favoriete tools"

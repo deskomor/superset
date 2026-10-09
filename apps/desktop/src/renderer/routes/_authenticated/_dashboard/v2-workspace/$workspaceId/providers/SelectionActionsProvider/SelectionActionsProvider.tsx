@@ -1,5 +1,4 @@
 import { useLingui } from "@lingui/react/macro";
-import { buildCreateFromSelectionPrompt } from "@superset/shared/roadmap";
 import {
 	buildAskSelectionDraft,
 	buildExplainSelectionPrompt,
@@ -229,22 +228,6 @@ export function SelectionActionsProvider({
 				});
 				return;
 			}
-			if (action === "task" || action === "plan") {
-				const config = await resolveConfig(source?.agentId);
-				if (!config) return;
-				await createNewAgentSession({
-					configId: config.id,
-					placement: "split-pane",
-					prompt: buildCreateFromSelectionPrompt({
-						kind: action,
-						selection: text,
-						source: source
-							? `a ${config.label} session in this workspace`
-							: undefined,
-					}),
-				});
-				return;
-			}
 			if (action === "details") {
 				const context = source
 					? await source.readContext().catch(() => null)
@@ -287,8 +270,6 @@ export function SelectionActionsProvider({
 			...(anchor.source?.insertText ? (["add"] as const) : []),
 			"ask",
 			"details",
-			"task",
-			"plan",
 			...(anchor.source?.readContextUpTo ? (["fork"] as const) : []),
 		];
 	}, [anchor]);

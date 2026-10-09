@@ -840,9 +840,6 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} trước"
 
-msgid "{done} of {total} tasks checked"
-msgstr "Đã đánh dấu {done}/{total} tác vụ"
-
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Đã suy nghĩ # giây} other {Đã suy nghĩ # giây}}"
 
@@ -1475,10 +1472,6 @@ msgstr "Định danh duy nhất cho tổ chức của bạn (tự tạo từ tê
 msgid "Aa"
 msgstr "Aa"
 
-msgctxt "roadmap status"
-msgid "Abandoned"
-msgstr "Đã bỏ"
-
 msgid "About"
 msgstr "Giới thiệu"
 
@@ -1573,10 +1566,6 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Đang hoạt động"
 
-msgctxt "roadmap status"
-msgid "Active"
-msgstr "Đang thực hiện"
-
 msgid "active {lastActive}"
 msgstr "hoạt động {lastActive}"
 
@@ -1618,14 +1607,8 @@ msgstr "Thêm bình luận…"
 msgid "Add a description…"
 msgstr "Thêm mô tả…"
 
-msgid "Add a journal entry"
-msgstr "Thêm mục nhật ký"
-
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Hãy thêm một script chạy vòng đời trong Cài đặt dự án hoặc đánh dấu một script terminal làm lệnh chạy của workspace."
-
-msgid "Add a note"
-msgstr "Thêm ghi chú"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Thêm một dự án để xem issue GitHub."
@@ -1635,15 +1618,6 @@ msgstr "Thêm một dự án để xem pull request."
 
 msgid "Add a short summary…"
 msgstr "Thêm tóm tắt ngắn…"
-
-msgid "Add a subtask"
-msgstr "Thêm tác vụ con"
-
-msgid "Add a summary"
-msgstr "Thêm tóm tắt"
-
-msgid "Add a task"
-msgstr "Thêm tác vụ"
 
 msgid "Add account"
 msgstr "Thêm tài khoản"
@@ -1715,17 +1689,11 @@ msgstr "Thêm tác nhân lắng nghe"
 msgid "Add member"
 msgstr "Thêm thành viên"
 
-msgid "Add milestone"
-msgstr "Thêm cột mốc"
-
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Thêm một agent từ menu ở thanh bên để bắt đầu."
 
 msgid "Add photos or files"
 msgstr "Thêm ảnh hoặc tệp"
-
-msgid "Add plan"
-msgstr "Thêm kế hoạch"
 
 msgid "Add project"
 msgstr "Thêm dự án"
@@ -1747,9 +1715,6 @@ msgstr "Thêm script"
 
 msgid "Add setup commands, one per line..."
 msgstr "Thêm lệnh thiết lập, mỗi dòng một lệnh..."
-
-msgid "Add subtask"
-msgstr "Thêm tác vụ con"
 
 msgid "Add tag…"
 msgstr "Thêm thẻ…"
@@ -2829,9 +2794,6 @@ msgstr "Tác vụ nền và trang"
 
 msgid "Backlog"
 msgstr "Backlog"
-
-msgid "Backlog actions"
-msgstr "Thao tác backlog"
 
 msgid "Badge"
 msgstr "Badge"
@@ -3940,9 +3902,6 @@ msgstr "Thu gọn tất cả tệp"
 msgid "Collapse file"
 msgstr "Thu gọn tệp"
 
-msgid "Collapse plan"
-msgstr "Thu gọn kế hoạch"
-
 msgid "Collapse project"
 msgstr "Thu gọn dự án"
 
@@ -4443,9 +4402,6 @@ msgstr "Cuộc thảo luận"
 msgid "Conversation · Message"
 msgstr "Hội thoại · Tin nhắn"
 
-msgid "Conversations"
-msgstr "Cuộc thảo luận"
-
 msgid "Conversion"
 msgstr "Chuyển đổi"
 
@@ -4454,15 +4410,6 @@ msgstr "Chuyển đổi từ bước trước"
 
 msgid "Conversion so far"
 msgstr "Chuyển đổi đến hiện tại"
-
-msgid "Convert to note"
-msgstr "Chuyển thành ghi chú"
-
-msgid "Convert to plan"
-msgstr "Chuyển thành kế hoạch"
-
-msgid "Convert to task"
-msgstr "Chuyển thành tác vụ"
 
 msgid "Converted"
 msgstr "Đã chuyển đổi"
@@ -4488,9 +4435,6 @@ msgstr "Đã sao chép liên kết"
 
 msgid "Copied terminal ID"
 msgstr "Đã sao chép ID terminal"
-
-msgid "Copied the Roadmap as Markdown"
-msgstr "Đã sao chép lộ trình dưới dạng Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Đã sao chép vào clipboard."
@@ -4903,9 +4847,6 @@ msgstr "Không thể sao chép đường dẫn"
 msgid "Couldn't copy the image"
 msgstr "Không sao chép được hình ảnh"
 
-msgid "Couldn't copy the Roadmap"
-msgstr "Không thể sao chép lộ trình"
-
 msgid "Couldn't create workspace"
 msgstr "Không thể tạo workspace"
 
@@ -5058,9 +4999,6 @@ msgstr "Không thể khởi động workspace trên cloud"
 msgid "Couldn't start design mode on this page"
 msgstr "Không thể bật chế độ thiết kế trên trang này"
 
-msgid "Couldn't start the agent"
-msgstr "Không thể khởi động agent"
-
 msgid "Couldn't start workspace"
 msgstr "Không khởi động được workspace"
 
@@ -5084,9 +5022,6 @@ msgstr "Không thể cập nhật pull request"
 
 msgid "Couldn't update the queue"
 msgstr "Không thể cập nhật hàng đợi"
-
-msgid "Couldn't update the Roadmap"
-msgstr "Không thể cập nhật lộ trình"
 
 msgid "Couldn't update thread"
 msgstr "Không thể cập nhật luồng"
@@ -5127,14 +5062,8 @@ msgstr "Tạo tác vụ mới từ màn hình tác vụ trên máy tính."
 msgid "Create a new workspace"
 msgstr "Tạo workspace mới"
 
-msgid "Create a plan"
-msgstr "Tạo kế hoạch"
-
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Tạo dự án để nhóm các nhiệm vụ và không gian làm việc đám mây."
-
-msgid "Create a task"
-msgstr "Tạo nhiệm vụ"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Tạo một tác vụ để sửa lỗi đăng nhập"
@@ -5619,9 +5548,6 @@ msgstr "Xóa hình ảnh"
 msgid "Delete local branch on workspace removal"
 msgstr "Xóa nhánh cục bộ khi gỡ workspace"
 
-msgid "Delete milestone"
-msgstr "Xóa cột mốc"
-
 msgid "Delete organization"
 msgstr "Xóa tổ chức"
 
@@ -5630,9 +5556,6 @@ msgstr "Xóa trang"
 
 msgid "Delete permanently"
 msgstr "Xóa vĩnh viễn"
-
-msgid "Delete plan"
-msgstr "Xóa kế hoạch"
 
 msgid "Delete project"
 msgstr "Xóa dự án"
@@ -5796,9 +5719,6 @@ msgstr "Mô tả điều bạn cần. Superset tạo một workspace tách biệ
 
 msgid "Describe what you'd like to see built…"
 msgstr "Mô tả điều bạn muốn được xây dựng…"
-
-msgid "Describe where this project is going."
-msgstr "Mô tả định hướng của dự án này."
 
 msgid "Description"
 msgstr "Mô tả"
@@ -6085,10 +6005,6 @@ msgstr "Không lưu"
 msgid "Done"
 msgstr "Xong"
 
-msgctxt "roadmap status"
-msgid "Done"
-msgstr "Xong"
-
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Xong — kiểu chip có viền mà thanh preset dùng giờ là mặc định cho mọi tooltip, và các chỗ ghi đè sao chép lặp đã được gỡ (giảm ròng 90 dòng)."
 
@@ -6332,12 +6248,6 @@ msgstr "Sửa script chạy"
 
 msgid "Edit script"
 msgstr "Sửa script"
-
-msgid "Edit summary"
-msgstr "Sửa tóm tắt"
-
-msgid "Edit vision"
-msgstr "Sửa tầm nhìn"
 
 msgid "Edit your comment…"
 msgstr "Sửa bình luận của bạn…"
@@ -6636,9 +6546,6 @@ msgstr "Mở rộng tất cả tệp"
 msgid "Expand file"
 msgstr "Mở rộng tệp"
 
-msgid "Expand plan"
-msgstr "Mở rộng kế hoạch"
-
 msgid "Expand project"
 msgstr "Mở rộng dự án"
 
@@ -6696,12 +6603,6 @@ msgstr "Trình soạn thảo ngoài"
 
 msgid "extra ${used} of ${limit}"
 msgstr "dùng thêm ${used} trên ${limit}"
-
-msgid "Extra instructions"
-msgstr "Hướng dẫn bổ sung"
-
-msgid "Extra instructions (optional)"
-msgstr "Hướng dẫn bổ sung (không bắt buộc)"
 
 msgid "Extra small"
 msgstr "Rất nhỏ"
@@ -8781,9 +8682,6 @@ msgstr "Tham gia"
 msgid "Joining…"
 msgstr "Đang tham gia…"
 
-msgid "Journal ({count})"
-msgstr "Nhật ký ({count})"
-
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Nhảy vào editor yêu thích chỉ với một cú nhấp. VS Code, Cursor, Xcode, các IDE JetBrains hay bất kỳ terminal nào: mở worktree đúng nơi bạn cần."
 
@@ -9319,9 +9217,6 @@ msgstr "Đang tải review..."
 msgid "Loading terminal scripts..."
 msgstr "Đang tải script terminal..."
 
-msgid "Loading the Roadmap…"
-msgstr "Đang tải lộ trình…"
-
 msgid "Loading usage history…"
 msgstr "Đang tải lịch sử sử dụng…"
 
@@ -9712,24 +9607,6 @@ msgstr "Giữa 2026"
 msgid "Mid 2027"
 msgstr "Giữa 2027"
 
-msgid "Milestone"
-msgstr "Cột mốc"
-
-msgid "Milestone actions"
-msgstr "Thao tác cột mốc"
-
-msgid "Milestone status"
-msgstr "Trạng thái cột mốc"
-
-msgid "Milestone summary"
-msgstr "Tóm tắt cột mốc"
-
-msgid "Milestone title"
-msgstr "Tiêu đề cột mốc"
-
-msgid "Milestones"
-msgstr "Cột mốc"
-
 msgid "Mine"
 msgstr "Của tôi"
 
@@ -9918,9 +9795,6 @@ msgstr "Gần như suốt lịch sử phần mềm"
 msgid "Move {count} to Group"
 msgstr "Chuyển {count} vào nhóm"
 
-msgid "Move down"
-msgstr "Di chuyển xuống"
-
 msgid "Move to Center"
 msgstr "Chuyển vào giữa"
 
@@ -9932,9 +9806,6 @@ msgstr "Chuyển sang bên phải"
 
 msgid "Move to Tab"
 msgstr "Chuyển sang tab"
-
-msgid "Move up"
-msgstr "Di chuyển lên"
 
 msgid "MRR"
 msgstr "MRR"
@@ -10135,17 +10006,11 @@ msgstr "Nhóm mới từ workspace"
 msgid "New issue"
 msgstr "Issue mới"
 
-msgid "New milestone title"
-msgstr "Tiêu đề cột mốc mới"
-
 msgid "New page"
 msgstr "Trang mới"
 
 msgid "New password (min 8 characters)"
 msgstr "Mật khẩu mới (tối thiểu 8 ký tự)"
-
-msgid "New plan title"
-msgstr "Tiêu đề kế hoạch mới"
 
 msgid "New project"
 msgstr "Dự án mới"
@@ -10564,17 +10429,11 @@ msgstr "Không có pull request nào đã merge."
 msgid "No messages yet"
 msgstr "Chưa có tin nhắn nào"
 
-msgid "No milestone"
-msgstr "Không có cột mốc"
-
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Không có trình giả lập di động nào khả dụng ở đây. Cần có hộp cát đám mây hỗ trợ Limrun hoặc bộ công cụ iOS/Android cục bộ."
 
 msgid "No name on file"
 msgstr "Chưa có tên nào được lưu"
-
-msgid "No notes yet."
-msgstr "Chưa có ghi chú."
 
 msgid "No open issues found."
 msgstr "Không có issue nào đang mở."
@@ -10958,12 +10817,6 @@ msgstr "chưa sắp xếp"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Không cập nhật"
-
-msgid "Note"
-msgstr "Ghi chú"
-
-msgid "Note (optional)"
-msgstr "Ghi chú (không bắt buộc)"
 
 msgid "Notes"
 msgstr "Ghi chú"
@@ -11623,9 +11476,6 @@ msgstr "mở tác vụ trong một workspace"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Mở workspace trong ứng dụng đã chọn ở menu \"Mở trong\" (VS Code, Cursor, v.v.)"
 
-msgid "Open this conversation"
-msgstr "Mở cuộc thảo luận này"
-
 msgid "Open this run's workspace"
 msgstr "Mở workspace của lần chạy này"
 
@@ -11782,9 +11632,6 @@ msgstr "Host khác"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Người khác đang dùng dự án này. Nhập <0>{projectName}</0> để xác nhận."
-
-msgid "Other plans"
-msgstr "Kế hoạch khác"
 
 msgid "Other Team Members"
 msgstr "Các thành viên khác"
@@ -12019,10 +11866,6 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Tạm dừng"
 
-msgctxt "roadmap status"
-msgid "Paused"
-msgstr "Đã tạm dừng"
-
 msgid "Pay now"
 msgstr "Thanh toán ngay"
 
@@ -12187,23 +12030,10 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Gói"
 
-msgid "Plan actions"
-msgstr "Thao tác kế hoạch"
-
 msgid "Plan restored"
 msgstr "Đã khôi phục gói"
 
-msgid "Plan status"
-msgstr "Trạng thái kế hoạch"
-
-msgid "Plan title"
-msgstr "Tiêu đề kế hoạch"
-
 msgctxt "project state"
-msgid "Planned"
-msgstr "Đã lên kế hoạch"
-
-msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Đã lên kế hoạch"
 
@@ -12212,10 +12042,6 @@ msgstr "Lên kế hoạch refactor tooltip"
 
 msgid "Plans"
 msgstr "Gói"
-
-msgctxt "roadmap"
-msgid "Plans"
-msgstr "Kế hoạch"
 
 msgid "Plant Floor"
 msgstr "Xưởng sản xuất"
@@ -12558,12 +12384,6 @@ msgstr "Không tìm thấy dự án."
 
 msgid "Project not set up on this host"
 msgstr "Dự án chưa được thiết lập trên host này"
-
-msgid "Project notes"
-msgstr "Ghi chú dự án"
-
-msgid "Project notes (Markdown)"
-msgstr "Ghi chú dự án (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Dự án đã sẵn sàng — mở nó từ thanh bên."
@@ -13224,14 +13044,8 @@ msgstr "Đổi tên nhóm"
 msgid "Rename host"
 msgstr "Đổi tên host"
 
-msgid "Rename milestone"
-msgstr "Đổi tên cột mốc"
-
 msgid "Rename page"
 msgstr "Đổi tên trang"
-
-msgid "Rename plan"
-msgstr "Đổi tên kế hoạch"
 
 msgid "Rename session"
 msgstr "Đổi tên phiên"
@@ -13762,9 +13576,6 @@ msgstr "Nhạc chuông"
 
 msgid "Roadmap"
 msgstr "Lộ trình"
-
-msgid "Roadmap actions"
-msgstr "Thao tác lộ trình"
 
 msgid "Rocket"
 msgstr "Tên lửa"
@@ -15354,9 +15165,6 @@ msgstr "Số star tăng mỗi ngày"
 msgid "Stars gained per week"
 msgstr "Số star tăng mỗi tuần"
 
-msgid "Start"
-msgstr "Bắt đầu"
-
 msgctxt "project date"
 msgid "Start"
 msgstr "Bắt đầu"
@@ -16020,9 +15828,6 @@ msgstr "targetHostId không khớp với host của workspace"
 msgid "Task"
 msgstr "Tác vụ"
 
-msgid "Task actions"
-msgstr "Thao tác tác vụ"
-
 msgid "Task ID copied"
 msgstr "Đã sao chép ID tác vụ"
 
@@ -16284,9 +16089,6 @@ msgstr "Hiện không kết nối được tới thiết bị liên quan"
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "Chủ sở hữu của tự động hóa không còn dùng được workspace cloud trong tổ chức này. Hãy nhờ họ kiểm tra quyền truy cập, hoặc chạy tự động hóa trên một thiết bị."
 
-msgid "The backlog does not count toward plan progress."
-msgstr "Backlog không được tính vào tiến độ kế hoạch."
-
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "Agent tốt nhất sẽ thay đổi.<0/>Quy trình của bạn thì không."
 
@@ -16493,12 +16295,6 @@ msgstr "Yêu cầu thất bại."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Cách phản ứng: agent review agent, còn con người lấy mẫu thay vì đọc tất cả. Niềm tin được xây bằng thống kê, không phải theo từng diff."
 
-msgid "The Roadmap changed elsewhere. Showing the latest version."
-msgstr "Lộ trình đã được thay đổi ở nơi khác. Đang hiển thị phiên bản mới nhất."
-
-msgid "The Roadmap is not available here"
-msgstr "Lộ trình không khả dụng ở đây"
-
 msgid "The rubric"
 msgstr "Thang chấm"
 
@@ -16671,9 +16467,6 @@ msgstr "Thao tác này đóng workspace và các terminal của nó. Tệp, nhá
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Không gian làm việc đám mây này đang được đánh thức, có thể mất tới 30 giây sau một thời gian không hoạt động."
-
-msgid "This conversation is not open here"
-msgstr "Cuộc thảo luận này không mở ở đây"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Thao tác này xóa phần scrollback đã lưu dùng để khôi phục sau khi khởi động lại hoặc crash."
@@ -16951,9 +16744,6 @@ msgstr "Host của workspace này đang ngoại tuyến"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Máy chủ của workspace này chạy dịch vụ máy chủ cũ hơn mức ứng dụng hỗ trợ. Hãy cập nhật để kết nối lại; workspace và các tệp không bị ảnh hưởng."
-
-msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
-msgstr "Host của workspace này chạy phiên bản cũ không có lộ trình. Hãy cập nhật để lập kế hoạch cho dự án này tại đây."
 
 msgid "Thorough reasoning effort"
 msgstr "Mức suy luận kỹ lưỡng"
@@ -17894,9 +17684,6 @@ msgstr "Xem mức sử dụng"
 msgid "Violence or harassment"
 msgstr "Bạo lực hoặc quấy rối"
 
-msgid "Vision"
-msgstr "Tầm nhìn"
-
 msgid "Visitors"
 msgstr "Khách truy cập"
 
@@ -18158,12 +17945,6 @@ msgstr "Nội dung đang làm gì: phiên bắt đầu ở trang nào và có ba
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Nội dung mà chúng được viết cho đã không còn trên trang, nên chúng không có ghim."
 
-msgid "What this milestone means"
-msgstr "Ý nghĩa của cột mốc này"
-
-msgid "What this plan delivers (Markdown)"
-msgstr "Kết quả kế hoạch này mang lại (Markdown)"
-
 msgid "What We're Building"
 msgstr "Chúng tôi đang xây gì"
 
@@ -18196,9 +17977,6 @@ msgstr "Bạn xếp hạng bao nhiêu?"
 
 msgid "Where does my code run?"
 msgstr "Code của tôi chạy ở đâu?"
-
-msgid "Where is this project going?"
-msgstr "Dự án này đang hướng tới đâu?"
 
 msgid "Where serious teams are"
 msgstr "Nơi các đội nghiêm túc đang đứng"
@@ -18280,18 +18058,6 @@ msgstr "Email công việc"
 
 msgid "Work from tickets"
 msgstr "Làm việc từ ticket"
-
-msgid "Work on milestone"
-msgstr "Làm cột mốc"
-
-msgid "Work on plan"
-msgstr "Làm kế hoạch"
-
-msgid "Work on task"
-msgstr "Làm tác vụ"
-
-msgid "Work on this"
-msgstr "Làm mục này"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Làm việc với agent của bạn trên các công cụ ưa thích"

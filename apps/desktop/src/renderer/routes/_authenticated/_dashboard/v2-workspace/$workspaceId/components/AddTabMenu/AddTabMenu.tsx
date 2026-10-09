@@ -5,7 +5,7 @@ import {
 	DropdownMenuSeparator,
 } from "@superset/ui/dropdown-menu";
 import { BsTerminalPlus } from "react-icons/bs";
-import { LuGitCompareArrows, LuMap } from "react-icons/lu";
+import { LuGitCompareArrows } from "react-icons/lu";
 import { TbDeviceDesktop, TbMessageCirclePlus, TbWorld } from "react-icons/tb";
 import { HotkeyMenuShortcut } from "renderer/components/HotkeyMenuShortcut";
 
@@ -14,7 +14,6 @@ interface AddTabMenuProps {
 	onAddChatV3?: (() => void) | undefined;
 	onAddBrowser: () => void;
 	onAddChanges: () => void;
-	onAddRoadmap: () => void;
 	onAddDesktop?: (() => void) | undefined;
 	showPresetsBar: boolean;
 	onToggleShowPresetsBar: (enabled: boolean) => void;
@@ -25,7 +24,6 @@ export function AddTabMenu({
 	onAddChatV3,
 	onAddBrowser,
 	onAddChanges,
-	onAddRoadmap,
 	onAddDesktop,
 	showPresetsBar,
 	onToggleShowPresetsBar,
@@ -60,12 +58,6 @@ export function AddTabMenu({
 					<Trans>Changes</Trans>
 				</span>
 				<HotkeyMenuShortcut hotkeyId="OPEN_DIFF_VIEWER" />
-			</DropdownMenuItem>
-			<DropdownMenuItem className="gap-2" onClick={onAddRoadmap}>
-				<LuMap className="size-4" />
-				<span>
-					<Trans>Roadmap</Trans>
-				</span>
 			</DropdownMenuItem>
 			{onAddDesktop && (
 				<DropdownMenuItem className="gap-2" onClick={onAddDesktop}>

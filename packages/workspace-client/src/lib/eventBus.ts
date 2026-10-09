@@ -24,7 +24,6 @@ type EventType =
 	| "workspace:create-settled"
 	| "workspace:naming-failed"
 	| "project:changed"
-	| "roadmap:changed"
 	| "tag-folders:changed"
 	| "page-watch:changed"
 	| "chat:sessions-changed";
@@ -115,11 +114,6 @@ export interface ProjectChangedPayload {
 	occurredAt: number;
 }
 
-export interface RoadmapChangedPayload {
-	revision: number;
-	occurredAt: number;
-}
-
 export interface PageWatchChangedPayload {
 	occurredAt: number;
 }
@@ -168,27 +162,22 @@ type EventListener<T extends EventType> = T extends "fs:events"
 												projectId: string,
 												payload: ProjectChangedPayload,
 											) => void
-										: T extends "roadmap:changed"
+										: T extends "tag-folders:changed"
 											? (
-													projectId: string,
-													payload: RoadmapChangedPayload,
+													scope: string,
+													payload: TagFoldersChangedPayload,
 												) => void
-											: T extends "tag-folders:changed"
+											: T extends "page-watch:changed"
 												? (
-														scope: string,
-														payload: TagFoldersChangedPayload,
+														workspaceId: string,
+														payload: PageWatchChangedPayload,
 													) => void
-												: T extends "page-watch:changed"
+												: T extends "chat:sessions-changed"
 													? (
 															workspaceId: string,
-															payload: PageWatchChangedPayload,
+															payload: ChatSessionsChangedPayload,
 														) => void
-													: T extends "chat:sessions-changed"
-														? (
-																workspaceId: string,
-																payload: ChatSessionsChangedPayload,
-															) => void
-														: never;
+													: never;
 
 interface ListenerEntry {
 	type: EventType;
@@ -331,8 +320,7 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 			message.type === "page-watch:changed" ||
 			message.type === "chat:sessions-changed"
 				? message.workspaceId
-				: message.type === "project:changed" ||
-						message.type === "roadmap:changed"
+				: message.type === "project:changed"
 					? message.projectId
 					: message.type === "tag-folders:changed"
 						? message.scope
@@ -407,11 +395,6 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 			(entry.callback as EventListener<"project:changed">)(message.projectId, {
 				eventType: message.eventType,
 				project: message.project,
-				occurredAt: message.occurredAt,
-			});
-		} else if (message.type === "roadmap:changed") {
-			(entry.callback as EventListener<"roadmap:changed">)(message.projectId, {
-				revision: message.revision,
 				occurredAt: message.occurredAt,
 			});
 		} else if (message.type === "chat:sessions-changed") {

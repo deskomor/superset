@@ -9,5 +9,4 @@ export {
 	type HostWsEndpoint,
 	type ResolvedHostTarget,
 	resolveHostTarget,
-	resolveLocalHostTarget,
 } from "./resolveHostTarget";

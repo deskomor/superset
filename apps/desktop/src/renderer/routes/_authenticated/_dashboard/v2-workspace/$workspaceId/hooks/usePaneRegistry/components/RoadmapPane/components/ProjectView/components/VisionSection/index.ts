@@ -1,1 +1,0 @@
-export { VisionSection } from "./VisionSection";

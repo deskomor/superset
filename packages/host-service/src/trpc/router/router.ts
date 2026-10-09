@@ -16,7 +16,6 @@ import { pageWatchRouter } from "./page-watch";
 import { portsRouter } from "./ports";
 import { projectRouter } from "./project";
 import { pullRequestsRouter } from "./pull-requests";
-import { roadmapRouter } from "./roadmap";
 import { sandboxRouter } from "./sandbox";
 import { settingsRouter } from "./settings";
 import { systemRouter } from "./system";
@@ -45,7 +44,6 @@ export const appRouter = router({
 	notifications: notificationsRouter,
 	pullRequests: pullRequestsRouter,
 	project: projectRouter,
-	roadmap: roadmapRouter,
 	tagFolders: tagFoldersRouter,
 	pageWatch: pageWatchRouter,
 	ports: portsRouter,

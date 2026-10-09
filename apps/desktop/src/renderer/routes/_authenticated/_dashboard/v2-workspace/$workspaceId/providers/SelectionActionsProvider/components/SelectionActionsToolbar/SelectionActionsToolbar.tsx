@@ -2,13 +2,7 @@ import { useLingui } from "@lingui/react/macro";
 import { type RefObject, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 
-export type SelectionAction =
-	| "add"
-	| "ask"
-	| "details"
-	| "task"
-	| "plan"
-	| "fork";
+export type SelectionAction = "add" | "ask" | "details" | "fork";
 
 const GAP = 8;
 const EDGE = 8;
@@ -31,8 +25,6 @@ export function SelectionActionsToolbar({
 		add: t({ message: "Add to chat" }),
 		ask: t({ message: "Ask in side chat" }),
 		details: t({ message: "More details" }),
-		task: t({ message: "Create a task" }),
-		plan: t({ message: "Create a plan" }),
 		fork: t({ message: "Fork from here" }),
 	};
 

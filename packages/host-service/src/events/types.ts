@@ -194,13 +194,6 @@ export interface ProjectChangedMessage {
 	occurredAt: number;
 }
 
-export interface RoadmapChangedMessage {
-	type: "roadmap:changed";
-	projectId: string;
-	revision: number;
-	occurredAt: number;
-}
-
 export interface WorkspaceCreateTerminalLaunch {
 	terminalId: string;
 	label?: string;
@@ -264,7 +257,6 @@ export type ServerMessage =
 	| WorkspaceCreateSettledMessage
 	| WorkspaceNamingFailedMessage
 	| ProjectChangedMessage
-	| RoadmapChangedMessage
 	| TagFoldersChangedMessage
 	| PageWatchChangedMessage
 	| ChatSessionsChangedMessage

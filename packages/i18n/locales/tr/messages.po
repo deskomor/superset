@@ -840,9 +840,6 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} önce"
 
-msgid "{done} of {total} tasks checked"
-msgstr "{total} görevden {done} tanesi işaretlendi"
-
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {# saniye düşündü} other {# saniye düşündü}}"
 
@@ -1475,10 +1472,6 @@ msgstr "Kuruluşunuz için benzersiz bir tanımlayıcı (addan otomatik oluştur
 msgid "Aa"
 msgstr "Aa"
 
-msgctxt "roadmap status"
-msgid "Abandoned"
-msgstr "Bırakıldı"
-
 msgid "About"
 msgstr "Hakkımızda"
 
@@ -1573,10 +1566,6 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Etkin"
 
-msgctxt "roadmap status"
-msgid "Active"
-msgstr "Etkin"
-
 msgid "active {lastActive}"
 msgstr "{lastActive} aktif"
 
@@ -1618,14 +1607,8 @@ msgstr "Yorum ekle…"
 msgid "Add a description…"
 msgstr "Açıklama ekleyin…"
 
-msgid "Add a journal entry"
-msgstr "Günlük girdisi ekle"
-
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Proje Ayarları'nda bir yaşam döngüsü çalıştırma betiği ekleyin veya bir terminal betiğini çalışma alanı çalıştırması olarak işaretleyin."
-
-msgid "Add a note"
-msgstr "Not ekle"
 
 msgid "Add a project to see GitHub issues."
 msgstr "GitHub issue'larını görmek için bir proje ekleyin."
@@ -1635,15 +1618,6 @@ msgstr "Pull request'leri görmek için bir proje ekleyin."
 
 msgid "Add a short summary…"
 msgstr "Kısa bir özet ekleyin…"
-
-msgid "Add a subtask"
-msgstr "Alt görev ekle"
-
-msgid "Add a summary"
-msgstr "Özet ekle"
-
-msgid "Add a task"
-msgstr "Görev ekle"
 
 msgid "Add account"
 msgstr "Hesap ekle"
@@ -1715,17 +1689,11 @@ msgstr "Dinleyen ajan ekle"
 msgid "Add member"
 msgstr "Üye ekle"
 
-msgid "Add milestone"
-msgstr "Kilometre taşı ekle"
-
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Başlamak için kenar çubuğundaki menüden bir tane ekleyin."
 
 msgid "Add photos or files"
 msgstr "Fotoğraf veya dosya ekle"
-
-msgid "Add plan"
-msgstr "Plan ekle"
 
 msgid "Add project"
 msgstr "Proje ekle"
@@ -1747,9 +1715,6 @@ msgstr "Betik ekle"
 
 msgid "Add setup commands, one per line..."
 msgstr "Kurulum komutlarını her satıra bir tane olacak şekilde ekleyin..."
-
-msgid "Add subtask"
-msgstr "Alt görev ekle"
 
 msgid "Add tag…"
 msgstr "Etiket ekle…"
@@ -2829,9 +2794,6 @@ msgstr "Arka plan işleri ve sayfalar"
 
 msgid "Backlog"
 msgstr "Bekleyen işler"
-
-msgid "Backlog actions"
-msgstr "Bekleyen iş eylemleri"
 
 msgid "Badge"
 msgstr "Rozet"
@@ -3940,9 +3902,6 @@ msgstr "Tüm dosyaları daralt"
 msgid "Collapse file"
 msgstr "Dosyayı daralt"
 
-msgid "Collapse plan"
-msgstr "Planı daralt"
-
 msgid "Collapse project"
 msgstr "Projeyi daralt"
 
@@ -4443,9 +4402,6 @@ msgstr "Konuşma"
 msgid "Conversation · Message"
 msgstr "Konuşma · Mesaj"
 
-msgid "Conversations"
-msgstr "Konuşmalar"
-
 msgid "Conversion"
 msgstr "Dönüşüm"
 
@@ -4454,15 +4410,6 @@ msgstr "Öncekinden dönüşüm"
 
 msgid "Conversion so far"
 msgstr "Şu ana kadarki dönüşüm"
-
-msgid "Convert to note"
-msgstr "Nota dönüştür"
-
-msgid "Convert to plan"
-msgstr "Plana dönüştür"
-
-msgid "Convert to task"
-msgstr "Göreve dönüştür"
 
 msgid "Converted"
 msgstr "Dönüştü"
@@ -4488,9 +4435,6 @@ msgstr "Bağlantı kopyalandı"
 
 msgid "Copied terminal ID"
 msgstr "Terminal kimliği kopyalandı"
-
-msgid "Copied the Roadmap as Markdown"
-msgstr "Yol haritası Markdown olarak kopyalandı"
 
 msgid "Copied to clipboard."
 msgstr "Panoya kopyalandı."
@@ -4903,9 +4847,6 @@ msgstr "Yol kopyalanamadı"
 msgid "Couldn't copy the image"
 msgstr "Görsel kopyalanamadı"
 
-msgid "Couldn't copy the Roadmap"
-msgstr "Yol haritası kopyalanamadı"
-
 msgid "Couldn't create workspace"
 msgstr "Çalışma alanı oluşturulamadı"
 
@@ -5058,9 +4999,6 @@ msgstr "Bulut çalışma alanı başlatılamadı"
 msgid "Couldn't start design mode on this page"
 msgstr "Bu sayfada tasarım modu başlatılamadı"
 
-msgid "Couldn't start the agent"
-msgstr "Ajan başlatılamadı"
-
 msgid "Couldn't start workspace"
 msgstr "Çalışma alanı başlatılamadı"
 
@@ -5084,9 +5022,6 @@ msgstr "Pull request güncellenemedi"
 
 msgid "Couldn't update the queue"
 msgstr "Kuyruk güncellenemedi"
-
-msgid "Couldn't update the Roadmap"
-msgstr "Yol haritası güncellenemedi"
 
 msgid "Couldn't update thread"
 msgstr "Konu güncellenemedi"
@@ -5127,14 +5062,8 @@ msgstr "Masaüstü görevler görünümünden yeni bir görev oluşturun."
 msgid "Create a new workspace"
 msgstr "Yeni bir çalışma alanı oluşturun"
 
-msgid "Create a plan"
-msgstr "Plan oluştur"
-
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Görevleri ve bulut çalışma alanlarını gruplamak için bir proje oluşturun."
-
-msgid "Create a task"
-msgstr "Görev oluştur"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Oturum açma hatasını düzeltmek için bir görev oluştur"
@@ -5619,9 +5548,6 @@ msgstr "Görseli sil"
 msgid "Delete local branch on workspace removal"
 msgstr "Çalışma alanı kaldırılırken yerel dalı sil"
 
-msgid "Delete milestone"
-msgstr "Kilometre taşını sil"
-
 msgid "Delete organization"
 msgstr "Kuruluşu sil"
 
@@ -5630,9 +5556,6 @@ msgstr "Sayfayı sil"
 
 msgid "Delete permanently"
 msgstr "Kalıcı olarak sil"
-
-msgid "Delete plan"
-msgstr "Planı sil"
 
 msgid "Delete project"
 msgstr "Projeyi sil"
@@ -5796,9 +5719,6 @@ msgstr "Neye ihtiyacınız olduğunu anlatın. Superset, görev için yalıtılm
 
 msgid "Describe what you'd like to see built…"
 msgstr "Neyin geliştirilmesini istediğinizi anlatın…"
-
-msgid "Describe where this project is going."
-msgstr "Bu projenin nereye gittiğini anlatın."
 
 msgid "Description"
 msgstr "Açıklama"
@@ -6085,10 +6005,6 @@ msgstr "Kaydetme"
 msgid "Done"
 msgstr "Tamamlandı"
 
-msgctxt "roadmap status"
-msgid "Done"
-msgstr "Tamamlandı"
-
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Tamam — hazır ayarlar çubuğunun kullandığı çerçeveli çip stili artık her tooltip için varsayılan ve kopyala-yapıştır geçersiz kılmalar kaldırıldı (net −90 satır)."
 
@@ -6332,12 +6248,6 @@ msgstr "Çalıştırma betiğini düzenle"
 
 msgid "Edit script"
 msgstr "Betiği düzenle"
-
-msgid "Edit summary"
-msgstr "Özeti düzenle"
-
-msgid "Edit vision"
-msgstr "Vizyonu düzenle"
 
 msgid "Edit your comment…"
 msgstr "Yorumunu düzenle…"
@@ -6636,9 +6546,6 @@ msgstr "Tüm dosyaları genişlet"
 msgid "Expand file"
 msgstr "Dosyayı genişlet"
 
-msgid "Expand plan"
-msgstr "Planı genişlet"
-
 msgid "Expand project"
 msgstr "Projeyi genişlet"
 
@@ -6696,12 +6603,6 @@ msgstr "Harici düzenleyici"
 
 msgid "extra ${used} of ${limit}"
 msgstr "ek ${used}/${limit}"
-
-msgid "Extra instructions"
-msgstr "Ek yönergeler"
-
-msgid "Extra instructions (optional)"
-msgstr "Ek yönergeler (isteğe bağlı)"
 
 msgid "Extra small"
 msgstr "Çok küçük"
@@ -8781,9 +8682,6 @@ msgstr "Katılım"
 msgid "Joining…"
 msgstr "Katılınıyor…"
 
-msgid "Journal ({count})"
-msgstr "Günlük ({count})"
-
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Tek tıkla en sevdiğiniz düzenleyiciye atlayın. VS Code, Cursor, Xcode, JetBrains IDE'leri veya herhangi bir terminal: worktree'leri tam ihtiyacınız olan yerde açın."
 
@@ -9319,9 +9217,6 @@ msgstr "İnceleme yükleniyor..."
 msgid "Loading terminal scripts..."
 msgstr "Terminal betikleri yükleniyor..."
 
-msgid "Loading the Roadmap…"
-msgstr "Yol haritası yükleniyor…"
-
 msgid "Loading usage history…"
 msgstr "Kullanım geçmişi yükleniyor…"
 
@@ -9712,24 +9607,6 @@ msgstr "2026 ortası"
 msgid "Mid 2027"
 msgstr "2027 ortası"
 
-msgid "Milestone"
-msgstr "Kilometre taşı"
-
-msgid "Milestone actions"
-msgstr "Kilometre taşı eylemleri"
-
-msgid "Milestone status"
-msgstr "Kilometre taşı durumu"
-
-msgid "Milestone summary"
-msgstr "Kilometre taşı özeti"
-
-msgid "Milestone title"
-msgstr "Kilometre taşı başlığı"
-
-msgid "Milestones"
-msgstr "Kilometre taşları"
-
 msgid "Mine"
 msgstr "Benim"
 
@@ -9918,9 +9795,6 @@ msgstr "Yazılım tarihinin çoğu"
 msgid "Move {count} to Group"
 msgstr "{count} öğeyi gruba taşı"
 
-msgid "Move down"
-msgstr "Aşağı taşı"
-
 msgid "Move to Center"
 msgstr "Ortaya taşı"
 
@@ -9932,9 +9806,6 @@ msgstr "Sağ tarafa taşı"
 
 msgid "Move to Tab"
 msgstr "Sekmeye taşı"
-
-msgid "Move up"
-msgstr "Yukarı taşı"
 
 msgid "MRR"
 msgstr "MRR"
@@ -10135,17 +10006,11 @@ msgstr "Çalışma alanından yeni grup"
 msgid "New issue"
 msgstr "Yeni issue"
 
-msgid "New milestone title"
-msgstr "Yeni kilometre taşı başlığı"
-
 msgid "New page"
 msgstr "Yeni sayfa"
 
 msgid "New password (min 8 characters)"
 msgstr "Yeni parola (en az 8 karakter)"
-
-msgid "New plan title"
-msgstr "Yeni plan başlığı"
 
 msgid "New project"
 msgstr "Yeni proje"
@@ -10564,17 +10429,11 @@ msgstr "Birleştirilmiş pull request yok."
 msgid "No messages yet"
 msgstr "Henüz mesaj yok"
 
-msgid "No milestone"
-msgstr "Kilometre taşı yok"
-
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Burada kullanılabilir bir mobil simülatör yok. Limrun destekli bir bulut korumalı alanı veya yerel bir iOS/Android araç zinciri gerekir."
 
 msgid "No name on file"
 msgstr "Kayıtlı ad yok"
-
-msgid "No notes yet."
-msgstr "Henüz not yok."
 
 msgid "No open issues found."
 msgstr "Açık issue bulunamadı."
@@ -10958,12 +10817,6 @@ msgstr "sıralanmamış"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Güncellenmiyor"
-
-msgid "Note"
-msgstr "Not"
-
-msgid "Note (optional)"
-msgstr "Not (isteğe bağlı)"
 
 msgid "Notes"
 msgstr "Notlar"
@@ -11623,9 +11476,6 @@ msgstr "görevi çalışma alanında açma"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Çalışma alanını \"Şununla aç\" menüsünde seçilen uygulamada aç (VS Code, Cursor vb.)"
 
-msgid "Open this conversation"
-msgstr "Bu konuşmayı aç"
-
 msgid "Open this run's workspace"
 msgstr "Bu çalıştırmanın çalışma alanını aç"
 
@@ -11782,9 +11632,6 @@ msgstr "Diğer host'lar"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Bu projeyi başkaları kullanıyor. Onaylamak için <0>{projectName}</0> yaz."
-
-msgid "Other plans"
-msgstr "Diğer planlar"
 
 msgid "Other Team Members"
 msgstr "Diğer takım üyeleri"
@@ -12019,10 +11866,6 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Duraklatıldı"
 
-msgctxt "roadmap status"
-msgid "Paused"
-msgstr "Duraklatıldı"
-
 msgid "Pay now"
 msgstr "Şimdi öde"
 
@@ -12187,33 +12030,16 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Plan"
 
-msgid "Plan actions"
-msgstr "Plan eylemleri"
-
 msgid "Plan restored"
 msgstr "Plan geri yüklendi"
 
-msgid "Plan status"
-msgstr "Plan durumu"
-
-msgid "Plan title"
-msgstr "Plan başlığı"
-
 msgctxt "project state"
-msgid "Planned"
-msgstr "Planlandı"
-
-msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Planlandı"
 
 msgid "Planning the tooltip refactor"
 msgstr "Tooltip yeniden düzenlemesi planlanıyor"
 
-msgid "Plans"
-msgstr "Planlar"
-
-msgctxt "roadmap"
 msgid "Plans"
 msgstr "Planlar"
 
@@ -12558,12 +12384,6 @@ msgstr "Proje bulunamadı."
 
 msgid "Project not set up on this host"
 msgstr "Proje bu host'ta kurulu değil"
-
-msgid "Project notes"
-msgstr "Proje notları"
-
-msgid "Project notes (Markdown)"
-msgstr "Proje notları (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Proje hazır — kenar çubuğundan açın."
@@ -13224,14 +13044,8 @@ msgstr "Grubu yeniden adlandır"
 msgid "Rename host"
 msgstr "Host'u yeniden adlandır"
 
-msgid "Rename milestone"
-msgstr "Kilometre taşını yeniden adlandır"
-
 msgid "Rename page"
 msgstr "Sayfayı yeniden adlandır"
-
-msgid "Rename plan"
-msgstr "Planı yeniden adlandır"
 
 msgid "Rename session"
 msgstr "Oturumu yeniden adlandır"
@@ -13762,9 +13576,6 @@ msgstr "Zil sesleri"
 
 msgid "Roadmap"
 msgstr "Yol haritası"
-
-msgid "Roadmap actions"
-msgstr "Yol haritası eylemleri"
 
 msgid "Rocket"
 msgstr "Roket"
@@ -15354,9 +15165,6 @@ msgstr "Gün başına kazanılan yıldız"
 msgid "Stars gained per week"
 msgstr "Hafta başına kazanılan yıldız"
 
-msgid "Start"
-msgstr "Başlat"
-
 msgctxt "project date"
 msgid "Start"
 msgstr "Başlangıç"
@@ -16020,9 +15828,6 @@ msgstr "targetHostId, çalışma alanının host'uyla eşleşmiyor"
 msgid "Task"
 msgstr "Görev"
 
-msgid "Task actions"
-msgstr "Görev eylemleri"
-
 msgid "Task ID copied"
 msgstr "Görev kimliği kopyalandı"
 
@@ -16284,9 +16089,6 @@ msgstr "İlgili cihaza şu anda erişilemiyor"
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "Otomasyonun sahibi artık bu kuruluşta bulut çalışma alanlarını kullanamıyor. Erişimini kontrol etmesini isteyin veya otomasyonu bir cihazda çalıştırın."
 
-msgid "The backlog does not count toward plan progress."
-msgstr "Bekleyen işler plan ilerlemesine dahil edilmez."
-
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "En iyi ajan değişecek.<0/>İş akışınız değişmemeli."
 
@@ -16493,12 +16295,6 @@ msgstr "İstek başarısız oldu."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Yanıt şu: ajanlar ajanları inceler, insanlar da her şeyi okumak yerine örnekleme yapar. Güven fark fark değil, istatistiksel olarak kazanılır."
 
-msgid "The Roadmap changed elsewhere. Showing the latest version."
-msgstr "Yol haritası başka bir yerde değişti. En son sürüm gösteriliyor."
-
-msgid "The Roadmap is not available here"
-msgstr "Yol haritası burada kullanılamıyor"
-
 msgid "The rubric"
 msgstr "Değerlendirme ölçeği"
 
@@ -16671,9 +16467,6 @@ msgstr "Bu, çalışma alanını ve terminallerini kapatır. Projenin dosyaları
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Bu bulut çalışma alanı uyandırılıyor; bir süre kullanılmadıysa bu işlem 30 saniyeye kadar sürebilir."
-
-msgid "This conversation is not open here"
-msgstr "Bu konuşma burada açık değil"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Bu işlem, yeniden başlatma/çökme kurtarma için saklanan kaydırma geçmişini siler."
@@ -16951,9 +16744,6 @@ msgstr "Bu çalışma alanının host'u çevrimdışı"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Bu çalışma alanının ana makinesi, bu uygulamanın desteklediğinden daha eski bir ana makine hizmeti çalıştırıyor. Yeniden bağlanmak için güncelleyin; çalışma alanı ve dosyaları olduğu gibi kalır."
-
-msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
-msgstr "Bu çalışma alanının host'u yol haritası olmayan eski bir sürüm çalıştırıyor. Bu projeyi burada planlamak için güncelleyin."
 
 msgid "Thorough reasoning effort"
 msgstr "Kapsamlı akıl yürütme çabası"
@@ -17894,9 +17684,6 @@ msgstr "Kullanımı görüntüle"
 msgid "Violence or harassment"
 msgstr "Şiddet veya taciz"
 
-msgid "Vision"
-msgstr "Vizyon"
-
 msgid "Visitors"
 msgstr "Ziyaretçiler"
 
@@ -18158,12 +17945,6 @@ msgstr "İçerik ne yapıyor: oturumlar hangi sayfalarda başlıyor ve ne kadar 
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "Yazıldıkları öğe artık sayfada olmadığı için işaretleri yok."
 
-msgid "What this milestone means"
-msgstr "Bu kilometre taşının anlamı"
-
-msgid "What this plan delivers (Markdown)"
-msgstr "Bu planın sağlayacakları (Markdown)"
-
 msgid "What We're Building"
 msgstr "Ne geliştiriyoruz"
 
@@ -18196,9 +17977,6 @@ msgstr "Kaçıncı sıradasınız?"
 
 msgid "Where does my code run?"
 msgstr "Kodum nerede çalışıyor?"
-
-msgid "Where is this project going?"
-msgstr "Bu proje nereye gidiyor?"
 
 msgid "Where serious teams are"
 msgstr "Ciddi takımların bulunduğu yer"
@@ -18280,18 +18058,6 @@ msgstr "İş e-postası"
 
 msgid "Work from tickets"
 msgstr "Biletlerden çalışma"
-
-msgid "Work on milestone"
-msgstr "Kilometre taşı üzerinde çalış"
-
-msgid "Work on plan"
-msgstr "Plan üzerinde çalış"
-
-msgid "Work on task"
-msgstr "Görev üzerinde çalış"
-
-msgid "Work on this"
-msgstr "Bunun üzerinde çalış"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Ajanlarınızla en sevdiğiniz araçlar üzerinden çalışın"

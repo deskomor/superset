@@ -32,21 +32,16 @@ describe("isManifestLive", () => {
 		expect(alive).toBe(true);
 	});
 
-	test("a host the desktop spawned under its own binary is live when its endpoint answers", async () => {
-		const alive = await isManifestLive(manifestFor(865), {
-			isAlive: () => true,
-			inspectCommand: async () =>
-				"/tmp/.mount_SupersX/superset /tmp/.mount_SupersX/resources/app.asar/dist/main/host-service.js",
-			probeHealthy: async () => true,
-		});
-		expect(alive).toBe(true);
-	});
-
-	test("a recycled pid running an unrelated process is not live", async () => {
+	test("live pid whose command belongs to an unrelated process is not live", async () => {
+		const probeHealthy = () => {
+			throw new Error(
+				"must not fall back to a health probe when ps is conclusive",
+			);
+		};
 		const alive = await isManifestLive(manifestFor(865), {
 			isAlive: () => true,
 			inspectCommand: async () => "/usr/libexec/some-unrelated-system-daemon",
-			probeHealthy: async () => false,
+			probeHealthy,
 		});
 		expect(alive).toBe(false);
 	});

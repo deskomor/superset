@@ -349,11 +349,6 @@ function V2WorkspaceContent() {
 			panes: [{ kind: "desktop", data: { kind: "desktop" } }],
 		});
 	}, [store]);
-	const addRoadmapTab = useCallback(() => {
-		store.getState().addTab({
-			panes: [{ kind: "roadmap", data: { kind: "roadmap" } }],
-		});
-	}, [store]);
 	const isChatV3Enabled = useFeatureFlagEnabled(FEATURE_FLAGS.CHAT_V3) ?? false;
 	useRunPendingChatHandoff({
 		workspaceId,
@@ -386,7 +381,6 @@ function V2WorkspaceContent() {
 				case "files":
 				case "changes-list":
 				case "review":
-				case "roadmap":
 					rightStore.getState().addTab({ panes: [{ kind, data: { kind } }] });
 					return;
 				case "browser":
@@ -576,7 +570,6 @@ function V2WorkspaceContent() {
 											onAddChatV3={isChatV3Enabled ? addChatV3Tab : undefined}
 											onAddBrowser={addBrowserTab}
 											onAddChanges={openChangesPane}
-											onAddRoadmap={addRoadmapTab}
 											onAddDesktop={isSandbox ? addDesktopTab : undefined}
 											showPresetsBar={showPresetsBar}
 											onToggleShowPresetsBar={setShowPresetsBar}

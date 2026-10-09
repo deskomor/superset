@@ -1,1 +1,0 @@
-export { CompactSelect } from "./CompactSelect";

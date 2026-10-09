@@ -45,57 +45,50 @@ export interface ResolveHostTargetOptions {
 	api: ApiClient;
 }
 
-/** This machine's host-service, read from its manifest. Needs no login. */
-export function resolveLocalHostTarget(
-	organizationId: string,
-	userJwt = "",
-): ResolvedHostTarget {
-	const localHostId = getHostId();
-	const userId = readJwtSubject(userJwt);
-	const manifest = readManifest(organizationId);
-	if (!manifest) {
-		throw new CLIError(
-			"Host service for this machine isn't running",
-			"Run: superset start",
-		);
-	}
-	if (!isProcessAlive(manifest.pid)) {
-		throw new CLIError(
-			"Host service manifest is stale (recorded PID is dead)",
-			"Run: superset start",
-		);
-	}
-	return {
-		kind: "local",
-		hostId: localHostId,
-		client: createTRPCClient<HostServiceRouter>({
-			links: [
-				httpBatchLink({
-					url: `${manifest.endpoint}/trpc`,
-					transformer: SuperJSON,
-					headers: {
-						Authorization: `Bearer ${manifest.authToken}`,
-						"x-superset-client-machine-id": localHostId,
-						// Names the user to the local host so it can stamp
-						// createdByUserId; the relay does this for remote hosts.
-						...(userId ? { [SUPERSET_USER_ID_HEADER]: userId } : {}),
-					},
-				}),
-			],
-		}),
-		ws: {
-			baseWsUrl: manifest.endpoint.replace(/^http/, "ws"),
-			token: manifest.authToken,
-		},
-	};
-}
-
 export async function resolveHostTarget(
 	options: ResolveHostTargetOptions,
 ): Promise<ResolvedHostTarget> {
+	const localHostId = getHostId();
 	const targetHostId = options.requestedHostId;
-	if (targetHostId === getHostId()) {
-		return resolveLocalHostTarget(options.organizationId, options.userJwt);
+	const userId = readJwtSubject(options.userJwt);
+
+	if (targetHostId === localHostId) {
+		const manifest = readManifest(options.organizationId);
+		if (!manifest) {
+			throw new CLIError(
+				"Host service for this machine isn't running",
+				"Run: superset start",
+			);
+		}
+		if (!isProcessAlive(manifest.pid)) {
+			throw new CLIError(
+				"Host service manifest is stale (recorded PID is dead)",
+				"Run: superset start",
+			);
+		}
+		return {
+			kind: "local",
+			hostId: localHostId,
+			client: createTRPCClient<HostServiceRouter>({
+				links: [
+					httpBatchLink({
+						url: `${manifest.endpoint}/trpc`,
+						transformer: SuperJSON,
+						headers: {
+							Authorization: `Bearer ${manifest.authToken}`,
+							"x-superset-client-machine-id": localHostId,
+							// Names the user to the local host so it can stamp
+							// createdByUserId; the relay does this for remote hosts.
+							...(userId ? { [SUPERSET_USER_ID_HEADER]: userId } : {}),
+						},
+					}),
+				],
+			}),
+			ws: {
+				baseWsUrl: manifest.endpoint.replace(/^http/, "ws"),
+				token: manifest.authToken,
+			},
+		};
 	}
 
 	const routingKey = buildHostRoutingKey(options.organizationId, targetHostId);
@@ -110,7 +103,7 @@ export async function resolveHostTarget(
 					transformer: SuperJSON,
 					headers: {
 						Authorization: `Bearer ${options.userJwt}`,
-						"x-superset-client-machine-id": getHostId(),
+						"x-superset-client-machine-id": localHostId,
 					},
 				}),
 			],

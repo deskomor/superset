@@ -840,9 +840,6 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "před {distance}"
 
-msgid "{done} of {total} tasks checked"
-msgstr "Zaškrtnuto {done} z {total} úkolů"
-
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Přemýšlel # sekundu} few {Přemýšlel # sekundy} many {Přemýšlel # sekundy} other {Přemýšlel # sekund}}"
 
@@ -1475,10 +1472,6 @@ msgstr "Jedinečný identifikátor vaší organizace (vygenerovaný z názvu)"
 msgid "Aa"
 msgstr "Aa"
 
-msgctxt "roadmap status"
-msgid "Abandoned"
-msgstr "Opuštěno"
-
 msgid "About"
 msgstr "O nás"
 
@@ -1573,10 +1566,6 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Aktivní"
 
-msgctxt "roadmap status"
-msgid "Active"
-msgstr "Aktivní"
-
 msgid "active {lastActive}"
 msgstr "aktivní {lastActive}"
 
@@ -1618,14 +1607,8 @@ msgstr "Přidat komentář…"
 msgid "Add a description…"
 msgstr "Přidejte popis…"
 
-msgid "Add a journal entry"
-msgstr "Přidat záznam do deníku"
-
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Přidejte lifecycle run skript v nastavení projektu, nebo označte terminálový skript jako spuštění pracovního prostoru."
-
-msgid "Add a note"
-msgstr "Přidat poznámku"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Přidejte projekt a uvidíte GitHub issues."
@@ -1635,15 +1618,6 @@ msgstr "Přidejte projekt a uvidíte pull requesty."
 
 msgid "Add a short summary…"
 msgstr "Přidejte krátké shrnutí…"
-
-msgid "Add a subtask"
-msgstr "Přidat podúkol"
-
-msgid "Add a summary"
-msgstr "Přidat souhrn"
-
-msgid "Add a task"
-msgstr "Přidat úkol"
 
 msgid "Add account"
 msgstr "Přidat účet"
@@ -1715,17 +1689,11 @@ msgstr "Přidat naslouchajícího agenta"
 msgid "Add member"
 msgstr "Přidat člena"
 
-msgid "Add milestone"
-msgstr "Přidat milník"
-
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Začněte tím, že jednoho přidáte z nabídky v postranním panelu."
 
 msgid "Add photos or files"
 msgstr "Přidat fotky nebo soubory"
-
-msgid "Add plan"
-msgstr "Přidat plán"
 
 msgid "Add project"
 msgstr "Přidat projekt"
@@ -1747,9 +1715,6 @@ msgstr "Přidat skript"
 
 msgid "Add setup commands, one per line..."
 msgstr "Přidejte setup příkazy, jeden na řádek..."
-
-msgid "Add subtask"
-msgstr "Přidat podúkol"
 
 msgid "Add tag…"
 msgstr "Přidat štítek…"
@@ -2829,9 +2794,6 @@ msgstr "Práce na pozadí a stránky"
 
 msgid "Backlog"
 msgstr "Backlog"
-
-msgid "Backlog actions"
-msgstr "Akce backlogu"
 
 msgid "Badge"
 msgstr "Odznak"
@@ -3940,9 +3902,6 @@ msgstr "Sbalit všechny soubory"
 msgid "Collapse file"
 msgstr "Sbalit soubor"
 
-msgid "Collapse plan"
-msgstr "Sbalit plán"
-
 msgid "Collapse project"
 msgstr "Sbalit projekt"
 
@@ -4443,9 +4402,6 @@ msgstr "Konverzace"
 msgid "Conversation · Message"
 msgstr "Konverzace · Zpráva"
 
-msgid "Conversations"
-msgstr "Konverzace"
-
 msgid "Conversion"
 msgstr "Konverze"
 
@@ -4454,15 +4410,6 @@ msgstr "Konverze z předchozího"
 
 msgid "Conversion so far"
 msgstr "Konverze zatím"
-
-msgid "Convert to note"
-msgstr "Převést na poznámku"
-
-msgid "Convert to plan"
-msgstr "Převést na plán"
-
-msgid "Convert to task"
-msgstr "Převést na úkol"
 
 msgid "Converted"
 msgstr "Konvertovalo"
@@ -4488,9 +4435,6 @@ msgstr "Odkaz zkopírován"
 
 msgid "Copied terminal ID"
 msgstr "ID terminálu zkopírováno"
-
-msgid "Copied the Roadmap as Markdown"
-msgstr "Roadmapa zkopírována jako Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Zkopírováno do schránky."
@@ -4903,9 +4847,6 @@ msgstr "Nepodařilo se zkopírovat cestu"
 msgid "Couldn't copy the image"
 msgstr "Obrázek se nepodařilo zkopírovat"
 
-msgid "Couldn't copy the Roadmap"
-msgstr "Roadmapu se nepodařilo zkopírovat"
-
 msgid "Couldn't create workspace"
 msgstr "Pracovní prostor se nepodařilo vytvořit"
 
@@ -5058,9 +4999,6 @@ msgstr "Nepodařilo se spustit cloudový pracovní prostor"
 msgid "Couldn't start design mode on this page"
 msgstr "Na této stránce se nepodařilo spustit režim designu"
 
-msgid "Couldn't start the agent"
-msgstr "Agenta se nepodařilo spustit"
-
 msgid "Couldn't start workspace"
 msgstr "Pracovní prostor se nepodařilo spustit"
 
@@ -5084,9 +5022,6 @@ msgstr "Pull request se nepodařilo aktualizovat"
 
 msgid "Couldn't update the queue"
 msgstr "Frontu se nepodařilo aktualizovat"
-
-msgid "Couldn't update the Roadmap"
-msgstr "Roadmapu se nepodařilo aktualizovat"
 
 msgid "Couldn't update thread"
 msgstr "Nepodařilo se aktualizovat vlákno"
@@ -5127,14 +5062,8 @@ msgstr "Vytvořte nový úkol z desktopového zobrazení úkolů."
 msgid "Create a new workspace"
 msgstr "Vytvořit nový pracovní prostor"
 
-msgid "Create a plan"
-msgstr "Vytvořit plán"
-
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Vytvořte projekt a seskupte do něj úkoly a cloudové pracovní prostory."
-
-msgid "Create a task"
-msgstr "Vytvořit úkol"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Vytvoř úkol na opravu chyby v přihlašování"
@@ -5619,9 +5548,6 @@ msgstr "Smazat obrázek"
 msgid "Delete local branch on workspace removal"
 msgstr "Smazat lokální větev při odstranění pracovního prostoru"
 
-msgid "Delete milestone"
-msgstr "Smazat milník"
-
 msgid "Delete organization"
 msgstr "Smazat organizaci"
 
@@ -5630,9 +5556,6 @@ msgstr "Smazat stránku"
 
 msgid "Delete permanently"
 msgstr "Trvale smazat"
-
-msgid "Delete plan"
-msgstr "Smazat plán"
 
 msgid "Delete project"
 msgstr "Smazat projekt"
@@ -5796,9 +5719,6 @@ msgstr "Popište, co potřebujete. Superset pro úkol vytvoří izolovaný praco
 
 msgid "Describe what you'd like to see built…"
 msgstr "Popište, co byste chtěli vidět hotové…"
-
-msgid "Describe where this project is going."
-msgstr "Popište, kam tento projekt směřuje."
 
 msgid "Description"
 msgstr "Popis"
@@ -6085,10 +6005,6 @@ msgstr "Neukládat"
 msgid "Done"
 msgstr "Hotovo"
 
-msgctxt "roadmap status"
-msgid "Done"
-msgstr "Hotovo"
-
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Hotovo — orámovaný styl čipu z lišty přednastavení je teď výchozí pro každý tooltip a zkopírované přepisy jsou pryč (čistě −90 řádků)."
 
@@ -6332,12 +6248,6 @@ msgstr "Upravit run skript"
 
 msgid "Edit script"
 msgstr "Upravit skript"
-
-msgid "Edit summary"
-msgstr "Upravit souhrn"
-
-msgid "Edit vision"
-msgstr "Upravit vizi"
 
 msgid "Edit your comment…"
 msgstr "Upravte komentář…"
@@ -6636,9 +6546,6 @@ msgstr "Rozbalit všechny soubory"
 msgid "Expand file"
 msgstr "Rozbalit soubor"
 
-msgid "Expand plan"
-msgstr "Rozbalit plán"
-
 msgid "Expand project"
 msgstr "Rozbalit projekt"
 
@@ -6696,12 +6603,6 @@ msgstr "Externí editor"
 
 msgid "extra ${used} of ${limit}"
 msgstr "navíc {used} $ z {limit} $"
-
-msgid "Extra instructions"
-msgstr "Další pokyny"
-
-msgid "Extra instructions (optional)"
-msgstr "Další pokyny (volitelné)"
 
 msgid "Extra small"
 msgstr "Velmi malé"
@@ -8781,9 +8682,6 @@ msgstr "Připojeno"
 msgid "Joining…"
 msgstr "Připojuji…"
 
-msgid "Journal ({count})"
-msgstr "Deník ({count})"
-
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Skočte do svého oblíbeného editoru jedním kliknutím. VS Code, Cursor, Xcode, JetBrains IDE nebo libovolný terminál: otevřete worktree přesně tam, kde ho potřebujete."
 
@@ -9319,9 +9217,6 @@ msgstr "Načítám revizi..."
 msgid "Loading terminal scripts..."
 msgstr "Načítám terminálové skripty..."
 
-msgid "Loading the Roadmap…"
-msgstr "Načítání roadmapy…"
-
 msgid "Loading usage history…"
 msgstr "Načítám historii využití…"
 
@@ -9712,24 +9607,6 @@ msgstr "Polovina 2026"
 msgid "Mid 2027"
 msgstr "Pol. 2027"
 
-msgid "Milestone"
-msgstr "Milník"
-
-msgid "Milestone actions"
-msgstr "Akce milníku"
-
-msgid "Milestone status"
-msgstr "Stav milníku"
-
-msgid "Milestone summary"
-msgstr "Souhrn milníku"
-
-msgid "Milestone title"
-msgstr "Název milníku"
-
-msgid "Milestones"
-msgstr "Milníky"
-
 msgid "Mine"
 msgstr "Moje"
 
@@ -9918,9 +9795,6 @@ msgstr "Většina historie softwaru"
 msgid "Move {count} to Group"
 msgstr "Přesunout {count} do skupiny"
 
-msgid "Move down"
-msgstr "Posunout dolů"
-
 msgid "Move to Center"
 msgstr "Přesunout do středu"
 
@@ -9932,9 +9806,6 @@ msgstr "Přesunout doprava"
 
 msgid "Move to Tab"
 msgstr "Přesunout na kartu"
-
-msgid "Move up"
-msgstr "Posunout nahoru"
 
 msgid "MRR"
 msgstr "MRR"
@@ -10135,17 +10006,11 @@ msgstr "Nová skupina z pracovního prostoru"
 msgid "New issue"
 msgstr "Nová issue"
 
-msgid "New milestone title"
-msgstr "Název nového milníku"
-
 msgid "New page"
 msgstr "Nová stránka"
 
 msgid "New password (min 8 characters)"
 msgstr "Nové heslo (min. 8 znaků)"
-
-msgid "New plan title"
-msgstr "Název nového plánu"
 
 msgid "New project"
 msgstr "Nový projekt"
@@ -10564,17 +10429,11 @@ msgstr "Žádné sloučené pull requesty."
 msgid "No messages yet"
 msgstr "Zatím žádné zprávy"
 
-msgid "No milestone"
-msgstr "Žádný milník"
-
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "Zde není k dispozici žádný mobilní simulátor. Je potřeba cloudový sandbox s podporou Limrun nebo místní sada nástrojů iOS/Android."
 
 msgid "No name on file"
 msgstr "Není uloženo žádné jméno"
-
-msgid "No notes yet."
-msgstr "Zatím žádné poznámky."
 
 msgid "No open issues found."
 msgstr "Nenalezeny žádné otevřené issues."
@@ -10958,12 +10817,6 @@ msgstr "neseřazeno"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Bez aktualizací"
-
-msgid "Note"
-msgstr "Poznámka"
-
-msgid "Note (optional)"
-msgstr "Poznámka (volitelné)"
 
 msgid "Notes"
 msgstr "Poznámky"
@@ -11623,9 +11476,6 @@ msgstr "otevřít úkol v pracovním prostoru"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Otevřít pracovní prostor v aplikaci vybrané v nabídce „Otevřít v“ (VS Code, Cursor atd.)"
 
-msgid "Open this conversation"
-msgstr "Otevřít tuto konverzaci"
-
 msgid "Open this run's workspace"
 msgstr "Otevřít pracovní prostor tohoto běhu"
 
@@ -11782,9 +11632,6 @@ msgstr "Ostatní hosty"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Tento projekt používají další lidé. Pro potvrzení napište <0>{projectName}</0>."
-
-msgid "Other plans"
-msgstr "Další plány"
 
 msgid "Other Team Members"
 msgstr "Další členové týmu"
@@ -12019,10 +11866,6 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Pozastaveno"
 
-msgctxt "roadmap status"
-msgid "Paused"
-msgstr "Pozastaveno"
-
 msgid "Pay now"
 msgstr "Zaplatit"
 
@@ -12187,35 +12030,18 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Tarif"
 
-msgid "Plan actions"
-msgstr "Akce plánu"
-
 msgid "Plan restored"
 msgstr "Tarif obnoven"
-
-msgid "Plan status"
-msgstr "Stav plánu"
-
-msgid "Plan title"
-msgstr "Název plánu"
 
 msgctxt "project state"
 msgid "Planned"
 msgstr "Plánováno"
-
-msgctxt "roadmap status"
-msgid "Planned"
-msgstr "Naplánováno"
 
 msgid "Planning the tooltip refactor"
 msgstr "Plánuji refaktor tooltipů"
 
 msgid "Plans"
 msgstr "Tarify"
-
-msgctxt "roadmap"
-msgid "Plans"
-msgstr "Plány"
 
 msgid "Plant Floor"
 msgstr "Výrobní hala"
@@ -12558,12 +12384,6 @@ msgstr "Projekt nenalezen."
 
 msgid "Project not set up on this host"
 msgstr "Projekt není na tomto hostu nastaven"
-
-msgid "Project notes"
-msgstr "Poznámky k projektu"
-
-msgid "Project notes (Markdown)"
-msgstr "Poznámky k projektu (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Projekt je připravený — otevřete ho v postranním panelu."
@@ -13224,14 +13044,8 @@ msgstr "Přejmenovat skupinu"
 msgid "Rename host"
 msgstr "Přejmenovat hosta"
 
-msgid "Rename milestone"
-msgstr "Přejmenovat milník"
-
 msgid "Rename page"
 msgstr "Přejmenovat stránku"
-
-msgid "Rename plan"
-msgstr "Přejmenovat plán"
 
 msgid "Rename session"
 msgstr "Přejmenovat relaci"
@@ -13762,9 +13576,6 @@ msgstr "Vyzvánění"
 
 msgid "Roadmap"
 msgstr "Roadmapa"
-
-msgid "Roadmap actions"
-msgstr "Akce roadmapy"
 
 msgid "Rocket"
 msgstr "Raketa"
@@ -15354,9 +15165,6 @@ msgstr "Získané hvězdy za den"
 msgid "Stars gained per week"
 msgstr "Získané hvězdy za týden"
 
-msgid "Start"
-msgstr "Spustit"
-
 msgctxt "project date"
 msgid "Start"
 msgstr "Začátek"
@@ -16020,9 +15828,6 @@ msgstr "targetHostId neodpovídá hostu pracovního prostoru"
 msgid "Task"
 msgstr "Úkol"
 
-msgid "Task actions"
-msgstr "Akce úkolu"
-
 msgid "Task ID copied"
 msgstr "ID úkolu zkopírováno"
 
@@ -16284,9 +16089,6 @@ msgstr "Přidružené zařízení teď není dostupné"
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "Vlastník automatizace už v této organizaci nemůže používat cloudové pracovní prostory. Požádejte ho, aby si zkontroloval přístup, nebo automatizaci spusťte na zařízení."
 
-msgid "The backlog does not count toward plan progress."
-msgstr "Backlog se nezapočítává do postupu plánů."
-
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "Nejlepší agent se změní.<0/>Vaše workflow ne."
 
@@ -16493,12 +16295,6 @@ msgstr "Požadavek selhal."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "Odpověď: agenti revidují agenty a lidé místo čtení všeho jen vzorkují. Důvěra se získává statisticky, ne u jednotlivého diffu."
 
-msgid "The Roadmap changed elsewhere. Showing the latest version."
-msgstr "Roadmapa se změnila jinde. Zobrazuje se nejnovější verze."
-
-msgid "The Roadmap is not available here"
-msgstr "Roadmapa zde není k dispozici"
-
 msgid "The rubric"
 msgstr "Hodnoticí tabulka"
 
@@ -16671,9 +16467,6 @@ msgstr "Tím se zavře pracovní prostor a jeho terminály. Soubory, větve a os
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Tento cloudový workspace se probouzí, což může po nečinnosti trvat až 30 sekund."
-
-msgid "This conversation is not open here"
-msgstr "Tato konverzace zde není otevřená"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "Tímto se smaže uložený scrollback používaný k obnovení po restartu nebo pádu."
@@ -16951,9 +16744,6 @@ msgstr "Host tohoto pracovního prostoru je offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Hostitel tohoto pracovního prostoru používá starší službu hostitele, než tato aplikace podporuje. Aktualizujte ji pro opětovné připojení; pracovní prostor a jeho soubory zůstanou nedotčené."
-
-msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
-msgstr "Host tohoto pracovního prostoru používá starší verzi bez roadmapy. Aktualizujte ho, abyste zde mohli plánovat tento projekt."
 
 msgid "Thorough reasoning effort"
 msgstr "Důkladné uvažování"
@@ -17894,9 +17684,6 @@ msgstr "Zobrazit využití"
 msgid "Violence or harassment"
 msgstr "Násilí nebo obtěžování"
 
-msgid "Vision"
-msgstr "Vize"
-
 msgid "Visitors"
 msgstr "Návštěvníci"
 
@@ -18158,12 +17945,6 @@ msgstr "Co obsah dělá: na kterých stránkách relace začínají a kolik se p
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "To, k čemu byly napsané, už na stránce není, takže nemají značku."
 
-msgid "What this milestone means"
-msgstr "Co tento milník znamená"
-
-msgid "What this plan delivers (Markdown)"
-msgstr "Co tento plán přinese (Markdown)"
-
 msgid "What We're Building"
 msgstr "Co stavíme"
 
@@ -18196,9 +17977,6 @@ msgstr "Jak si stojíte?"
 
 msgid "Where does my code run?"
 msgstr "Kde běží můj kód?"
-
-msgid "Where is this project going?"
-msgstr "Kam tento projekt směřuje?"
 
 msgid "Where serious teams are"
 msgstr "Kde jsou seriózní týmy"
@@ -18280,18 +18058,6 @@ msgstr "Pracovní e-mail"
 
 msgid "Work from tickets"
 msgstr "Práce z ticketů"
-
-msgid "Work on milestone"
-msgstr "Pracovat na milníku"
-
-msgid "Work on plan"
-msgstr "Pracovat na plánu"
-
-msgid "Work on task"
-msgstr "Pracovat na úkolu"
-
-msgid "Work on this"
-msgstr "Pracovat na tomto"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Pracujte s agenty napříč svými oblíbenými nástroji"

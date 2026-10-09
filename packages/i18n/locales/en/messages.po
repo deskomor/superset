@@ -840,9 +840,6 @@ msgstr "{developerCount}+"
 msgid "{distance} ago"
 msgstr "{distance} ago"
 
-msgid "{done} of {total} tasks checked"
-msgstr "{done} of {total} tasks checked"
-
 msgid "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 msgstr "{duration, plural, one {Thought for # second} other {Thought for # seconds}}"
 
@@ -1475,10 +1472,6 @@ msgstr "A unique identifier for your organization (auto-generated from name)"
 msgid "Aa"
 msgstr "Aa"
 
-msgctxt "roadmap status"
-msgid "Abandoned"
-msgstr "Abandoned"
-
 msgid "About"
 msgstr "About"
 
@@ -1573,10 +1566,6 @@ msgctxt "presence"
 msgid "Active"
 msgstr "Active"
 
-msgctxt "roadmap status"
-msgid "Active"
-msgstr "Active"
-
 msgid "active {lastActive}"
 msgstr "active {lastActive}"
 
@@ -1618,14 +1607,8 @@ msgstr "Add a comment…"
 msgid "Add a description…"
 msgstr "Add a description…"
 
-msgid "Add a journal entry"
-msgstr "Add a journal entry"
-
 msgid "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
 msgstr "Add a lifecycle run script in Project Settings or mark a terminal script as the workspace run."
-
-msgid "Add a note"
-msgstr "Add a note"
 
 msgid "Add a project to see GitHub issues."
 msgstr "Add a project to see GitHub issues."
@@ -1635,15 +1618,6 @@ msgstr "Add a project to see pull requests."
 
 msgid "Add a short summary…"
 msgstr "Add a short summary…"
-
-msgid "Add a subtask"
-msgstr "Add a subtask"
-
-msgid "Add a summary"
-msgstr "Add a summary"
-
-msgid "Add a task"
-msgstr "Add a task"
 
 msgid "Add account"
 msgstr "Add account"
@@ -1715,17 +1689,11 @@ msgstr "Add listening agent"
 msgid "Add member"
 msgstr "Add member"
 
-msgid "Add milestone"
-msgstr "Add milestone"
-
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Add one from the menu in the sidebar to get started."
 
 msgid "Add photos or files"
 msgstr "Add photos or files"
-
-msgid "Add plan"
-msgstr "Add plan"
 
 msgid "Add project"
 msgstr "Add project"
@@ -1747,9 +1715,6 @@ msgstr "Add Script"
 
 msgid "Add setup commands, one per line..."
 msgstr "Add setup commands, one per line..."
-
-msgid "Add subtask"
-msgstr "Add subtask"
 
 msgid "Add tag…"
 msgstr "Add tag…"
@@ -2829,9 +2794,6 @@ msgstr "Background work and pages"
 
 msgid "Backlog"
 msgstr "Backlog"
-
-msgid "Backlog actions"
-msgstr "Backlog actions"
 
 msgid "Badge"
 msgstr "Badge"
@@ -3940,9 +3902,6 @@ msgstr "Collapse all files"
 msgid "Collapse file"
 msgstr "Collapse file"
 
-msgid "Collapse plan"
-msgstr "Collapse plan"
-
 msgid "Collapse project"
 msgstr "Collapse project"
 
@@ -4443,9 +4402,6 @@ msgstr "Conversation"
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
 
-msgid "Conversations"
-msgstr "Conversations"
-
 msgid "Conversion"
 msgstr "Conversion"
 
@@ -4454,15 +4410,6 @@ msgstr "Conversion from previous"
 
 msgid "Conversion so far"
 msgstr "Conversion so far"
-
-msgid "Convert to note"
-msgstr "Convert to note"
-
-msgid "Convert to plan"
-msgstr "Convert to plan"
-
-msgid "Convert to task"
-msgstr "Convert to task"
 
 msgid "Converted"
 msgstr "Converted"
@@ -4488,9 +4435,6 @@ msgstr "Copied Link"
 
 msgid "Copied terminal ID"
 msgstr "Copied terminal ID"
-
-msgid "Copied the Roadmap as Markdown"
-msgstr "Copied the Roadmap as Markdown"
 
 msgid "Copied to clipboard."
 msgstr "Copied to clipboard."
@@ -4903,9 +4847,6 @@ msgstr "Couldn't copy path"
 msgid "Couldn't copy the image"
 msgstr "Couldn't copy the image"
 
-msgid "Couldn't copy the Roadmap"
-msgstr "Couldn't copy the Roadmap"
-
 msgid "Couldn't create workspace"
 msgstr "Couldn't create workspace"
 
@@ -5058,9 +4999,6 @@ msgstr "Couldn't start cloud workspace"
 msgid "Couldn't start design mode on this page"
 msgstr "Couldn't start design mode on this page"
 
-msgid "Couldn't start the agent"
-msgstr "Couldn't start the agent"
-
 msgid "Couldn't start workspace"
 msgstr "Couldn't start workspace"
 
@@ -5084,9 +5022,6 @@ msgstr "Couldn't update pull request"
 
 msgid "Couldn't update the queue"
 msgstr "Couldn't update the queue"
-
-msgid "Couldn't update the Roadmap"
-msgstr "Couldn't update the Roadmap"
 
 msgid "Couldn't update thread"
 msgstr "Couldn't update thread"
@@ -5127,14 +5062,8 @@ msgstr "Create a new task from the desktop tasks view."
 msgid "Create a new workspace"
 msgstr "Create a new workspace"
 
-msgid "Create a plan"
-msgstr "Create a plan"
-
 msgid "Create a project to group tasks and cloud workspaces."
 msgstr "Create a project to group tasks and cloud workspaces."
-
-msgid "Create a task"
-msgstr "Create a task"
 
 msgid "Create a task for fixing the login bug"
 msgstr "Create a task for fixing the login bug"
@@ -5619,9 +5548,6 @@ msgstr "Delete image"
 msgid "Delete local branch on workspace removal"
 msgstr "Delete local branch on workspace removal"
 
-msgid "Delete milestone"
-msgstr "Delete milestone"
-
 msgid "Delete organization"
 msgstr "Delete organization"
 
@@ -5630,9 +5556,6 @@ msgstr "Delete page"
 
 msgid "Delete permanently"
 msgstr "Delete permanently"
-
-msgid "Delete plan"
-msgstr "Delete plan"
 
 msgid "Delete project"
 msgstr "Delete project"
@@ -5796,9 +5719,6 @@ msgstr "Describe what you need. Superset creates an isolated workspace and clean
 
 msgid "Describe what you'd like to see built…"
 msgstr "Describe what you'd like to see built…"
-
-msgid "Describe where this project is going."
-msgstr "Describe where this project is going."
 
 msgid "Description"
 msgstr "Description"
@@ -6085,10 +6005,6 @@ msgstr "Don't Save"
 msgid "Done"
 msgstr "Done"
 
-msgctxt "roadmap status"
-msgid "Done"
-msgstr "Done"
-
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 
@@ -6332,12 +6248,6 @@ msgstr "Edit Run Script"
 
 msgid "Edit script"
 msgstr "Edit script"
-
-msgid "Edit summary"
-msgstr "Edit summary"
-
-msgid "Edit vision"
-msgstr "Edit vision"
 
 msgid "Edit your comment…"
 msgstr "Edit your comment…"
@@ -6636,9 +6546,6 @@ msgstr "Expand all files"
 msgid "Expand file"
 msgstr "Expand file"
 
-msgid "Expand plan"
-msgstr "Expand plan"
-
 msgid "Expand project"
 msgstr "Expand project"
 
@@ -6696,12 +6603,6 @@ msgstr "External editor"
 
 msgid "extra ${used} of ${limit}"
 msgstr "extra ${used} of ${limit}"
-
-msgid "Extra instructions"
-msgstr "Extra instructions"
-
-msgid "Extra instructions (optional)"
-msgstr "Extra instructions (optional)"
 
 msgid "Extra small"
 msgstr "Extra small"
@@ -8781,9 +8682,6 @@ msgstr "Joined"
 msgid "Joining…"
 msgstr "Joining…"
 
-msgid "Journal ({count})"
-msgstr "Journal ({count})"
-
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 
@@ -9319,9 +9217,6 @@ msgstr "Loading review..."
 msgid "Loading terminal scripts..."
 msgstr "Loading terminal scripts..."
 
-msgid "Loading the Roadmap…"
-msgstr "Loading the Roadmap…"
-
 msgid "Loading usage history…"
 msgstr "Loading usage history…"
 
@@ -9712,24 +9607,6 @@ msgstr "Mid 2026"
 msgid "Mid 2027"
 msgstr "Mid 2027"
 
-msgid "Milestone"
-msgstr "Milestone"
-
-msgid "Milestone actions"
-msgstr "Milestone actions"
-
-msgid "Milestone status"
-msgstr "Milestone status"
-
-msgid "Milestone summary"
-msgstr "Milestone summary"
-
-msgid "Milestone title"
-msgstr "Milestone title"
-
-msgid "Milestones"
-msgstr "Milestones"
-
 msgid "Mine"
 msgstr "Mine"
 
@@ -9918,9 +9795,6 @@ msgstr "Most of software history"
 msgid "Move {count} to Group"
 msgstr "Move {count} to Group"
 
-msgid "Move down"
-msgstr "Move down"
-
 msgid "Move to Center"
 msgstr "Move to Center"
 
@@ -9932,9 +9806,6 @@ msgstr "Move to Right Side"
 
 msgid "Move to Tab"
 msgstr "Move to Tab"
-
-msgid "Move up"
-msgstr "Move up"
 
 msgid "MRR"
 msgstr "MRR"
@@ -10135,17 +10006,11 @@ msgstr "New group from workspace"
 msgid "New issue"
 msgstr "New issue"
 
-msgid "New milestone title"
-msgstr "New milestone title"
-
 msgid "New page"
 msgstr "New page"
 
 msgid "New password (min 8 characters)"
 msgstr "New password (min 8 characters)"
-
-msgid "New plan title"
-msgstr "New plan title"
 
 msgid "New project"
 msgstr "New project"
@@ -10564,17 +10429,11 @@ msgstr "No merged pull requests."
 msgid "No messages yet"
 msgstr "No messages yet"
 
-msgid "No milestone"
-msgstr "No milestone"
-
 msgid "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 msgstr "No mobile simulator available here. This needs either a Limrun-enabled cloud sandbox or a local iOS/Android toolchain."
 
 msgid "No name on file"
 msgstr "No name on file"
-
-msgid "No notes yet."
-msgstr "No notes yet."
 
 msgid "No open issues found."
 msgstr "No open issues found."
@@ -10958,12 +10817,6 @@ msgstr "not sorted"
 msgctxt "agent status"
 msgid "Not updating"
 msgstr "Not updating"
-
-msgid "Note"
-msgstr "Note"
-
-msgid "Note (optional)"
-msgstr "Note (optional)"
 
 msgid "Notes"
 msgstr "Notes"
@@ -11623,9 +11476,6 @@ msgstr "open the task in a workspace"
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 
-msgid "Open this conversation"
-msgstr "Open this conversation"
-
 msgid "Open this run's workspace"
 msgstr "Open this run's workspace"
 
@@ -11782,9 +11632,6 @@ msgstr "Other Hosts"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Other people are using this project. Type <0>{projectName}</0> to confirm."
-
-msgid "Other plans"
-msgstr "Other plans"
 
 msgid "Other Team Members"
 msgstr "Other Team Members"
@@ -12019,10 +11866,6 @@ msgctxt "project state"
 msgid "Paused"
 msgstr "Paused"
 
-msgctxt "roadmap status"
-msgid "Paused"
-msgstr "Paused"
-
 msgid "Pay now"
 msgstr "Pay now"
 
@@ -12187,33 +12030,16 @@ msgctxt "billing"
 msgid "Plan"
 msgstr "Plan"
 
-msgid "Plan actions"
-msgstr "Plan actions"
-
 msgid "Plan restored"
 msgstr "Plan restored"
 
-msgid "Plan status"
-msgstr "Plan status"
-
-msgid "Plan title"
-msgstr "Plan title"
-
 msgctxt "project state"
-msgid "Planned"
-msgstr "Planned"
-
-msgctxt "roadmap status"
 msgid "Planned"
 msgstr "Planned"
 
 msgid "Planning the tooltip refactor"
 msgstr "Planning the tooltip refactor"
 
-msgid "Plans"
-msgstr "Plans"
-
-msgctxt "roadmap"
 msgid "Plans"
 msgstr "Plans"
 
@@ -12558,12 +12384,6 @@ msgstr "Project not found."
 
 msgid "Project not set up on this host"
 msgstr "Project not set up on this host"
-
-msgid "Project notes"
-msgstr "Project notes"
-
-msgid "Project notes (Markdown)"
-msgstr "Project notes (Markdown)"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Project ready — open it from the sidebar."
@@ -13224,14 +13044,8 @@ msgstr "Rename group"
 msgid "Rename host"
 msgstr "Rename host"
 
-msgid "Rename milestone"
-msgstr "Rename milestone"
-
 msgid "Rename page"
 msgstr "Rename page"
-
-msgid "Rename plan"
-msgstr "Rename plan"
 
 msgid "Rename session"
 msgstr "Rename session"
@@ -13762,9 +13576,6 @@ msgstr "Ringtones"
 
 msgid "Roadmap"
 msgstr "Roadmap"
-
-msgid "Roadmap actions"
-msgstr "Roadmap actions"
 
 msgid "Rocket"
 msgstr "Rocket"
@@ -15354,9 +15165,6 @@ msgstr "Stars gained per day"
 msgid "Stars gained per week"
 msgstr "Stars gained per week"
 
-msgid "Start"
-msgstr "Start"
-
 msgctxt "project date"
 msgid "Start"
 msgstr "Start"
@@ -16020,9 +15828,6 @@ msgstr "targetHostId does not match the workspace's host"
 msgid "Task"
 msgstr "Task"
 
-msgid "Task actions"
-msgstr "Task actions"
-
 msgid "Task ID copied"
 msgstr "Task ID copied"
 
@@ -16284,9 +16089,6 @@ msgstr "The associated device isn't reachable right now"
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 
-msgid "The backlog does not count toward plan progress."
-msgstr "The backlog does not count toward plan progress."
-
 msgid "The best agent will change.<0/>Your workflow shouldn't."
 msgstr "The best agent will change.<0/>Your workflow shouldn't."
 
@@ -16493,12 +16295,6 @@ msgstr "The request failed."
 msgid "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 msgstr "The response: agents review agents, and humans sample instead of reading everything. Trust is earned statistically, not per diff."
 
-msgid "The Roadmap changed elsewhere. Showing the latest version."
-msgstr "The Roadmap changed elsewhere. Showing the latest version."
-
-msgid "The Roadmap is not available here"
-msgstr "The Roadmap is not available here"
-
 msgid "The rubric"
 msgstr "The rubric"
 
@@ -16671,9 +16467,6 @@ msgstr "This closes the workspace and its terminals. The project's files, branch
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
-
-msgid "This conversation is not open here"
-msgstr "This conversation is not open here"
 
 msgid "This deletes the saved scrollback used for reboot/crash recovery."
 msgstr "This deletes the saved scrollback used for reboot/crash recovery."
@@ -16951,9 +16744,6 @@ msgstr "This workspace's host is offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
-
-msgid "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
-msgstr "This workspace's host runs an older version without the Roadmap. Update it to plan this project here."
 
 msgid "Thorough reasoning effort"
 msgstr "Thorough reasoning effort"
@@ -17894,9 +17684,6 @@ msgstr "View usage"
 msgid "Violence or harassment"
 msgstr "Violence or harassment"
 
-msgid "Vision"
-msgstr "Vision"
-
 msgid "Visitors"
 msgstr "Visitors"
 
@@ -18158,12 +17945,6 @@ msgstr "What the content is doing: which pages sessions start on, and how much i
 msgid "What these were written against is no longer on the page, so they have no pin."
 msgstr "What these were written against is no longer on the page, so they have no pin."
 
-msgid "What this milestone means"
-msgstr "What this milestone means"
-
-msgid "What this plan delivers (Markdown)"
-msgstr "What this plan delivers (Markdown)"
-
 msgid "What We're Building"
 msgstr "What We're Building"
 
@@ -18196,9 +17977,6 @@ msgstr "Where do you rank?"
 
 msgid "Where does my code run?"
 msgstr "Where does my code run?"
-
-msgid "Where is this project going?"
-msgstr "Where is this project going?"
 
 msgid "Where serious teams are"
 msgstr "Where serious teams are"
@@ -18280,18 +18058,6 @@ msgstr "Work email"
 
 msgid "Work from tickets"
 msgstr "Work from tickets"
-
-msgid "Work on milestone"
-msgstr "Work on milestone"
-
-msgid "Work on plan"
-msgstr "Work on plan"
-
-msgid "Work on task"
-msgstr "Work on task"
-
-msgid "Work on this"
-msgstr "Work on this"
 
 msgid "Work with your agents across your favorite tools"
 msgstr "Work with your agents across your favorite tools"
